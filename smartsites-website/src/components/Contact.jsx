@@ -68,8 +68,8 @@ export default function Contact() {
                 </div>
                 <div className="info-content">
                   <div className="info-label">Email</div>
-                  <a href="mailto:smtadeeb@gmail.com" className="info-value">
-                    smtadeeb@gmail.com
+                  <a href="mailto:smartsitestr@gmail.com" className="info-value">
+                    smartsitestr@gmail.com
                   </a>
                 </div>
               </div>

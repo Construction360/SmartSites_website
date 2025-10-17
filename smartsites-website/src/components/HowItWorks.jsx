@@ -94,28 +94,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Benefits */}
-        <div className="modern-benefits-grid">
-          <div className="benefit-card">
-            <span className="benefit-emoji">⚡</span>
-            <h4>Quick Deployment</h4>
-            <p>Live in days, not months</p>
-          </div>
-          <div className="benefit-card">
-            <span className="benefit-emoji">🔒</span>
-            <h4>Secure & Compliant</h4>
-            <p>GDPR compliant data</p>
-          </div>
-          <div className="benefit-card">
-            <span className="benefit-emoji">📱</span>
-            <h4>Mobile Ready</h4>
-            <p>Access anywhere</p>
-          </div>
-          <div className="benefit-card">
-            <span className="benefit-emoji">🇹🇷</span>
-            <h4>Local Support</h4>
-            <p>Based in Istanbul</p>
-          </div>
-        </div>
+        
       </div>
 
       {/* Background */}
