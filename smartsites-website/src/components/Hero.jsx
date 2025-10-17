@@ -1,6 +1,7 @@
 // src/components/Hero.jsx - WITH CALENDLY
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Zap, Eye, Shield, Calendar } from 'lucide-react';
+import heroVideo from '../assets/smartsites_intro.mp4'; 
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -131,11 +132,16 @@ export default function Hero() {
         <div className="modern-hero-visual">
           <div className="hero-visual-container">
             <div className="hero-visual-card">
-              <img 
-                src="/mvp-screenshot.png" 
-                alt="SmartSites Dashboard" 
-                className="hero-visual-img"
-              />
+               <video
+                src={heroVideo}
+                className="hero-visual-img"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
               <div className="visual-overlay"></div>
             </div>
             <div className="visual-float visual-float-1"></div>
