@@ -1,6 +1,6 @@
 // src/components/Pricing.jsx
 import React from 'react';
-import { Check, Calendar, Zap, Shield, Smartphone } from 'lucide-react';
+import { Check, Calendar, Zap, ShieldCheck, Shield, Smartphone } from 'lucide-react';
 
 export default function Pricing() {
   const features = [
@@ -99,7 +99,7 @@ export default function Pricing() {
 
           {/* Pilot Program Banner */}
           <div className="pricing-pilot-banner">
-            <div className="pilot-banner-icon">🚀</div>
+            <div className="pilot-banner-icon">  <ShieldCheck size={34} /> </div>
             <div className="pilot-banner-content">
               <h4>Early Partner Advantage</h4>
               <p>Current pilot program partners receive special pricing and priority support</p>

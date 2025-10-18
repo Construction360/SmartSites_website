@@ -1,6 +1,6 @@
 // src/components/Contact.jsx - MODERN REDESIGN
 import React, { useState } from 'react';
-import { Mail, MapPin, Send, Sparkles } from 'lucide-react';
+import { Mail, MapPin, Send, MessageSquare } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="modern-contact-info">
             <div className="contact-info-header">
-              <Sparkles className="header-icon" />
+              <MessageSquare className="header-icon" />
               <h3>Get in Touch</h3>
             </div>
 

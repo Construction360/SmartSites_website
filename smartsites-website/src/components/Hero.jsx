@@ -136,11 +136,11 @@ export default function Hero() {
                <video
                 src="https://storage.googleapis.com/smartsites-website-video/smartsites_intro.mp4"
                 className="hero-visual-img"
-                //autoPlay
-                //loop
-                //muted
+                autoPlay
+                loop
+                muted
                 playsInline
-                controls
+                //controls
               >
                 Your browser does not support the video tag.
               </video>
