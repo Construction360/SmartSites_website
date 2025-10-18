@@ -4,6 +4,7 @@ import { Menu, X, Calendar, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import logo from "../assets/Opaque.png";
 
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
