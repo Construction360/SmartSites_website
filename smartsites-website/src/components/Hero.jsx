@@ -135,10 +135,11 @@ export default function Hero() {
                <video
                 src={heroVideo}
                 className="hero-visual-img"
-                autoPlay
-                loop
-                muted
+                //autoPlay
+                //loop
+                //muted
                 playsInline
+                controls
               >
                 Your browser does not support the video tag.
               </video>
