@@ -1,7 +1,7 @@
 // src/components/Hero.jsx - WITH CALENDLY
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Zap, Eye, Shield, Calendar } from 'lucide-react';
-import heroVideo from '../assets/smartsites_intro.mp4'; 
+//import heroVideo from '../assets/smartsites_intro.mp4'; 
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -133,7 +133,7 @@ export default function Hero() {
           <div className="hero-visual-container">
             <div className="hero-visual-card">
                <video
-                src={heroVideo}
+                src="https://storage.googleapis.com/smartsites-website-video/smartsites_intro.mp4"
                 className="hero-visual-img"
                 //autoPlay
                 //loop
