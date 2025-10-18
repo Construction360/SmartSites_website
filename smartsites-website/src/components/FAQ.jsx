@@ -1,6 +1,7 @@
 // src/components/FAQ.jsx
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import '../styles/FAQ.css';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);

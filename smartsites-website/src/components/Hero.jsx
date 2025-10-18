@@ -1,6 +1,7 @@
 // src/components/Hero.jsx - WITH CALENDLY
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Zap, Eye, Shield, Calendar } from 'lucide-react';
+import '../styles/Hero.css';
 
 //import heroVideo from '../assets/smartsites_intro.mp4'; 
 

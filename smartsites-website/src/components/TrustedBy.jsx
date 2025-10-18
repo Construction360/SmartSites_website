@@ -4,6 +4,7 @@ import benestaLogo from '../assets/benesta.svg';
 import estaLogo from '../assets/Esta.png';
 import yamataLogo from '../assets/yamata.png';
 import locationIcon from '../assets/location_icon.png';
+import '../styles/TrustedBy.css';
 
 export default function TrustedBy() {
   const partners = [

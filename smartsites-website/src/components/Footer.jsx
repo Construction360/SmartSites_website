@@ -2,6 +2,7 @@
 import React from 'react';
 import { Mail, MapPin, ArrowUp } from 'lucide-react';
 import logo from "../assets/Opaque.png";
+import '../styles/Footer.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

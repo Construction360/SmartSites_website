@@ -1,6 +1,7 @@
 // src/components/Contact.jsx - MODERN REDESIGN
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, MessageSquare } from 'lucide-react';
+import '../styles/Contact.css';
 
 export default function Contact() {
   const [formData, setFormData] = useState({

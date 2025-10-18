@@ -1,6 +1,7 @@
 // src/components/Features.jsx - MODERN REDESIGN
 import React from 'react';
 import { Camera, Users, Package, Brain, ArrowUpRight } from 'lucide-react';
+import '../styles/Features.css';
 
 export default function Features() {
   const features = [

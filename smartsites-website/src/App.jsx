@@ -10,7 +10,8 @@ import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './styles/website.css';
+//import './styles/website.css';
+import './styles/Global.css';
 
 function App() {
   return (

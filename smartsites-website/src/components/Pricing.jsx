@@ -1,6 +1,7 @@
 // src/components/Pricing.jsx
 import React from 'react';
 import { Check, Calendar, Zap, ShieldCheck, Shield, Smartphone } from 'lucide-react';
+import '../styles/Pricing.css';
 
 export default function Pricing() {
   const features = [

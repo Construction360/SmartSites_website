@@ -1,6 +1,7 @@
 // src/components/HowItWorks.jsx - MODERN REDESIGN
 import React from 'react';
 import { Camera, Cpu, Monitor, Bell, Check } from 'lucide-react';
+import '../styles/HowItWorks.css';
 
 export default function HowItWorks() {
   const steps = [

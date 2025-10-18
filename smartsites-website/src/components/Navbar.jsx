@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Calendar, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import logo from "../assets/Opaque.png";
+import '../styles/Navbar.css';
 
 
 export default function Navbar() {
