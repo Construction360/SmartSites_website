@@ -36,7 +36,7 @@ export default function Footer() {
               </a>
               <div className="footer-contact-link">
                 <MapPin size={16} />
-                <span>Istanbul, Turkey</span>
+                <span>Global Operations</span>
               </div>
             </div>
           </div>

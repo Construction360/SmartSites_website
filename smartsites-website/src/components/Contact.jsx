@@ -81,7 +81,7 @@ export default function Contact() {
                 </div>
                 <div className="info-content">
                   <div className="info-label">Location</div>
-                  <div className="info-value">Istanbul, Turkey</div>
+                  <div className="info-value">Global Operations</div>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+90 XXX XXX XX XX"
+                    placeholder="+1 (555) 123-4567"
                   />
                 </div>
               </div>

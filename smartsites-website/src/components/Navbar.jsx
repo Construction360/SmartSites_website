@@ -18,6 +18,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Add favicon to the page
+  useEffect(() => {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = logo;
+    favicon.type = 'image/png';
+    document.head.appendChild(favicon);
+
+    // Cleanup function to remove the favicon when the component unmounts
+    return () => {
+      document.head.removeChild(favicon);
+    };
+  }, []); // The empty array ensures this effect runs only once
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);

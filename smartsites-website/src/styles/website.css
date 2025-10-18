@@ -2056,6 +2056,112 @@ body {
   opacity: 0.3;
 }
 
+/* ========================================
+   PARTNERSHIP MAP
+   ======================================== */
+
+.partnership-map-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+}
+
+.map-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03); /* Fallback for slow loading images 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem; */
+  /* Applying your map image */
+  background-image: url('https://storage.googleapis.com/smartsites-website-video/world.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 16 / 9; /* Maintains the map's shape */
+}
+
+[data-theme="light"] .map-container {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+    /* Same image for light theme as requested */
+    background-image: url('https://storage.googleapis.com/smartsites-website-video/world-map.svg');
+}
+
+/* Styling for the custom PNG icon container */
+.location-dot {
+  position: absolute;
+  width: 19px; /* Adjust size for your icon */
+  height: 20px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: mapPulse 2.5s infinite ease-in-out;
+}
+
+/* Styling for the custom icon image itself */
+.location-dot img {
+    width: 100%;
+    height: auto;
+    /* This creates the glow effect 
+    filter: drop-shadow(0 0 8px var(--orange-neon)); */
+    /* Layered drop-shadow for a more intense glow */
+    filter: drop-shadow(0 0 5px var(--orange-neon)) drop-shadow(0 0 15px rgba(255, 107, 53, 0.6));
+}
+
+@keyframes mapPulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+
+.location-dot::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 0.875rem;
+  z-index: 10;
+}
+
+.location-dot:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Recalibrated Dot Positions for the dark-thme map */
+[data-theme="dark"] .dot-turkey     { top: 32%; left: 58%; }
+[data-theme="dark"] .dot-turkey-2   { top: 32%; left: 57%; }
+[data-theme="dark"] .dot-russia     { top: 22%; left: 62%; }
+[data-theme="dark"] .dot-russia-2   { top: 21%; left: 75.5%; }
+[data-theme="dark"] .dot-kazakhstan { top: 26%; left: 65%; }
+[data-theme="dark"] .dot-iraq       { top: 36%; left: 61%; }
+
+/* Recalibrated Dot Positions for the light theme map */
+[data-theme="light"] .dot-turkey     { top: 38.3%; left: 55.6%; }
+[data-theme="light"] .dot-turkey-2   { top: 38.3%; left: 56.9%; }
+[data-theme="light"] .dot-russia     { top: 22%; left: 62%; }
+[data-theme="light"] .dot-russia-2   { top: 15%; left: 77.5%; }
+[data-theme="light"] .dot-kazakhstan { top: 30%; left: 65%; }
+[data-theme="light"] .dot-iraq       { top: 43%; left: 60%; }
+
 /* Achievements Grid */
 .achievements-grid {
   display: grid;
@@ -2216,7 +2322,28 @@ body {
   .trustedby-cta-text {
     font-size: 1rem;
   }
+  .map-container {
+    padding: 1rem;
+  }
+  /* Styling for the MapPin icon */
+  .location-dot {
+    position: absolute;
+    width: 24px; /* Size of the icon */
+    height: 24px;
+    color: var(--orange-neon); /* This styles the stroke/outline */
+    fill: var(--orange-neon);  /* This makes the icon solid and opaque */
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: mapPulse 2s infinite;
+    /* Increased the glow effect */
+    filter: drop-shadow(0 0 8px var(--orange-neon));
+  }
+  .location-dot::after {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
+
 
 /* ========================================
    PRICING SECTION
@@ -2277,7 +2404,7 @@ body {
 }
 
 .pricing-plan-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
@@ -2314,9 +2441,11 @@ body {
 }
 
 .pricing-note {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 .pricing-features {

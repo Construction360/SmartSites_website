@@ -19,7 +19,7 @@ export default function Pricing() {
     {
       icon: <Zap size={24} />,
       title: "No Long-Term Contracts",
-      description: "Monthly subscription, cancel anytime"
+      description: "Flexible subscriptions, cancel anytime"
     },
     {
       icon: <Shield size={24} />,
@@ -29,7 +29,7 @@ export default function Pricing() {
     {
       icon: <Smartphone size={24} />,
       title: "Quick Deployment",
-      description: "Live in 3-5 days on your site"
+      description: "Go live on your site in days"
     }
   ];
 
@@ -52,11 +52,11 @@ export default function Pricing() {
             PRICING
           </span>
           <h2 className="section-title">
-            Simple, Transparent
-            <span className="title-gradient"> Subscription Pricing</span>
+            Customized & Scalable
+            <span className="title-gradient"> Solutions</span>
           </h2>
           <p className="section-description">
-            Flexible monthly plans designed for construction projects of all sizes.
+            Flexible plans designed for construction projects of all sizes, everywhere.
             <br />No hidden fees, no long-term commitments.
           </p>
         </div>
@@ -69,18 +69,15 @@ export default function Pricing() {
           </div>
 
           <div className="pricing-header-content">
-            <h3 className="pricing-plan-title">Subscription-Based Pricing</h3>
-            <div className="pricing-amount">
-              <span className="pricing-currency">Starting from</span>
-              <span className="pricing-value">2000$</span>
-              <span className="pricing-period">per site/month*</span>
-            </div>
-            <p className="pricing-note">*Final pricing based on site size, features, and project duration</p>
+            <h3 className="pricing-plan-title">Tailored Pricing for Your Project</h3>
+            <p className="pricing-note">
+              Our pricing is customized based on your project's unique scale, features, and operational region. We build a plan that fits your needs and budget.
+            </p>
           </div>
 
           <button className="modern-btn modern-btn-primary modern-btn-large modern-btn-full" onClick={openCalendly}>
             <Calendar size={20} />
-            <span>Schedule Pricing Consultation</span>
+            <span>Get a Custom Quote</span>
             <div className="btn-glow"></div>
           </button>
 
@@ -124,14 +121,14 @@ export default function Pricing() {
 
         {/* Custom Quote CTA */}
         <div className="pricing-custom-quote">
-          <h3 className="custom-quote-title">Need a Custom Package?</h3>
+          <h3 className="custom-quote-title">Need an Enterprise Package?</h3>
           <p className="custom-quote-text">
             Large-scale projects, multi-site deployments, or specific requirements?
             <br />
             Let's discuss a tailored solution for your needs.
           </p>
           <button className="modern-btn modern-btn-secondary modern-btn-large" onClick={openCalendly}>
-            <span>Get Custom Quote</span>
+            <span>Request Enterprise Quote</span>
             <div className="btn-glow-secondary"></div>
           </button>
         </div>
