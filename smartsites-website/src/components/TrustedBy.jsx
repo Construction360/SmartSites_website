@@ -98,7 +98,7 @@ export default function TrustedBy() {
        
         {/* Partnership Map Section */}
         <div className="partnership-map-section">
-            <h3 className="map-title">Our Partners' Global Reach</h3>
+            <h3 className="map-title">Our Partners-Global Reach</h3>
             <div className="map-container">
                 {/* Pins using the custom PNG icon */}
                 <div className="location-dot dot-turkey" data-tooltip="Benesta: Istanbul, Turkey">
