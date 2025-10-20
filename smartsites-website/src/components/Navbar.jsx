@@ -1,7 +1,9 @@
-// src/components/Navbar.jsx - WITH CALENDLY
+// src/components/Navbar.jsx - WITH LANGUAGE SELECTOR
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Calendar, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+import LanguageSelector from './LanguageSelector'; // Import LanguageSelector
 import logo from "../assets/Opaque.png";
 import '../styles/Navbar.css';
 
@@ -10,6 +12,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation(); // Initialize translation hook
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,11 +30,10 @@ export default function Navbar() {
     favicon.type = 'image/png';
     document.head.appendChild(favicon);
 
-    // Cleanup function to remove the favicon when the component unmounts
     return () => {
       document.head.removeChild(favicon);
     };
-  }, []); // The empty array ensures this effect runs only once
+  }, []);
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -53,7 +55,7 @@ export default function Navbar() {
       <div className="modern-navbar-container">
         <div className="modern-navbar-logo">
           <img 
-            src= {logo} 
+            src={logo} 
             alt="SmartSites Logo"
             className="modern-logo"
           />
@@ -63,24 +65,27 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="modern-navbar-menu">
           <button onClick={() => scrollToSection('home')} className="modern-nav-link">
-            <span>Home</span>
+            <span>{t('navbar.home')}</span>
             <div className="nav-link-glow"></div>
           </button>
           <button onClick={() => scrollToSection('features')} className="modern-nav-link">
-            <span>Features</span>
+            <span>{t('navbar.features')}</span>
             <div className="nav-link-glow"></div>
           </button>
           <button onClick={() => scrollToSection('how-it-works')} className="modern-nav-link">
-            <span>How It Works</span>
+            <span>{t('navbar.howItWorks')}</span>
             <div className="nav-link-glow"></div>
           </button>
           <button onClick={() => scrollToSection('contact')} className="modern-nav-link">
-            <span>Contact</span>
+            <span>{t('navbar.contact')}</span>
             <div className="nav-link-glow"></div>
           </button>
         </div>
 
         <div className="modern-navbar-actions">
+          {/* Language Selector */}
+          <LanguageSelector />
+          
           {/* Theme Toggle */}
           <button 
             className="theme-toggle-btn"
@@ -95,13 +100,13 @@ export default function Navbar() {
             <div className="theme-toggle-glow"></div>
           </button>
 
-          {/* Schedule Call Button - REPLACED REQUEST DEMO */}
+          {/* Schedule Call Button */}
           <button 
             onClick={openCalendly}
             className="modern-btn modern-btn-primary"
           >
             <Calendar size={18} />
-            <span>Schedule a Call</span>
+            <span>{t('navbar.scheduleCall')}</span>
             <div className="btn-glow"></div>
           </button>
         </div>
@@ -119,17 +124,20 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="modern-navbar-mobile">
           <button onClick={() => scrollToSection('home')} className="modern-mobile-link">
-            Home
+            {t('navbar.home')}
           </button>
           <button onClick={() => scrollToSection('features')} className="modern-mobile-link">
-            Features
+            {t('navbar.features')}
           </button>
           <button onClick={() => scrollToSection('how-it-works')} className="modern-mobile-link">
-            How It Works
+            {t('navbar.howItWorks')}
           </button>
           <button onClick={() => scrollToSection('contact')} className="modern-mobile-link">
-            Contact
+            {t('navbar.contact')}
           </button>
+          
+          {/* Language Selector Mobile */}
+          <LanguageSelector />
           
           {/* Theme Toggle Mobile */}
           <button 
@@ -155,7 +163,7 @@ export default function Navbar() {
             className="modern-btn modern-btn-primary"
           >
             <Calendar size={18} />
-            Schedule a Call
+            {t('navbar.scheduleCall')}
           </button>
         </div>
       )}

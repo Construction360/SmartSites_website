@@ -2,38 +2,21 @@
 import React from 'react';
 import { Camera, Cpu, Monitor, Bell, Check } from 'lucide-react';
 import '../styles/HowItWorks.css';
+import { useTranslation } from 'react-i18next';
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      number: "01",
-      icon: <Camera size={40} />,
-      title: "Deploy Smart Cameras",
-      description: "Install AI-enabled cameras and IoT sensors across your site. Quick setup with minimal disruption.",
-      features: ["5G connectivity", "Weatherproof design", "24/7 operation"]
-    },
-    {
-      number: "02",
-      icon: <Cpu size={40} />,
-      title: "AI Processes Data",
-      description: "Computer vision analyzes site activity in real-time, detecting workers, equipment, and progress.",
-      features: ["Object detection", "Activity recognition", "Pattern analysis"]
-    },
-    {
-      number: "03",
-      icon: <Monitor size={40} />,
-      title: "Monitor Dashboard",
-      description: "Access unified dashboard from anywhere. Track progress, locations, and equipment status.",
-      features: ["Live feeds", "Progress tracking", "Resource monitoring"]
-    },
-    {
-      number: "04",
-      icon: <Bell size={40} />,
-      title: "Receive Alerts",
-      description: "Get instant notifications for delays, safety incidents, or equipment issues.",
-      features: ["Smart alerts", "Mobile notifications", "Email reports"]
-    }
-  ];
+  const { t } = useTranslation();
+  
+  // Define step keys to match our JSON structure
+  const stepKeys = ['deploy', 'process', 'monitor', 'alerts'];
+
+  // Map icons to each step
+  const stepIcons = {
+    deploy: <Camera size={40} />,
+    process: <Cpu size={40} />,
+    monitor: <Monitor size={40} />,
+    alerts: <Bell size={40} />
+  };
 
   return (
     <section id="how-it-works" className="modern-howitworks">
@@ -42,38 +25,37 @@ export default function HowItWorks() {
         <div className="modern-section-header">
           <span className="section-badge section-badge-cyan">
             <span className="badge-dot"></span>
-            HOW IT WORKS
+            {t('howItWorks.badge')}
           </span>
           <h2 className="section-title">
-            From Installation to Insights
-            <span className="title-gradient"> in 4 Simple Steps</span>
+            {t('howItWorks.title')}
+            <span className="title-gradient"> {t('howItWorks.titleHighlight')}</span>
           </h2>
           <p className="section-description">
-            SmartSites integrates seamlessly with your workflow, 
-            providing immediate value from day one.
+            {t('howItWorks.description')}
           </p>
         </div>
 
         {/* Steps Timeline */}
         <div className="modern-steps-timeline">
-          {steps.map((step, index) => (
+          {stepKeys.map((stepKey, index) => (
             <div key={index} className="modern-step-card">
               <div className="step-number-badge">
-                <span>{step.number}</span>
+                <span>{t(`howItWorks.steps.${stepKey}.number`)}</span>
                 <div className="badge-pulse"></div>
               </div>
 
               <div className="step-icon-circle">
-                {step.icon}
+                {stepIcons[stepKey]}
                 <div className="icon-circle-glow"></div>
               </div>
 
               <div className="step-content">
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
+                <h3 className="step-title">{t(`howItWorks.steps.${stepKey}.title`)}</h3>
+                <p className="step-description">{t(`howItWorks.steps.${stepKey}.description`)}</p>
 
                 <ul className="step-features">
-                  {step.features.map((feature, idx) => (
+                  {t(`howItWorks.steps.${stepKey}.features`, { returnObjects: true }).map((feature, idx) => (
                     <li key={idx}>
                       <Check size={16} />
                       <span>{feature}</span>
@@ -82,7 +64,7 @@ export default function HowItWorks() {
                 </ul>
               </div>
 
-              {index < steps.length - 1 && (
+              {index < stepKeys.length - 1 && (
                 <div className="step-connector">
                   <div className="connector-line"></div>
                   <div className="connector-dot"></div>

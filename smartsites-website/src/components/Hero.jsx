@@ -1,11 +1,11 @@
-// src/components/Hero.jsx - WITH CALENDLY
+// src/components/Hero.jsx - WITH i18n
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Zap, Eye, Shield, Calendar } from 'lucide-react';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import '../styles/Hero.css';
 
-//import heroVideo from '../assets/smartsites_intro.mp4'; 
-
 export default function Hero() {
+  const { t } = useTranslation(); // Initialize translation hook
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -50,22 +50,22 @@ export default function Hero() {
           {/* Badge */}
           <div className="modern-hero-badge">
             <Zap size={16} />
-            <span>AI-Powered Construction Monitoring</span>
+            <span>{t('hero.badge')}</span>
             <div className="badge-glow"></div>
           </div>
 
           {/* Main Heading */}
           <h1 className="modern-hero-title">
-            <span className="title-line">Bring Every</span>
-            <span className="title-line title-gradient">Construction Site</span>
-            <span className="title-line">Under Control</span>
+            <span className="title-line">{t('hero.title.line1')}</span>
+            <span className="title-line title-gradient">{t('hero.title.line2')}</span>
+            <span className="title-line">{t('hero.title.line3')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="modern-hero-subtitle">
-            Real-time AI monitoring, predictive analytics, and complete site visibility.
+            {t('hero.subtitle')}
             <br />
-            <span className="subtitle-highlight">Transform chaos into control.</span>
+            <span className="subtitle-highlight">{t('hero.subtitleHighlight')}</span>
           </p>
 
           {/* Stats */}
@@ -75,8 +75,8 @@ export default function Hero() {
                 <Eye />
               </div>
               <div className="stat-content">
-                <div className="stat-value">24/7</div>
-                <div className="stat-label">Live Monitoring</div>
+                <div className="stat-value">{t('hero.stats.monitoring.value')}</div>
+                <div className="stat-label">{t('hero.stats.monitoring.label')}</div>
               </div>
               <div className="stat-glow"></div>
             </div>
@@ -86,8 +86,8 @@ export default function Hero() {
                 <Zap />
               </div>
               <div className="stat-content">
-                <div className="stat-value">Real-Time</div>
-                <div className="stat-label">AI Analytics</div>
+                <div className="stat-value">{t('hero.stats.analytics.value')}</div>
+                <div className="stat-label">{t('hero.stats.analytics.label')}</div>
               </div>
               <div className="stat-glow stat-glow-cyan"></div>
             </div>
@@ -97,29 +97,29 @@ export default function Hero() {
                 <Shield />
               </div>
               <div className="stat-content">
-                <div className="stat-value">100%</div>
-                <div className="stat-label">Site Coverage</div>
+                <div className="stat-value">{t('hero.stats.coverage.value')}</div>
+                <div className="stat-label">{t('hero.stats.coverage.label')}</div>
               </div>
               <div className="stat-glow stat-glow-purple"></div>
             </div>
           </div>
 
-          {/* CTA Buttons - UPDATED */}
+          {/* CTA Buttons */}
           <div className="modern-hero-buttons">
             <button className="modern-btn modern-btn-primary modern-btn-large" onClick={openCalendly}>
               <Calendar size={20} />
-              <span>Schedule a Call</span>
+              <span>{t('hero.buttons.scheduleCall')}</span>
               <div className="btn-glow"></div>
             </button>
             <button className="modern-btn modern-btn-secondary modern-btn-large" onClick={scrollToFeatures}>
-              <span>Explore Features</span>
+              <span>{t('hero.buttons.exploreFeatures')}</span>
               <div className="btn-glow-secondary"></div>
             </button>
           </div>
 
           {/* Trust Badges */}
           <div className="modern-hero-trust">
-            <p className="trust-label">Trusted by leading construction companies</p>
+            <p className="trust-label">{t('hero.trust.label')}</p>
             <div className="trust-companies">
               <span className="trust-company">Benesta</span>
               <span className="trust-divider">•</span>
@@ -135,16 +135,15 @@ export default function Hero() {
           <div className="hero-visual-container">
             <div className="hero-visual-card">
                <video
-                src="https://storage.googleapis.com/smartsites-website-video/smartsites_intro.mp4"
-                className="hero-visual-img"
-                autoPlay
-                loop
-                muted
-                playsInline
-                //controls
-              >
-                Your browser does not support the video tag.
-              </video>
+                src="https://storage.googleapis.com/smartsites-website-video/smartsites_intro.mp4"
+                className="hero-visual-img"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
               <div className="visual-overlay"></div>
             </div>
             <div className="visual-float visual-float-1"></div>
@@ -157,7 +156,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <div className="scroll-line"></div>
-        <span>Scroll to explore</span>
+        <span>{t('hero.scrollText')}</span>
       </div>
     </section>
   );

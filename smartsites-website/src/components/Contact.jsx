@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, MessageSquare } from 'lucide-react';
 import '../styles/Contact.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,12 +24,15 @@ export default function Contact() {
     e.preventDefault();
     const subject = `Demo Request from ${formData.company || formData.name}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:smtadeeb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:${t('contact.info.email.value')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
     setFormData({ name: '', email: '', company: '', phone: '', message: '' });
     setStatus('success');
     setTimeout(() => setStatus(''), 5000);
   };
+
+  // Array of trusted companies for easier mapping
+  const trustedCompanies = ['contact.info.trustTitle', 'contact.info.companies.0', 'contact.info.companies.1', 'contact.info.companies.2'];
 
   return (
     <section id="contact" className="modern-contact">
@@ -36,14 +41,14 @@ export default function Contact() {
         <div className="modern-section-header">
           <span className="section-badge section-badge-purple">
             <span className="badge-dot"></span>
-            CONTACT US
+            {t('contact.badge')}
           </span>
           <h2 className="section-title">
-            Ready to Transform
-            <span className="title-gradient"> Your Construction Site?</span>
+            {t('contact.title')}
+            <span className="title-gradient"> {t('contact.titleHighlight')}</span>
           </h2>
           <p className="section-description">
-            Schedule a demo and see how SmartSites brings your construction sites under control.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -52,13 +57,13 @@ export default function Contact() {
           <div className="modern-contact-info">
             <div className="contact-info-header">
               <MessageSquare className="header-icon" />
-              <h3>Get in Touch</h3>
+              <h3>{t('contact.info.header')}</h3>
             </div>
 
             <p className="contact-info-text">
-              Have questions? Want to see a demo? 
+              {t('contact.info.description')}
               <br />
-              We'd love to hear from you.
+              {t('contact.info.description2')}
             </p>
 
             <div className="contact-info-items">
@@ -68,9 +73,9 @@ export default function Contact() {
                   <div className="icon-bg"></div>
                 </div>
                 <div className="info-content">
-                  <div className="info-label">Email</div>
-                  <a href="mailto:smartsitestr@gmail.com" className="info-value">
-                    smartsitestr@gmail.com
+                  <div className="info-label">{t('contact.info.email.label')}</div>
+                  <a href={`mailto:${t('contact.info.email.value')}`} className="info-value">
+                    {t('contact.info.email.value')}
                   </a>
                 </div>
               </div>
@@ -81,18 +86,18 @@ export default function Contact() {
                   <div className="icon-bg"></div>
                 </div>
                 <div className="info-content">
-                  <div className="info-label">Location</div>
-                  <div className="info-value">Global Operations</div>
+                  <div className="info-label">{t('contact.info.location.label')}</div>
+                  <div className="info-value">{t('contact.info.location.value')}</div>
                 </div>
               </div>
             </div>
 
             <div className="contact-trust-box">
-              <p className="trust-box-title">Trusted by:</p>
+              <p className="trust-box-title">{t('contact.info.trustTitle')}:</p>
               <div className="trust-box-companies">
-                <span>Benesta Construction</span>
-                <span>ESTA Construction</span>
-                <span>Yamata İnşaat</span>
+                {t('contact.info.companies', { returnObjects: true }).map((company, index) => (
+                  <span key={index}>{company}</span>
+                ))}
               </div>
             </div>
 
@@ -104,7 +109,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="modern-contact-form">
               <div className="modern-form-row">
                 <div className="modern-form-group">
-                  <label htmlFor="name">Full Name *</label>
+                  <label htmlFor="name">{t('contact.form.name.label')}</label>
                   <input
                     type="text"
                     id="name"
@@ -112,12 +117,12 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
+                    placeholder={t('contact.form.name.placeholder')}
                   />
                 </div>
 
                 <div className="modern-form-group">
-                  <label htmlFor="email">Email *</label>
+                  <label htmlFor="email">{t('contact.form.email.label')}</label>
                   <input
                     type="email"
                     id="email"
@@ -125,39 +130,39 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@company.com"
+                    placeholder={t('contact.form.email.placeholder')}
                   />
                 </div>
               </div>
 
               <div className="modern-form-row">
                 <div className="modern-form-group">
-                  <label htmlFor="company">Company</label>
+                  <label htmlFor="company">{t('contact.form.company.label')}</label>
                   <input
                     type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Your Company"
+                    placeholder={t('contact.form.company.placeholder')}
                   />
                 </div>
 
                 <div className="modern-form-group">
-                  <label htmlFor="phone">Phone</label>
+                  <label htmlFor="phone">{t('contact.form.phone.label')}</label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+1 (555) 123-4567"
+                    placeholder={t('contact.form.phone.placeholder')}
                   />
                 </div>
               </div>
 
               <div className="modern-form-group modern-form-group-full">
-                <label htmlFor="message">Message *</label>
+                <label htmlFor="message">{t('contact.form.message.label')}</label>
                 <textarea
                   id="message"
                   name="message"
@@ -165,24 +170,24 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows="4"
-                  placeholder="Tell us about your project..."
+                  placeholder={t('contact.form.message.placeholder')}
                 ></textarea>
               </div>
 
               {status === 'success' && (
                 <div className="modern-form-success">
-                  ✓ Your email client will open to send your request!
+                  {t('contact.form.success')}
                 </div>
               )}
 
               <button type="submit" className="modern-btn modern-btn-primary modern-btn-large modern-btn-full">
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{t('contact.form.button')}</span>
                 <div className="btn-glow"></div>
               </button>
 
               <p className="modern-form-note">
-                By submitting, you agree to our privacy policy
+                {t('contact.form.note')}
               </p>
             </form>
           </div>

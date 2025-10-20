@@ -2,36 +2,60 @@
 import React from 'react';
 import { Camera, Users, Package, Brain, ArrowUpRight } from 'lucide-react';
 import '../styles/Features.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Features() {
+  const { t } = useTranslation();
+
+  // Feature data moved to an array, using i18n translation keys
   const features = [
     {
       icon: <Camera size={32} />,
-      title: "Smart Camera Monitoring",
-      description: "AI-enabled cameras capture 24/7 site activity. Automatic detection of equipment, workers, and progress milestones with computer vision.",
+      titleKey: 'features.cards.monitoring.title',
+      descriptionKey: 'features.cards.monitoring.description',
+      learnMoreKey: 'features.cards.monitoring.learnMore',
       color: "orange",
       delay: "0s"
     },
     {
       icon: <Users size={32} />,
-      title: "Worker & Asset Tracking",
-      description: "Real-time location tracking via BLE/GPS sensors. Monitor safety compliance and locate equipment instantly across all zones.",
+      titleKey: 'features.cards.tracking.title',
+      descriptionKey: 'features.cards.tracking.description',
+      learnMoreKey: 'features.cards.tracking.learnMore',
       color: "cyan",
       delay: "0.1s"
     },
     {
       icon: <Package size={32} />,
-      title: "Material & Equipment Monitoring",
-      description: "Know exactly where materials and equipment are located. Eliminate search time and improve resource coordination.",
+      titleKey: 'features.cards.material.title',
+      descriptionKey: 'features.cards.material.description',
+      learnMoreKey: 'features.cards.material.learnMore',
       color: "purple",
       delay: "0.2s"
     },
     {
       icon: <Brain size={32} />,
-      title: "AI Predictive Analytics",
-      description: "Machine learning predicts delays and safety risks before they occur. Make data-driven decisions to keep projects on track.",
+      titleKey: 'features.cards.analytics.title',
+      descriptionKey: 'features.cards.analytics.description',
+      learnMoreKey: 'features.cards.analytics.learnMore',
       color: "orange",
       delay: "0.3s"
+    }
+  ];
+
+  // Stats array for easier maintenance
+  const stats = [
+    {
+      valueKey: 'features.stats.reduction.value',
+      labelKey: 'features.stats.reduction.label',
+    },
+    {
+      valueKey: 'features.stats.tracking.value',
+      labelKey: 'features.stats.tracking.label',
+    },
+    {
+      valueKey: 'features.stats.monitoring.value',
+      labelKey: 'features.stats.monitoring.label',
     }
   ];
 
@@ -42,15 +66,14 @@ export default function Features() {
         <div className="modern-section-header">
           <span className="section-badge">
             <span className="badge-dot"></span>
-            FEATURES
+            {t('features.badge')}
           </span>
           <h2 className="section-title">
-            Everything You Need to
-            <span className="title-gradient"> Control Your Site</span>
+            {t('features.title')}
+            <span className="title-gradient"> {t('features.titleHighlight')}</span>
           </h2>
           <p className="section-description">
-            Comprehensive AI-powered platform combining computer vision, IoT sensors, 
-            and predictive analytics for complete construction site visibility.
+            {t('features.description')}
           </p>
         </div>
 
@@ -70,11 +93,11 @@ export default function Features() {
                   <div className="icon-glow"></div>
                 </div>
 
-                <h3 className="feature-title">{feature.title}</h3>
-                <p className="feature-description">{feature.description}</p>
+                <h3 className="feature-title">{t(feature.titleKey)}</h3>
+                <p className="feature-description">{t(feature.descriptionKey)}</p>
 
                 <button className="feature-learn-more">
-                  <span>Learn more</span>
+                  <span>{t(feature.learnMoreKey)}</span>
                   <ArrowUpRight size={16} />
                 </button>
 
@@ -86,23 +109,16 @@ export default function Features() {
 
         {/* Stats Bar */}
         <div className="modern-stats-bar">
-          <div className="stat-item">
-            <div className="stat-number">70%</div>
-            <div className="stat-label">Reduction in site visits</div>
-            <div className="stat-bar"></div>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <div className="stat-number">Real-Time</div>
-            <div className="stat-label">Progress tracking</div>
-            <div className="stat-bar"></div>
-          </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <div className="stat-number">24/7</div>
-            <div className="stat-label">Automated monitoring</div>
-            <div className="stat-bar"></div>
-          </div>
+          {stats.map((stat, index) => (
+            <React.Fragment key={index}>
+              <div className="stat-item">
+                <div className="stat-number">{t(stat.valueKey)}</div>
+                <div className="stat-label">{t(stat.labelKey)}</div>
+                <div className="stat-bar"></div>
+              </div>
+              {index < stats.length - 1 && <div className="stat-divider"></div>}
+            </React.Fragment>
+          ))}
         </div>
       </div>
 

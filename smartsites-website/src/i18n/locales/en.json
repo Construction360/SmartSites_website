@@ -1,0 +1,329 @@
+{
+  "navbar": {
+    "home": "Home",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "contact": "Contact",
+    "scheduleCall": "Schedule a Call"
+  },
+  "hero": {
+    "badge": "AI-Powered Construction Monitoring",
+    "title": {
+      "line1": "Bring Every",
+      "line2": "Construction Site",
+      "line3": "Under Control"
+    },
+    "subtitle": "Real-time AI monitoring, predictive analytics, and complete site visibility.",
+    "subtitleHighlight": "Transform chaos into control.",
+    "stats": {
+      "monitoring": {
+        "value": "24/7",
+        "label": "Live Monitoring"
+      },
+      "analytics": {
+        "value": "Real-Time",
+        "label": "AI Analytics"
+      },
+      "coverage": {
+        "value": "100%",
+        "label": "Site Coverage"
+      }
+    },
+    "buttons": {
+      "scheduleCall": "Schedule a Call",
+      "exploreFeatures": "Explore Features"
+    },
+    "trust": {
+      "label": "Trusted by leading construction companies"
+    },
+    "scrollText": "Scroll to explore"
+  },
+  "trustedBy": {
+    "badge": "INDUSTRY PARTNERSHIPS",
+    "title": "Leading the Global Shift to",
+    "titleHighlight": "Smart Construction",
+    "description": "Collaborating with industry leaders to transform construction site management worldwide.",
+    "partners": {
+      "benesta": {
+        "name": "Benesta Construction",
+        "status": "MVP Deployed"
+      },
+      "esta": {
+        "name": "ESTA Construction",
+        "status": "Pilot Program"
+      },
+      "yamata": {
+        "name": "Yamata İnşaat ve Yatırım A.Ş.",
+        "status": "In Discussion"
+      }
+    },
+    "mapTitle": "Our Partners-Global Reach",
+    "achievements": {
+      "mvp": {
+        "title": "MVP Deployed",
+        "description": "Successfully tested at Benesta Construction"
+      },
+      "pilot": {
+        "title": "Pilot Programs",
+        "description": "In development with industry leaders"
+      },
+      "validated": {
+        "title": "Industry Validated",
+        "description": "Backed by construction experts"
+      }
+    },
+    "cta": {
+      "text": "Join industry leaders worldwide in revolutionizing site management.",
+      "button": "Schedule a Call"
+    }
+  },
+  "features": {
+    "badge": "FEATURES",
+    "title": "Everything You Need to",
+    "titleHighlight": "Control Your Site",
+    "description": "Comprehensive AI-powered platform combining computer vision, IoT sensors, and predictive analytics for complete construction site visibility.",
+    "cards": {
+      "monitoring": {
+        "title": "Smart Camera Monitoring",
+        "description": "AI-enabled cameras capture 24/7 site activity. Automatic detection of equipment, workers, and progress milestones with computer vision.",
+        "learnMore": "Learn more"
+      },
+      "tracking": {
+        "title": "Worker & Asset Tracking",
+        "description": "Real-time location tracking via BLE/GPS sensors. Monitor safety compliance and locate equipment instantly across all zones.",
+        "learnMore": "Learn more"
+      },
+      "material": {
+        "title": "Material & Equipment Monitoring",
+        "description": "Know exactly where materials and equipment are located. Eliminate search time and improve resource coordination.",
+        "learnMore": "Learn more"
+      },
+      "analytics": {
+        "title": "AI Predictive Analytics",
+        "description": "Machine learning predicts delays and safety risks before they occur. Make data-driven decisions to keep projects on track.",
+        "learnMore": "Learn more"
+      }
+    },
+    "stats": {
+      "reduction": {
+        "value": "70%",
+        "label": "Reduction in site visits"
+      },
+      "tracking": {
+        "value": "Real-Time",
+        "label": "Progress tracking"
+      },
+      "monitoring": {
+        "value": "24/7",
+        "label": "Automated monitoring"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "HOW IT WORKS",
+    "title": "From Installation to Insights",
+    "titleHighlight": "in 4 Simple Steps",
+    "description": "SmartSites integrates seamlessly with your workflow, providing immediate value from day one.",
+    "steps": {
+      "deploy": {
+        "number": "01",
+        "title": "Deploy Smart Cameras",
+        "description": "Install AI-enabled cameras and IoT sensors across your site. Quick setup with minimal disruption.",
+        "features": ["5G connectivity", "Weatherproof design", "24/7 operation"]
+      },
+      "process": {
+        "number": "02",
+        "title": "AI Processes Data",
+        "description": "Computer vision analyzes site activity in real-time, detecting workers, equipment, and progress.",
+        "features": ["Object detection", "Activity recognition", "Pattern analysis"]
+      },
+      "monitor": {
+        "number": "03",
+        "title": "Monitor Dashboard",
+        "description": "Access unified dashboard from anywhere. Track progress, locations, and equipment status.",
+        "features": ["Live feeds", "Progress tracking", "Resource monitoring"]
+      },
+      "alerts": {
+        "number": "04",
+        "title": "Receive Alerts",
+        "description": "Get instant notifications for delays, safety incidents, or equipment issues.",
+        "features": ["Smart alerts", "Mobile notifications", "Email reports"]
+      }
+    }
+  },
+  "pricing": {
+    "badge": "PRICING",
+    "title": "Customized & Scalable",
+    "titleHighlight": "Solutions",
+    "description": "Flexible plans designed for construction projects of all sizes, everywhere.",
+    "description2": "No hidden fees, no long-term commitments.",
+    "main": {
+      "badge": "Most Popular",
+      "title": "Tailored Pricing for Your Project",
+      "description": "Our pricing is customized based on your project's unique scale, features, and operational region. We build a plan that fits your needs and budget.",
+      "button": "Get a Custom Quote",
+      "featuresTitle": "Everything included:",
+      "features": [
+        "24/7 Smart camera monitoring",
+        "Real-time AI analytics dashboard",
+        "Worker & equipment tracking",
+        "Digital twin integration",
+        "Automated progress reports",
+        "Safety compliance alerts",
+        "Mobile app access",
+        "Cloud data storage",
+        "Technical support"
+      ],
+      "pilot": {
+        "title": "Early Partner Advantage",
+        "description": "Current pilot program partners receive special pricing and priority support"
+      }
+    },
+    "benefits": {
+      "contracts": {
+        "title": "No Long-Term Contracts",
+        "description": "Flexible subscriptions, cancel anytime"
+      },
+      "inclusive": {
+        "title": "All-Inclusive",
+        "description": "Hardware, software & support included"
+      },
+      "deployment": {
+        "title": "Quick Deployment",
+        "description": "Go live on your site in days"
+      }
+    },
+    "enterprise": {
+      "title": "Need an Enterprise Package?",
+      "description": "Large-scale projects, multi-site deployments, or specific requirements?",
+      "description2": "Let's discuss a tailored solution for your needs.",
+      "button": "Request Enterprise Quote"
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions?",
+    "titleHighlight": "We've Got Answers",
+    "description": "Everything you need to know about SmartSites.",
+    "description2": "Can't find what you're looking for? Schedule a call with our team.",
+    "questions": {
+      "q1": {
+        "question": "How long does it take to deploy SmartSites on my construction site?",
+        "answer": "Installation is quick and non-disruptive. Our team can have cameras and sensors operational within 3-5 business days. The platform is accessible immediately after hardware installation, and your team can start monitoring from day one."
+      },
+      "q2": {
+        "question": "What happens if there's no internet connection on site?",
+        "answer": "SmartSites works with 4G/5G cellular connectivity, so traditional internet infrastructure isn't required. Our cameras have built-in cellular modems and can operate independently. Data is automatically synced when connectivity is restored, ensuring no gaps in monitoring."
+      },
+      "q3": {
+        "question": "Is my project data secure? Who has access to the footage?",
+        "answer": "Data security is our top priority. All footage and data is encrypted end-to-end and stored on secure cloud servers with GDPR compliance. Only authorized personnel from your organization have access through unique login credentials. We never share or sell your data to third parties."
+      },
+      "q4": {
+        "question": "Do I need to train my team to use SmartSites?",
+        "answer": "The platform is designed to be intuitive and user-friendly. We provide a 1-hour onboarding session for your team, and most users are comfortable within the first day. Our support team is also available via phone and email for any questions."
+      },
+      "q5": {
+        "question": "What if I have multiple construction sites?",
+        "answer": "SmartSites is built for multi-site management. You can monitor all your projects from a single dashboard, switching between sites instantly. We offer volume discounts for companies managing multiple sites simultaneously. Contact us for enterprise pricing."
+      },
+      "q6": {
+        "question": "Can SmartSites integrate with our existing project management software?",
+        "answer": "Yes! SmartSites offers API integrations with popular construction management platforms like Procore, PlanGrid, and others. We can also develop custom integrations based on your specific tech stack. Our team will work with you during onboarding to ensure seamless integration."
+      },
+      "q7": {
+        "question": "What's included in the monthly subscription?",
+        "answer": "Everything! Your subscription includes all hardware (cameras, sensors), software platform access, cloud storage, AI analytics, mobile app, regular software updates, and technical support. There are no hidden fees or surprise costs."
+      },
+      "q8": {
+        "question": "How is SmartSites different from regular security cameras?",
+        "answer": "Traditional security cameras only record footage passively. SmartSites uses AI-powered computer vision to actively analyze what's happening on your site—detecting workers, equipment, progress milestones, and safety risks in real-time. You get actionable insights and alerts, not just video footage. Plus, we integrate worker tracking, digital twins, and predictive analytics in one platform."
+      },
+      "q9": {
+        "question": "Can I cancel my subscription at any time?",
+        "answer": "Yes, absolutely. We offer month-to-month subscriptions with no long-term contracts. You can cancel anytime with 30 days' notice. We believe in earning your business every month through excellent service, not locking you into lengthy commitments."
+      }
+    },
+    "cta": {
+      "title": "Still have questions?",
+      "description": "Our team is here to help. Schedule a call to discuss your specific needs.",
+      "button": "Talk to Our Team"
+    }
+  },
+  "contact": {
+    "badge": "CONTACT US",
+    "title": "Ready to Transform",
+    "titleHighlight": "Your Construction Site?",
+    "description": "Schedule a demo and see how SmartSites brings your construction sites under control.",
+    "info": {
+      "header": "Get in Touch",
+      "description": "Have questions? Want to see a demo?",
+      "description2": "We'd love to hear from you.",
+      "email": {
+        "label": "Email",
+        "value": "smartsitestr@gmail.com"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Global Operations"
+      },
+      "trustTitle": "Trusted by:",
+      "companies": ["Benesta Construction", "ESTA Construction", "Yamata İnşaat"]
+    },
+    "form": {
+      "name": {
+        "label": "Full Name *",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Email *",
+        "placeholder": "john@company.com"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Your Company"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+1 (555) 123-4567"
+      },
+      "message": {
+        "label": "Message *",
+        "placeholder": "Tell us about your project..."
+      },
+      "button": "Send Message",
+      "success": "✓ Your email client will open to send your request!",
+      "note": "By submitting, you agree to our privacy policy"
+    }
+  },
+  "footer": {
+    "tagline": "AI-Powered Construction Site Visibility Platform",
+    "email": "smartsitestr@gmail.com",
+    "location": "Global Operations",
+    "sections": {
+      "navigation": {
+        "title": "Navigation",
+        "home": "Home",
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "contact": "Contact"
+      },
+      "features": {
+        "title": "Features",
+        "monitoring": "Smart Camera Monitoring",
+        "tracking": "Worker & Asset Tracking",
+        "material": "Material Monitoring",
+        "analytics": "AI Predictive Analytics"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About Us",
+        "careers": "Careers",
+        "demo": "Request Demo",
+        "privacy": "Privacy Policy"
+      }
+    },
+    "copyright": "© 2024 SmartSites. All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}

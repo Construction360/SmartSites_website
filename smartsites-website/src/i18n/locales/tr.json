@@ -1,0 +1,329 @@
+{
+  "navbar": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "howItWorks": "Nasıl Çalışır",
+    "contact": "İletişim",
+    "scheduleCall": "Görüşme Planla"
+  },
+  "hero": {
+    "badge": "Yapay Zeka Destekli Şantiye Takibi",
+    "title": {
+      "line1": "Her",
+      "line2": "Şantiyeyi",
+      "line3": "Kontrol Altına Alın"
+    },
+    "subtitle": "Gerçek zamanlı yapay zeka izleme, öngörücü analizler ve tam saha görünürlüğü.",
+    "subtitleHighlight": "Karmaşayı kontrole dönüştürün.",
+    "stats": {
+      "monitoring": {
+        "value": "7/24",
+        "label": "Canlı İzleme"
+      },
+      "analytics": {
+        "value": "Gerçek Zamanlı",
+        "label": "Yapay Zeka Analizi"
+      },
+      "coverage": {
+        "value": "%100",
+        "label": "Saha Kapsamı"
+      }
+    },
+    "buttons": {
+      "scheduleCall": "Görüşme Planla",
+      "exploreFeatures": "Özellikleri Keşfet"
+    },
+    "trust": {
+      "label": "Önde gelen inşaat firmalarının tercihi"
+    },
+    "scrollText": "Keşfetmek için kaydırın"
+  },
+  "trustedBy": {
+    "badge": "SEKTÖR ORTAKLIKLARI",
+    "title": "Akıllı İnşaata Geçişte",
+    "titleHighlight": "Küresel Liderlik",
+    "description": "Dünya çapında inşaat yönetimini dönüştürmek için sektör liderleriyle iş birliği yapıyoruz.",
+    "partners": {
+      "benesta": {
+        "name": "Benesta İnşaat",
+        "status": "MVP Uygulandı"
+      },
+      "esta": {
+        "name": "ESTA İnşaat",
+        "status": "Pilot Program"
+      },
+      "yamata": {
+        "name": "Yamata İnşaat ve Yatırım A.Ş.",
+        "status": "Görüşme Aşamasında"
+      }
+    },
+    "mapTitle": "Ortaklarımız - Küresel Erişim",
+    "achievements": {
+      "mvp": {
+        "title": "MVP Uygulandı",
+        "description": "Benesta İnşaat’ta başarıyla test edildi"
+      },
+      "pilot": {
+        "title": "Pilot Programlar",
+        "description": "Sektör liderleriyle geliştirme aşamasında"
+      },
+      "validated": {
+        "title": "Sektör Onaylı",
+        "description": "Uzman inşaat profesyonelleri tarafından doğrulandı"
+      }
+    },
+    "cta": {
+      "text": "Dünya çapındaki sektör liderlerine katılın ve şantiye yönetimini yeniden tanımlayın.",
+      "button": "Görüşme Planla"
+    }
+  },
+  "features": {
+    "badge": "ÖZELLİKLER",
+    "title": "Şantiyenizi",
+    "titleHighlight": "Kontrol Etmek İçin Her Şey",
+    "description": "Bilgisayarlı görü, IoT sensörleri ve öngörücü analizleri birleştiren yapay zeka destekli platform ile tam şantiye görünürlüğü sağlayın.",
+    "cards": {
+      "monitoring": {
+        "title": "Akıllı Kamera İzleme",
+        "description": "Yapay zeka destekli kameralar 7/24 şantiye faaliyetlerini kaydeder. Ekipman, işçi ve ilerleme tespitini otomatik olarak yapar.",
+        "learnMore": "Daha fazla bilgi"
+      },
+      "tracking": {
+        "title": "İşçi ve Varlık Takibi",
+        "description": "BLE/GPS sensörleriyle gerçek zamanlı konum takibi. Güvenlik uyumunu izleyin ve ekipmanları anında bulun.",
+        "learnMore": "Daha fazla bilgi"
+      },
+      "material": {
+        "title": "Malzeme ve Ekipman Takibi",
+        "description": "Malzeme ve ekipmanların tam olarak nerede olduğunu bilin. Arama süresini azaltın, kaynak koordinasyonunu geliştirin.",
+        "learnMore": "Daha fazla bilgi"
+      },
+      "analytics": {
+        "title": "Yapay Zeka Tabanlı Öngörücü Analiz",
+        "description": "Makine öğrenimi, gecikmeleri ve güvenlik risklerini önceden tahmin eder. Veriye dayalı kararlarla projelerinizi doğru yönde tutun.",
+        "learnMore": "Daha fazla bilgi"
+      }
+    },
+    "stats": {
+      "reduction": {
+        "value": "%70",
+        "label": "Saha ziyaretlerinde azalma"
+      },
+      "tracking": {
+        "value": "Gerçek Zamanlı",
+        "label": "İlerleme takibi"
+      },
+      "monitoring": {
+        "value": "7/24",
+        "label": "Otomatik izleme"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "NASIL ÇALIŞIR",
+    "title": "Kurulumdan Analize",
+    "titleHighlight": "4 Basit Adımda",
+    "description": "SmartSites, iş akışınıza sorunsuz bir şekilde entegre olur ve ilk günden itibaren değer üretmeye başlar.",
+    "steps": {
+      "deploy": {
+        "number": "01",
+        "title": "Akıllı Kameraları Kurun",
+        "description": "Yapay zekalı kameraları ve IoT sensörlerini sahaya yerleştirin. Hızlı ve kolay kurulum.",
+        "features": ["5G bağlantısı", "Hava koşullarına dayanıklı tasarım", "7/24 çalışma"]
+      },
+      "process": {
+        "number": "02",
+        "title": "Yapay Zeka Verileri İşler",
+        "description": "Bilgisayarlı görü teknolojisi, işçi, ekipman ve ilerlemeyi gerçek zamanlı olarak analiz eder.",
+        "features": ["Nesne tespiti", "Aktivite tanıma", "Veri deseni analizi"]
+      },
+      "monitor": {
+        "number": "03",
+        "title": "Gösterge Panelinden Takip Edin",
+        "description": "Tek bir panelden tüm sahaları izleyin. İlerlemeyi, konumları ve ekipman durumlarını takip edin.",
+        "features": ["Canlı yayın", "İlerleme takibi", "Kaynak izleme"]
+      },
+      "alerts": {
+        "number": "04",
+        "title": "Anında Bildirim Alın",
+        "description": "Gecikmeler, güvenlik olayları veya ekipman sorunları için anlık bildirim alın.",
+        "features": ["Akıllı uyarılar", "Mobil bildirimler", "E-posta raporları"]
+      }
+    }
+  },
+  "pricing": {
+    "badge": "FİYATLANDIRMA",
+    "title": "Kişiselleştirilmiş ve Ölçeklenebilir",
+    "titleHighlight": "Çözümler",
+    "description": "Her ölçekteki inşaat projeleri için esnek planlar.",
+    "description2": "Gizli ücret yok, uzun vadeli taahhüt yok.",
+    "main": {
+      "badge": "En Popüler",
+      "title": "Projenize Özel Fiyatlandırma",
+      "description": "Fiyatlandırmamız, projenizin kapsamına, özelliklerine ve bölgesine göre özelleştirilir. Bütçenize ve ihtiyacınıza uygun plan oluşturuyoruz.",
+      "button": "Özel Teklif Alın",
+      "featuresTitle": "Tüm hizmetler dahil:",
+      "features": [
+        "7/24 akıllı kamera izleme",
+        "Gerçek zamanlı yapay zeka analiz paneli",
+        "İşçi ve ekipman takibi",
+        "Dijital ikiz entegrasyonu",
+        "Otomatik ilerleme raporları",
+        "Güvenlik uyum bildirimleri",
+        "Mobil uygulama erişimi",
+        "Bulut veri depolama",
+        "Teknik destek"
+      ],
+      "pilot": {
+        "title": "Erken Ortak Avantajı",
+        "description": "Pilot program ortaklarına özel fiyatlandırma ve öncelikli destek"
+      }
+    },
+    "benefits": {
+      "contracts": {
+        "title": "Uzun Süreli Sözleşme Yok",
+        "description": "Esnek abonelik, istediğiniz zaman iptal edin"
+      },
+      "inclusive": {
+        "title": "Her Şey Dahil",
+        "description": "Donanım, yazılım ve destek birlikte"
+      },
+      "deployment": {
+        "title": "Hızlı Kurulum",
+        "description": "Sitenizde birkaç gün içinde aktif olun"
+      }
+    },
+    "enterprise": {
+      "title": "Kurumsal Paket mi Lazım?",
+      "description": "Büyük ölçekli projeler veya çoklu sahalar için özel çözümler sunuyoruz.",
+      "description2": "İhtiyacınıza göre özelleştirilmiş plan konuşalım.",
+      "button": "Kurumsal Teklif Talebi"
+    }
+  },
+  "faq": {
+    "badge": "SSS",
+    "title": "Sorularınız mı var?",
+    "titleHighlight": "Cevaplarımız Hazır",
+    "description": "SmartSites hakkında bilmeniz gereken her şey.",
+    "description2": "Aradığınızı bulamadınız mı? Ekibimizle görüşme planlayın.",
+    "questions": {
+      "q1": {
+        "question": "SmartSites kurulumu ne kadar sürer?",
+        "answer": "Kurulum hızlıdır ve iş akışınızı etkilemez. 3-5 iş günü içinde tüm kameralar ve sensörler aktif hale getirilir. Platform anında kullanılabilir."
+      },
+      "q2": {
+        "question": "Sahada internet yoksa ne olur?",
+        "answer": "SmartSites 4G/5G bağlantısı ile çalışır, geleneksel altyapıya gerek yoktur. Kameralar dahili modemlere sahiptir ve bağlantı sağlandığında veriler otomatik senkronize edilir."
+      },
+      "q3": {
+        "question": "Verilerim güvende mi? Kim erişebilir?",
+        "answer": "Veri güvenliği en öncelikli konumuzdur. Tüm veriler uçtan uca şifrelenir, yalnızca yetkili kullanıcılar erişebilir. Üçüncü şahıslarla paylaşılmaz."
+      },
+      "q4": {
+        "question": "Ekibim sistemi kullanmak için eğitim almalı mı?",
+        "answer": "Arayüz son derece kullanıcı dostudur. 1 saatlik kısa bir eğitim yeterlidir. Destek ekibimiz her zaman yardıma hazırdır."
+      },
+      "q5": {
+        "question": "Birden fazla şantiyem varsa ne olacak?",
+        "answer": "SmartSites çoklu saha yönetimi için tasarlanmıştır. Tüm projelerinizi tek panelden izleyebilirsiniz. Çoklu saha indirimleri mevcuttur."
+      },
+      "q6": {
+        "question": "SmartSites mevcut proje yönetim yazılımımızla entegre olur mu?",
+        "answer": "Evet! Procore, PlanGrid gibi platformlarla API entegrasyonu sunuyoruz. Gerekirse özel entegrasyon da geliştirebiliriz."
+      },
+      "q7": {
+        "question": "Aylık aboneliğe neler dahil?",
+        "answer": "Tüm donanım, yazılım, bulut depolama, AI analitiği, mobil uygulama, güncellemeler ve teknik destek dahildir. Ek ücret yoktur."
+      },
+      "q8": {
+        "question": "SmartSites normal güvenlik kameralarından nasıl farklıdır?",
+        "answer": "Klasik kameralar yalnızca kayıt yapar. SmartSites, yapay zeka ile aktif analiz yapar: işçiler, ekipman, ilerleme ve riskleri anında algılar. Gerçek zamanlı içgörüler sağlar."
+      },
+      "q9": {
+        "question": "Aboneliği istediğim zaman iptal edebilir miyim?",
+        "answer": "Evet, aboneliğinizi 30 gün önceden bildirerek iptal edebilirsiniz. Uzun vadeli sözleşmeler yoktur."
+      }
+    },
+    "cta": {
+      "title": "Hâlâ sorularınız mı var?",
+      "description": "Ekibimiz yardımcı olmaya hazır. İhtiyaçlarınızı konuşmak için görüşme planlayın.",
+      "button": "Ekibimizle Görüşün"
+    }
+  },
+  "contact": {
+    "badge": "BİZE ULAŞIN",
+    "title": "Şantiyenizi Dönüştürmeye",
+    "titleHighlight": "Hazır mısınız?",
+    "description": "Bir demo planlayın ve SmartSites’in şantiyenizi nasıl kontrol altına aldığını görün.",
+    "info": {
+      "header": "İletişim Bilgileri",
+      "description": "Sorularınız mı var? Demo görmek ister misiniz?",
+      "description2": "Sizden haber almayı çok isteriz.",
+      "email": {
+        "label": "E-posta",
+        "value": "smartsitestr@gmail.com"
+      },
+      "location": {
+        "label": "Konum",
+        "value": "Küresel Operasyonlar"
+      },
+      "trustTitle": "Güvenenler:",
+      "companies": ["Benesta İnşaat", "ESTA İnşaat", "Yamata İnşaat"]
+    },
+    "form": {
+      "name": {
+        "label": "Ad Soyad *",
+        "placeholder": "Ahmet Yılmaz"
+      },
+      "email": {
+        "label": "E-posta *",
+        "placeholder": "ahmet@firma.com"
+      },
+      "company": {
+        "label": "Firma",
+        "placeholder": "Firmanızın Adı"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+90 (555) 123 4567"
+      },
+      "message": {
+        "label": "Mesaj *",
+        "placeholder": "Projeniz hakkında bize bilgi verin..."
+      },
+      "button": "Mesaj Gönder",
+      "success": "✓ E-posta istemciniz açılacak ve talebiniz gönderilecektir!",
+      "note": "Göndererek gizlilik politikamızı kabul etmiş olursunuz."
+    }
+  },
+  "footer": {
+    "tagline": "Yapay Zeka Destekli Şantiye Görünürlüğü Platformu",
+    "email": "smartsitestr@gmail.com",
+    "location": "Küresel Operasyonlar",
+    "sections": {
+      "navigation": {
+        "title": "Gezinme",
+        "home": "Ana Sayfa",
+        "features": "Özellikler",
+        "howItWorks": "Nasıl Çalışır",
+        "contact": "İletişim"
+      },
+      "features": {
+        "title": "Özellikler",
+        "monitoring": "Akıllı Kamera İzleme",
+        "tracking": "İşçi ve Varlık Takibi",
+        "material": "Malzeme Takibi",
+        "analytics": "Yapay Zeka Analitiği"
+      },
+      "company": {
+        "title": "Şirket",
+        "about": "Hakkımızda",
+        "careers": "Kariyer",
+        "demo": "Demo Talebi",
+        "privacy": "Gizlilik Politikası"
+      }
+    },
+    "copyright": "© 2024 SmartSites. Tüm hakları saklıdır.",
+    "backToTop": "Başa dön"
+  }
+}
