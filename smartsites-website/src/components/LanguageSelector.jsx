@@ -10,7 +10,9 @@ export default function LanguageSelector() {
   const languages = [
     { code: 'en', name: 'English', flag: '🇬🇧' },  // or 🇺🇸 if you prefer US English
     { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
   ];
   
   const handleLanguageChange = (languageCode) => {

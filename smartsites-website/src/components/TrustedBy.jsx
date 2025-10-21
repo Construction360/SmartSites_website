@@ -1,45 +1,51 @@
+// src/components/TrustedBy.jsx
 import React from 'react';
-import { Check, Calendar, Users, MapPin } from 'lucide-react'; // Add MapPin here
+import { Check, Calendar, Users, MapPin } from 'lucide-react';
 import benestaLogo from '../assets/benesta.svg';
 import estaLogo from '../assets/Esta.png';
 import yamataLogo from '../assets/yamata.png';
 import locationIcon from '../assets/location_icon.png';
 import '../styles/TrustedBy.css';
+import { useTranslation } from 'react-i18next';
 
 export default function TrustedBy() {
+  const { t } = useTranslation();
+  
+  // Partner data with corresponding keys from JSON structure
   const partners = [
     {
-      name: "Benesta Construction",
+      nameKey: 'trustedBy.partners.benesta.name',
       logo: benestaLogo,
-      status: "MVP Deployed"
+      statusKey: 'trustedBy.partners.benesta.status'
     },
     {
-      name: "ESTA Construction",
+      nameKey: 'trustedBy.partners.esta.name',
       logo: estaLogo,
-      status: "Pilot Program"
+      statusKey: 'trustedBy.partners.esta.status'
     },
     {
-      name: "Yamata İnşaat ve Yatırım A.Ş.",
+      nameKey: 'trustedBy.partners.yamata.name',
       logo: yamataLogo,
-      status: "In Discussion"
+      statusKey: 'trustedBy.partners.yamata.status'
     }
   ];
 
-    const achievements = [
+  // Achievement data with corresponding keys from JSON structure
+  const achievements = [
     {
       icon: <Check size={24} />,
-      title: "MVP Deployed",
-      description: "Successfully tested at Benesta Construction"
+      titleKey: 'trustedBy.achievements.mvp.title',
+      descriptionKey: 'trustedBy.achievements.mvp.description'
     },
     {
       icon: <Calendar size={24} />,
-      title: "Pilot Programs",
-      description: "In development with industry leaders"
+      titleKey: 'trustedBy.achievements.pilot.title',
+      descriptionKey: 'trustedBy.achievements.pilot.description'
     },
     {
       icon: <Users size={24} />,
-      title: "Industry Validated",
-      description: "Backed by construction experts"
+      titleKey: 'trustedBy.achievements.validated.title',
+      descriptionKey: 'trustedBy.achievements.validated.description'
     }
   ];
 
@@ -59,14 +65,14 @@ export default function TrustedBy() {
         <div className="trustedby-header">
           <span className="section-badge section-badge-cyan">
             <span className="badge-dot"></span>
-            INDUSTRY PARTNERSHIPS
+            {t('trustedBy.badge')}
           </span>
-          <h2  className="section-title">
-            Leading the Global Shift to 
-             <span className="title-gradient"> Smart Construction</span>
+          <h2 className="section-title">
+            {t('trustedBy.title')}
+            <span className="title-gradient"> {t('trustedBy.titleHighlight')}</span>
           </h2>
           <p className="section-description">
-            Collaborating with industry leaders to transform construction site management worldwide.
+            {t('trustedBy.description')}
           </p>
         </div>
 
@@ -77,7 +83,7 @@ export default function TrustedBy() {
               <div className="partner-logo-wrapper">
                 <img 
                   src={partner.logo} 
-                  alt={partner.name}
+                  alt={t(partner.nameKey)}
                   className="partner-logo"
                   onError={(e) => {
                     e.target.style.display = 'none';
@@ -85,12 +91,12 @@ export default function TrustedBy() {
                   }}
                 />
                 <div className="partner-logo-text">
-                  {partner.name}
+                  {t(partner.nameKey)}
                 </div>
               </div>
               <div className="partner-status">
                 <span className="status-dot"></span>
-                {partner.status}
+                {t(partner.statusKey)}
               </div>
               <div className="partner-card-glow"></div>
             </div>
@@ -99,7 +105,7 @@ export default function TrustedBy() {
        
         {/* Partnership Map Section */}
         <div className="partnership-map-section">
-            <h3 className="map-title">Our Partners-Global Reach</h3>
+            <h3 className="map-title">{t('trustedBy.mapTitle')}</h3>
             <div className="map-container">
                 {/* Pins using the custom PNG icon */}
                 <div className="location-dot dot-turkey" data-tooltip="Benesta: Istanbul, Turkey">
@@ -131,23 +137,23 @@ export default function TrustedBy() {
                 {achievement.icon}
                 <div className="achievement-icon-glow"></div>
               </div>
-              <h3 className="achievement-title">{achievement.title}</h3>
-              <p className="achievement-description">{achievement.description}</p>
+              <h3 className="achievement-title">{t(achievement.titleKey)}</h3>
+              <p className="achievement-description">{t(achievement.descriptionKey)}</p>
             </div>
           ))}
         </div>
 
-        {/* Call to Action - UPDATED */}
+        {/* Call to Action */}
         <div className="trustedby-cta">
           <p className="trustedby-cta-text">
-            Join industry leaders worldwide in revolutionizing site management.
+            {t('trustedBy.cta.text')}
           </p>
           <button 
             className="modern-btn modern-btn-primary modern-btn-large"
             onClick={openCalendly}
           >
             <Calendar size={20} />
-            <span>Schedule a Call</span>
+            <span>{t('trustedBy.cta.button')}</span>
             <div className="btn-glow"></div>
           </button>
         </div>
@@ -158,4 +164,3 @@ export default function TrustedBy() {
     </section>
   );
 }
-

@@ -1,0 +1,329 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "howItWorks": "Wie es funktioniert",
+    "contact": "Kontakt",
+    "scheduleCall": "Gespräch vereinbaren"
+  },
+  "hero": {
+    "badge": "KI-gestützte Baustellenüberwachung",
+    "title": {
+      "line1": "Bringen Sie jede",
+      "line2": "Baustelle",
+      "line3": "unter Kontrolle"
+    },
+    "subtitle": "Echtzeit-KI-Überwachung, prädiktive Analytik und vollständige Baustellentransparenz.",
+    "subtitleHighlight": "Verwandeln Sie Chaos in Kontrolle.",
+    "stats": {
+      "monitoring": {
+        "value": "24/7",
+        "label": "Live-Überwachung"
+      },
+      "analytics": {
+        "value": "Echtzeit",
+        "label": "KI-Analysen"
+      },
+      "coverage": {
+        "value": "100%",
+        "label": "Baustellenabdeckung"
+      }
+    },
+    "buttons": {
+      "scheduleCall": "Gespräch vereinbaren",
+      "exploreFeatures": "Funktionen entdecken"
+    },
+    "trust": {
+      "label": "Vertrauenswürdig für führende Bauunternehmen"
+    },
+    "scrollText": "Nach unten scrollen"
+  },
+  "trustedBy": {
+    "badge": "BRANCHENPARTNERSCHAFTEN",
+    "title": "Führend im globalen Wandel zu",
+    "titleHighlight": "intelligenter Bauweise",
+    "description": "Zusammenarbeit mit Branchenführern zur Transformation des Baustellenmanagements weltweit.",
+    "partners": {
+      "benesta": {
+        "name": "Benesta Construction",
+        "status": "MVP Implementiert"
+      },
+      "esta": {
+        "name": "ESTA Construction",
+        "status": "Pilotprogramm"
+      },
+      "yamata": {
+        "name": "Yamata İnşaat ve Yatırım A.Ş.",
+        "status": "In Gesprächen"
+      }
+    },
+    "mapTitle": "Unsere Partner - Globale Reichweite",
+    "achievements": {
+      "mvp": {
+        "title": "MVP Implementiert",
+        "description": "Erfolgreich getestet bei Benesta Construction"
+      },
+      "pilot": {
+        "title": "Pilotprogramme",
+        "description": "In Entwicklung mit Branchenführern"
+      },
+      "validated": {
+        "title": "Branchenvalidiert",
+        "description": "Unterstützt von Bauexperten"
+      }
+    },
+    "cta": {
+      "text": "Schließen Sie sich Branchenführern weltweit an, um das Baustellenmanagement zu revolutionieren.",
+      "button": "Gespräch vereinbaren"
+    }
+  },
+  "features": {
+    "badge": "FUNKTIONEN",
+    "title": "Alles was Sie brauchen, um",
+    "titleHighlight": "Ihre Baustelle zu kontrollieren",
+    "description": "Umfassende KI-gestützte Plattform, die Computervision, IoT-Sensoren und prädiktive Analytik für vollständige Baustellentransparenz kombiniert.",
+    "cards": {
+      "monitoring": {
+        "title": "Intelligente Kameraüberwachung",
+        "description": "KI-gestützte Kameras erfassen 24/7 Baustellenaktivitäten. Automatische Erkennung von Ausrüstung, Arbeitern und Fortschrittsmeilensteinen mit Computervision.",
+        "learnMore": "Mehr erfahren"
+      },
+      "tracking": {
+        "title": "Arbeiter- & Asset-Tracking",
+        "description": "Echtzeit-Ortungsverfolgung über BLE/GPS-Sensoren. Überwachen Sie Sicherheitskonformität und lokalisieren Sie Geräte sofort in allen Zonen.",
+        "learnMore": "Mehr erfahren"
+      },
+      "material": {
+        "title": "Material- & Geräteüberwachung",
+        "description": "Wissen Sie genau, wo sich Materialien und Geräte befinden. Eliminieren Sie Suchzeiten und verbessern Sie die Ressourcenkoordination.",
+        "learnMore": "Mehr erfahren"
+      },
+      "analytics": {
+        "title": "KI-Prognoseanalysen",
+        "description": "Maschinelles Lernen prognostiziert Verzögerungen und Sicherheitsrisiken, bevor sie auftreten. Treffen Sie datengestützte Entscheidungen, um Projekte auf Kurs zu halten.",
+        "learnMore": "Mehr erfahren"
+      }
+    },
+    "stats": {
+      "reduction": {
+        "value": "70%",
+        "label": "Reduzierung von Baustellenbesuchen"
+      },
+      "tracking": {
+        "value": "Echtzeit",
+        "label": "Fortschrittsverfolgung"
+      },
+      "monitoring": {
+        "value": "24/7",
+        "label": "Automatisierte Überwachung"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "WIE ES FUNKTIONIERT",
+    "title": "Von der Installation bis zu Erkenntnissen",
+    "titleHighlight": "in 4 einfachen Schritten",
+    "description": "SmartSites integriert sich nahtlos in Ihren Arbeitsablauf und bietet vom ersten Tag an unmittelbaren Mehrwert.",
+    "steps": {
+      "deploy": {
+        "number": "01",
+        "title": "Intelligente Kameras installieren",
+        "description": "Installieren Sie KI-gestützte Kameras und IoT-Sensoren auf Ihrer Baustelle. Schnelle Einrichtung mit minimaler Unterbrechung.",
+        "features": ["5G-Konnektivität", "Wetterfestes Design", "24/7-Betrieb"]
+      },
+      "process": {
+        "number": "02",
+        "title": "KI verarbeitet Daten",
+        "description": "Computervision analysiert Baustellenaktivitäten in Echtzeit und erkennt Arbeiter, Ausrüstung und Fortschritte.",
+        "features": ["Objekterkennung", "Aktivitätserkennung", "Musteranalyse"]
+      },
+      "monitor": {
+        "number": "03",
+        "title": "Dashboard überwachen",
+        "description": "Greifen Sie von überall auf ein einheitliches Dashboard zu. Verfolgen Sie Fortschritte, Standorte und Gerätestatus.",
+        "features": ["Live-Feeds", "Fortschrittsverfolgung", "Ressourcenüberwachung"]
+      },
+      "alerts": {
+        "number": "04",
+        "title": "Warnungen erhalten",
+        "description": "Erhalten Sie sofortige Benachrichtigungen über Verzögerungen, Sicherheitsvorfälle oder Geräteprobleme.",
+        "features": ["Intelligente Warnungen", "Mobile Benachrichtigungen", "E-Mail-Berichte"]
+      }
+    }
+  },
+  "pricing": {
+    "badge": "PREISGESTALTUNG",
+    "title": "Angepasste & skalierbare",
+    "titleHighlight": "Lösungen",
+    "description": "Flexible Pläne, entwickelt für Bauprojekte aller Größen, überall.",
+    "description2": "Keine versteckten Gebühren, keine langfristigen Verpflichtungen.",
+    "main": {
+      "badge": "Beliebteste Option",
+      "title": "Maßgeschneiderte Preise für Ihr Projekt",
+      "description": "Unsere Preisgestaltung ist auf die einzigartige Größe, Funktionen und Betriebsregion Ihres Projekts zugeschnitten. Wir erstellen einen Plan, der Ihren Bedürfnissen und Budget entspricht.",
+      "button": "Individuelles Angebot erhalten",
+      "featuresTitle": "Alles inklusive:",
+      "features": [
+        "24/7 Intelligente Kameraüberwachung",
+        "Echtzeit-KI-Analyse-Dashboard",
+        "Arbeiter- & Gerätetracking",
+        "Digital Twin Integration",
+        "Automatisierte Fortschrittsberichte",
+        "Sicherheitskonformitätsalarme",
+        "Mobiler App-Zugriff",
+        "Cloud-Datenspeicherung",
+        "Technischer Support"
+      ],
+      "pilot": {
+        "title": "Frühpartner-Vorteil",
+        "description": "Aktuelle Pilotprogramm-Partner erhalten Sonderpreise und vorrangigen Support"
+      }
+    },
+    "benefits": {
+      "contracts": {
+        "title": "Keine langfristigen Verträge",
+        "description": "Flexible Abonnements, jederzeit kündbar"
+      },
+      "inclusive": {
+        "title": "All-Inclusive",
+        "description": "Hardware, Software & Support inbegriffen"
+      },
+      "deployment": {
+        "title": "Schnelle Bereitstellung",
+        "description": "In wenigen Tagen auf Ihrer Baustelle einsatzbereit"
+      }
+    },
+    "enterprise": {
+      "title": "Benötigen Sie ein Enterprise-Paket?",
+      "description": "Großprojekte, Multi-Standort-Bereitstellungen oder spezifische Anforderungen?",
+      "description2": "Lassen Sie uns eine maßgeschneiderte Lösung für Ihre Bedürfnisse besprechen.",
+      "button": "Enterprise-Angebot anfordern"
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Fragen?",
+    "titleHighlight": "Wir haben Antworten",
+    "description": "Alles, was Sie über SmartSites wissen müssen.",
+    "description2": "Haben Sie nicht gefunden, wonach Sie suchen? Vereinbaren Sie ein Gespräch mit unserem Team.",
+    "questions": {
+      "q1": {
+        "question": "Wie lange dauert es, SmartSites auf meiner Baustelle einzurichten?",
+        "answer": "Die Installation ist schnell und störungsfrei. Unser Team kann Kameras und Sensoren innerhalb von 3-5 Werktagen in Betrieb nehmen. Die Plattform ist sofort nach der Hardware-Installation zugänglich, und Ihr Team kann ab dem ersten Tag mit der Überwachung beginnen."
+      },
+      "q2": {
+        "question": "Was passiert, wenn es keine Internetverbindung auf der Baustelle gibt?",
+        "answer": "SmartSites arbeitet mit 4G/5G-Mobilfunkverbindung, daher ist keine traditionelle Internetinfrastruktur erforderlich. Unsere Kameras haben integrierte Mobilfunkmodems und können unabhängig arbeiten. Daten werden automatisch synchronisiert, wenn die Verbindung wiederhergestellt wird, um Überwachungslücken zu vermeiden."
+      },
+      "q3": {
+        "question": "Sind meine Projektdaten sicher? Wer hat Zugriff auf das Filmmaterial?",
+        "answer": "Datensicherheit hat für uns höchste Priorität. Alle Aufnahmen und Daten werden End-to-End verschlüsselt und auf sicheren Cloud-Servern mit DSGVO-Konformität gespeichert. Nur autorisiertes Personal Ihrer Organisation hat über eindeutige Anmeldedaten Zugriff. Wir teilen oder verkaufen Ihre Daten niemals an Dritte."
+      },
+      "q4": {
+        "question": "Muss ich mein Team schulen, um SmartSites zu nutzen?",
+        "answer": "Die Plattform ist intuitiv und benutzerfreundlich gestaltet. Wir bieten eine 1-stündige Einführungssitzung für Ihr Team an, und die meisten Benutzer sind bereits am ersten Tag vertraut. Unser Support-Team steht auch telefonisch und per E-Mail für alle Fragen zur Verfügung."
+      },
+      "q5": {
+        "question": "Was ist, wenn ich mehrere Baustellen habe?",
+        "answer": "SmartSites ist für Multi-Standort-Management konzipiert. Sie können alle Ihre Projekte von einem einzigen Dashboard aus überwachen und sofort zwischen Standorten wechseln. Wir bieten Mengenrabatte für Unternehmen, die mehrere Standorte gleichzeitig verwalten. Kontaktieren Sie uns für Enterprise-Preise."
+      },
+      "q6": {
+        "question": "Kann SmartSites in unsere bestehende Projektmanagementsoftware integriert werden?",
+        "answer": "Ja! SmartSites bietet API-Integrationen mit beliebten Bauprojektmanagement-Plattformen wie Procore, PlanGrid und anderen. Wir können auch maßgeschneiderte Integrationen basierend auf Ihrem spezifischen Tech-Stack entwickeln. Unser Team arbeitet mit Ihnen während des Onboardings zusammen, um eine nahtlose Integration sicherzustellen."
+      },
+      "q7": {
+        "question": "Was ist im monatlichen Abonnement enthalten?",
+        "answer": "Alles! Ihr Abonnement umfasst die gesamte Hardware (Kameras, Sensoren), Zugang zur Software-Plattform, Cloud-Speicher, KI-Analysen, mobile App, regelmäßige Software-Updates und technischen Support. Es gibt keine versteckten Gebühren oder überraschende Kosten."
+      },
+      "q8": {
+        "question": "Worin unterscheidet sich SmartSites von normalen Sicherheitskameras?",
+        "answer": "Traditionelle Sicherheitskameras zeichnen nur passiv Filmmaterial auf. SmartSites verwendet KI-gestützte Computervision, um aktiv zu analysieren, was auf Ihrer Baustelle passiert - Erkennung von Arbeitern, Ausrüstung, Fortschrittsmeilensteinen und Sicherheitsrisiken in Echtzeit. Sie erhalten praktische Erkenntnisse und Warnungen, nicht nur Videomaterial. Außerdem integrieren wir Arbeiter-Tracking, digitale Zwillinge und prädiktive Analysen in einer Plattform."
+      },
+      "q9": {
+        "question": "Kann ich mein Abonnement jederzeit kündigen?",
+        "answer": "Ja, absolut. Wir bieten Monatsabonnements ohne langfristige Verträge an. Sie können jederzeit mit einer Frist von 30 Tagen kündigen. Wir glauben daran, Ihr Geschäft jeden Monat durch exzellenten Service zu verdienen, nicht durch langfristige Bindungen."
+      }
+    },
+    "cta": {
+      "title": "Noch Fragen?",
+      "description": "Unser Team ist hier, um zu helfen. Planen Sie ein Gespräch, um Ihre spezifischen Bedürfnisse zu besprechen.",
+      "button": "Mit unserem Team sprechen"
+    }
+  },
+  "contact": {
+    "badge": "KONTAKT",
+    "title": "Bereit, Ihre",
+    "titleHighlight": "Baustelle zu transformieren?",
+    "description": "Vereinbaren Sie eine Demo und sehen Sie, wie SmartSites Ihre Baustellen unter Kontrolle bringt.",
+    "info": {
+      "header": "Kontaktieren Sie uns",
+      "description": "Haben Sie Fragen? Möchten Sie eine Demo sehen?",
+      "description2": "Wir freuen uns, von Ihnen zu hören.",
+      "email": {
+        "label": "E-Mail",
+        "value": "smartsitestr@gmail.com"
+      },
+      "location": {
+        "label": "Standort",
+        "value": "Globale Operationen"
+      },
+      "trustTitle": "Vertraut von:",
+      "companies": ["Benesta Construction", "ESTA Construction", "Yamata İnşaat"]
+    },
+    "form": {
+      "name": {
+        "label": "Vollständiger Name *",
+        "placeholder": "Max Mustermann"
+      },
+      "email": {
+        "label": "E-Mail *",
+        "placeholder": "max@firma.com"
+      },
+      "company": {
+        "label": "Unternehmen",
+        "placeholder": "Ihr Unternehmen"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+49 (123) 456-7890"
+      },
+      "message": {
+        "label": "Nachricht *",
+        "placeholder": "Erzählen Sie uns von Ihrem Projekt..."
+      },
+      "button": "Nachricht senden",
+      "success": "✓ Ihr E-Mail-Client wird sich öffnen, um Ihre Anfrage zu senden!",
+      "note": "Durch das Absenden stimmen Sie unserer Datenschutzrichtlinie zu"
+    }
+  },
+  "footer": {
+    "tagline": "KI-gestützte Plattform für Baustellentransparenz",
+    "email": "smartsitestr@gmail.com",
+    "location": "Globale Operationen",
+    "sections": {
+      "navigation": {
+        "title": "Navigation",
+        "home": "Startseite",
+        "features": "Funktionen",
+        "howItWorks": "Wie es funktioniert",
+        "contact": "Kontakt"
+      },
+      "features": {
+        "title": "Funktionen",
+        "monitoring": "Intelligente Kameraüberwachung",
+        "tracking": "Arbeiter- & Asset-Tracking",
+        "material": "Materialüberwachung",
+        "analytics": "KI-Prognoseanalysen"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "about": "Über uns",
+        "careers": "Karriere",
+        "demo": "Demo anfordern",
+        "privacy": "Datenschutzrichtlinie"
+      }
+    },
+    "copyright": "© 2024 SmartSites. Alle Rechte vorbehalten.",
+    "backToTop": "Nach oben"
+  }
+}
