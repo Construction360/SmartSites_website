@@ -8,12 +8,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -32,11 +32,16 @@
   background: rgba(0, 0, 0, 0.08);
 }
 
+.current-language {
+  font-weight: 500;
+}
+
 .language-dropdown {
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
-  min-width: 150px;
+  width: 160px;
+  max-height: 0;
   background: rgba(10, 14, 39, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
@@ -47,6 +52,15 @@
   transform: translateY(-10px);
   transition: all 0.3s ease;
   z-index: 100;
+  overflow: hidden;
+}
+
+.language-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  max-height: 250px; /* Set a reasonable max height */
+  overflow-y: auto; /* Enable scrolling if needed */
 }
 
 [data-theme="light"] .language-dropdown {
@@ -55,33 +69,19 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.language-selector:hover .language-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
 .language-option {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: flex-start;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.625rem 1rem;
   background: none;
   border: none;
   color: var(--text-secondary);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease;
-}
-
-.language-option:first-child {
-  border-radius: 0.75rem 0.75rem 0 0;
-}
-
-.language-option:last-child {
-  border-radius: 0 0 0.75rem 0.75rem;
 }
 
 .language-option:hover {
@@ -102,10 +102,6 @@
   background: rgba(249, 115, 22, 0.1);
 }
 
-.language-flag {
-  font-size: 1.25rem;
-}
-
 .language-name {
   font-weight: 500;
 }
@@ -113,11 +109,15 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .language-toggle {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 0.8125rem;
   }
   
   .language-dropdown {
-    min-width: 120px;
+    width: 140px;
+  }
+  
+  .language-option {
+    padding: 0.5rem 0.75rem;
   }
 }
