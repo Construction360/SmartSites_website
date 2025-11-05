@@ -272,7 +272,7 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  background-image: url('https://storage.googleapis.com/smartsites-website-video/world.svg');
+  background-image: url('https://foldr.space/api/view/lexvFndDbqIKrT5YtVRKHcVS/pngimg.com%20-%20world_map_PNG9.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -280,7 +280,7 @@
 }
 
 [data-theme="light"] .map-container {
-    background-image: url('https://storage.googleapis.com/smartsites-website-video/world-map.svg');
+    background-image: url('https://foldr.space/api/view/PZKl8TzYpBVwC1rWHarhMfFO/The_World_map.png');
 }
 
 .location-dot {
