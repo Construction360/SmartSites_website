@@ -135,7 +135,7 @@ export default function Hero() {
           <div className="hero-visual-container">
             <div className="hero-visual-card">
                <video
-                src="https://storage.googleapis.com/smartsites-website-video/smartsites_intro.mp4"
+                src="https://streamable.com/ztfg3y"
                 className="hero-visual-img"
                 autoPlay
                 loop
