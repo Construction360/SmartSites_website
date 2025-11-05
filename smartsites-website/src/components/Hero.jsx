@@ -135,7 +135,7 @@ export default function Hero() {
           <div className="hero-visual-container">
             <div className="hero-visual-card">
                <video
-                src="https://streamable.com/ztfg3y"
+                src="https://files.catbox.moe/1qktue.mp4"
                 className="hero-visual-img"
                 autoPlay
                 loop
