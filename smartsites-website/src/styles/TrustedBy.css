@@ -327,19 +327,19 @@
   visibility: visible;
 }
 
-[data-theme="dark"] .dot-turkey     { top: 32%; left: 58%; }
-[data-theme="dark"] .dot-turkey-2   { top: 32%; left: 57%; }
-[data-theme="dark"] .dot-russia     { top: 22%; left: 62%; }
-[data-theme="dark"] .dot-russia-2   { top: 21%; left: 75.5%; }
-[data-theme="dark"] .dot-kazakhstan { top: 26%; left: 65%; }
-[data-theme="dark"] .dot-iraq       { top: 36%; left: 61%; }
+[data-theme="dark"] .dot-turkey     { top: 38%; left: 58%; }
+[data-theme="dark"] .dot-turkey-2   { top: 38%; left: 57%; }
+[data-theme="dark"] .dot-russia     { top: 32%; left: 62%; }
+[data-theme="dark"] .dot-russia-2   { top: 30%; left: 75.5%; }
+[data-theme="dark"] .dot-kazakhstan { top: 36.7%; left: 66%; }
+[data-theme="dark"] .dot-iraq       { top: 39.4%; left: 61%; }
 
-[data-theme="light"] .dot-turkey     { top: 38.3%; left: 55.6%; }
-[data-theme="light"] .dot-turkey-2   { top: 38.3%; left: 56.9%; }
-[data-theme="light"] .dot-russia     { top: 22%; left: 62%; }
-[data-theme="light"] .dot-russia-2   { top: 15%; left: 77.5%; }
-[data-theme="light"] .dot-kazakhstan { top: 30%; left: 65%; }
-[data-theme="light"] .dot-iraq       { top: 43%; left: 60%; }
+[data-theme="light"] .dot-turkey     { top: 29.7%; left: 49.4%; }
+[data-theme="light"] .dot-turkey-2   { top: 29.9%; left: 50%; }
+[data-theme="light"] .dot-russia     { top: 22%; left: 54%; }
+[data-theme="light"] .dot-russia-2   { top: 20%; left: 67.5%; }
+[data-theme="light"] .dot-kazakhstan { top: 23.8%; left: 58.4%; }
+[data-theme="light"] .dot-iraq       { top: 34%; left: 53%; }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
