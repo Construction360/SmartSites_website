@@ -36,8 +36,8 @@ export default function Hero() {
         <div className="hero-gradient-1"></div>
         <div className="hero-gradient-2"></div>
         <div className="hero-grid"></div>
-        <div 
-          className="hero-cursor-glow" 
+        <div
+          className="hero-cursor-glow"
           style={{
             left: `${mousePosition.x}px`,
             top: `${mousePosition.y}px`
@@ -61,12 +61,7 @@ export default function Hero() {
             <span className="title-line">{t('hero.title.line3')}</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="modern-hero-subtitle">
-            {t('hero.subtitle')}
-            <br />
-            <span className="subtitle-highlight">{t('hero.subtitleHighlight')}</span>
-          </p>
+
 
           {/* Stats */}
           <div className="modern-hero-stats">
@@ -134,16 +129,18 @@ export default function Hero() {
         <div className="modern-hero-visual">
           <div className="hero-visual-container">
             <div className="hero-visual-card">
-               <video
-                src="https://files.catbox.moe/1qktue.mp4"
-                className="hero-visual-img"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                Your browser does not support the video tag.
-              </video>
+              <div className="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/tnsBZqBI_9M?autoplay=1&mute=1&loop=1&playlist=tnsBZqBI_9M&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1&vq=hd1080"
+                  className="hero-visual-img"
+                  title="SmartSites Intro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ border: 'none' }}
+                ></iframe>
+                {/* Overlay to prevent interaction and hide some YouTube UI elements on hover */}
+                <div className="video-overlay-blocker"></div>
+              </div>
               <div className="visual-overlay"></div>
             </div>
             <div className="visual-float visual-float-1"></div>

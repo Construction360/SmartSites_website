@@ -4,7 +4,8 @@ import { Menu, X, Calendar, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useTranslation } from 'react-i18next'; // Import useTranslation
 import LanguageSelector from './LanguageSelector'; // Import LanguageSelector
-import logo from "../assets/Opaque.png";
+import logo1 from "../assets/logo_white.svg";
+import logo2 from "../assets/logo_black.svg";
 import '../styles/Navbar.css';
 
 
@@ -15,25 +16,36 @@ export default function Navbar() {
   const { t } = useTranslation(); // Initialize translation hook
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 50;
+          setScrolled(prev => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Add favicon to the page
   useEffect(() => {
-    const favicon = document.createElement('link');
-    favicon.rel = 'icon';
-    favicon.href = logo;
-    favicon.type = 'image/png';
-    document.head.appendChild(favicon);
-
-    return () => {
-      document.head.removeChild(favicon);
-    };
-  }, []);
+    const existingFavicon = document.querySelector("link[rel*='icon']");
+    if (existingFavicon) {
+      existingFavicon.href = theme === 'dark' ? logo1 : logo2;
+    } else {
+      const favicon = document.createElement('link');
+      favicon.rel = 'icon';
+      favicon.href = theme === 'dark' ? logo1 : logo2;
+      favicon.type = 'image/svg+xml';
+      document.head.appendChild(favicon);
+    }
+  }, [theme]);
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -54,8 +66,8 @@ export default function Navbar() {
     <nav className={`modern-navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="modern-navbar-container">
         <div className="modern-navbar-logo">
-          <img 
-            src={logo} 
+          <img
+            src={theme === 'dark' ? logo1 : logo2}
             alt="SmartSites Logo"
             className="modern-logo"
           />
@@ -85,9 +97,9 @@ export default function Navbar() {
         <div className="modern-navbar-actions">
           {/* Language Selector */}
           <LanguageSelector />
-          
+
           {/* Theme Toggle */}
-          <button 
+          <button
             className="theme-toggle-btn"
             onClick={toggleTheme}
             aria-label="Toggle theme"
@@ -101,7 +113,7 @@ export default function Navbar() {
           </button>
 
           {/* Schedule Call Button */}
-          <button 
+          <button
             onClick={openCalendly}
             className="modern-btn modern-btn-primary"
           >
@@ -112,7 +124,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="modern-navbar-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -135,12 +147,12 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('contact')} className="modern-mobile-link">
             {t('navbar.contact')}
           </button>
-          
+
           {/* Language Selector Mobile */}
           <LanguageSelector />
-          
+
           {/* Theme Toggle Mobile */}
-          <button 
+          <button
             className="theme-toggle-btn theme-toggle-mobile"
             onClick={toggleTheme}
           >
@@ -158,7 +170,7 @@ export default function Navbar() {
           </button>
 
           {/* Schedule Call Mobile */}
-          <button 
+          <button
             onClick={openCalendly}
             className="modern-btn modern-btn-primary"
           >

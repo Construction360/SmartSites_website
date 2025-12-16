@@ -272,7 +272,7 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  background-image: url('https://foldr.space/api/view/lexvFndDbqIKrT5YtVRKHcVS/pngimg.com%20-%20world_map_PNG9.png');
+  background-image: url('https://imgur.com/ejgOYI9.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -280,7 +280,7 @@
 }
 
 [data-theme="light"] .map-container {
-    background-image: url('https://foldr.space/api/view/PZKl8TzYpBVwC1rWHarhMfFO/The_World_map.png');
+  background-image: url('https://i.imgur.com/EPGcE27.png');
 }
 
 .location-dot {
@@ -293,15 +293,23 @@
 }
 
 .location-dot img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 5px var(--orange-neon)) drop-shadow(0 0 15px rgba(255, 107, 53, 0.6));
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 5px var(--orange-neon)) drop-shadow(0 0 15px rgba(255, 107, 53, 0.6));
 }
 
 @keyframes mapPulse {
-    0% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.1); }
-    100% { transform: translate(-50%, -50%) scale(1); }
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .location-dot::after {
@@ -327,22 +335,69 @@
   visibility: visible;
 }
 
-[data-theme="dark"] .dot-turkey     { top: 38%; left: 58%; }
-[data-theme="dark"] .dot-turkey-2   { top: 38%; left: 57%; }
-[data-theme="dark"] .dot-russia     { top: 32%; left: 62%; }
-[data-theme="dark"] .dot-russia-2   { top: 30%; left: 75.5%; }
-[data-theme="dark"] .dot-kazakhstan { top: 36.7%; left: 66%; }
-[data-theme="dark"] .dot-iraq       { top: 39.4%; left: 61%; }
+[data-theme="dark"] .dot-turkey {
+  top: 31.5%;
+  left: 53%;
+}
 
-[data-theme="light"] .dot-turkey     { top: 29.7%; left: 49.4%; }
-[data-theme="light"] .dot-turkey-2   { top: 29.9%; left: 50%; }
-[data-theme="light"] .dot-russia     { top: 22%; left: 54%; }
-[data-theme="light"] .dot-russia-2   { top: 20%; left: 67.5%; }
-[data-theme="light"] .dot-kazakhstan { top: 23.8%; left: 58.4%; }
-[data-theme="light"] .dot-iraq       { top: 34%; left: 53%; }
+[data-theme="dark"] .dot-turkey-2 {
+  top: 31.5%;
+  left: 54%;
+}
+
+[data-theme="dark"] .dot-russia {
+  top: 24.5%;
+  left: 57.5%;
+}
+
+[data-theme="dark"] .dot-russia-2 {
+  top: 23%;
+  left: 70.5%;
+}
+
+[data-theme="dark"] .dot-kazakhstan {
+  top: 26.7%;
+  left: 62%;
+}
+
+[data-theme="dark"] .dot-iraq {
+  top: 36.4%;
+  left: 57%;
+}
+
+[data-theme="light"] .dot-turkey {
+  top: 29.7%;
+  left: 49.4%;
+}
+
+[data-theme="light"] .dot-turkey-2 {
+  top: 29.9%;
+  left: 50%;
+}
+
+[data-theme="light"] .dot-russia {
+  top: 22%;
+  left: 54%;
+}
+
+[data-theme="light"] .dot-russia-2 {
+  top: 20%;
+  left: 67.5%;
+}
+
+[data-theme="light"] .dot-kazakhstan {
+  top: 23.8%;
+  left: 58.4%;
+}
+
+[data-theme="light"] .dot-iraq {
+  top: 34%;
+  left: 53%;
+}
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
+
   .partners-grid,
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -371,13 +426,16 @@
   .trustedby-cta-text {
     font-size: 1rem;
   }
+
   .map-container {
     padding: 1rem;
   }
+
   .location-dot {
     width: 24px;
     height: 24px;
   }
+
   .location-dot::after {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;

@@ -43,8 +43,8 @@
 }
 
 .modern-logo {
-  height: 60px;  
-  width: 65px;   
+
+  width: 128px;
   filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.3));
   transition: transform 0.3s ease;
 }
@@ -103,27 +103,31 @@
 /* --- MOBILE NAVIGATION (Hidden on Desktop) --- */
 
 .modern-navbar-toggle {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   background: none;
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  z-index: 1001; /* Ensure it's above other elements */
+  z-index: 1001;
+  /* Ensure it's above other elements */
 }
 
 /* ADD THIS RULE for light mode hamburger icon */
 [data-theme="light"] .modern-navbar-toggle {
-    color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 .modern-navbar-mobile {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
 }
 
 
 /* --- RESPONSIVE STYLES --- */
 
 @media (max-width: 768px) {
+
   /* On mobile, hide the desktop menu/actions and show the hamburger toggle */
   .modern-navbar-menu,
   .modern-navbar-actions {
@@ -148,7 +152,7 @@
     right: 0;
     width: 100%;
   }
-  
+
   /* ADD THIS RULE for light mode mobile panel */
   [data-theme="light"] .modern-navbar-mobile {
     background: rgba(255, 255, 255, 0.98);
@@ -165,12 +169,12 @@
     cursor: pointer;
     padding: 0.5rem 0;
   }
-  
+
   /* ADD THIS RULE for light mode mobile links */
   [data-theme="light"] .modern-mobile-link {
     color: var(--text-secondary);
   }
-  
+
   .theme-toggle-mobile {
     display: flex;
   }
@@ -223,10 +227,11 @@
   gap: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary); /* for color change of hamburger button */
+  color: var(--text-primary);
+  /* for color change of hamburger button */
 }
 
 .theme-toggle-mobile:hover {
-  transform: none; /* Disable rotation for the mobile button */
+  transform: none;
+  /* Disable rotation for the mobile button */
 }
-
