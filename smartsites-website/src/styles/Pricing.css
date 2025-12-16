@@ -289,6 +289,38 @@
     padding: 4rem 1.5rem;
   }
 
+  .pricing-header {
+    margin-bottom: 2.5rem;
+    /* Reduced spacing */
+  }
+
+  .pricing-plan-title {
+    font-size: 1.5rem;
+    /* Smaller title to fit better */
+  }
+
+  .pricing-badge {
+    font-size: 0.75rem;
+    /* Sleeker badge */
+    padding: 0.4rem 1rem;
+  }
+
+  .pricing-header {
+    margin-bottom: 2.5rem;
+    /* Reduced spacing */
+  }
+
+  .pricing-plan-title {
+    font-size: 1.5rem;
+    /* Smaller title to fit better */
+  }
+
+  .pricing-badge {
+    font-size: 0.75rem;
+    /* Sleeker badge */
+    padding: 0.4rem 1rem;
+  }
+
   .pricing-main-card {
     padding: 2rem 1.5rem;
   }
