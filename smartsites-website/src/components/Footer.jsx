@@ -1,12 +1,15 @@
 // src/components/Footer.jsx - MODERN REDESIGN
 import React from 'react';
 import { Mail, MapPin, ArrowUp } from 'lucide-react';
-import logo from "../assets/Opaque.png";
+import logo1 from "../assets/transparent_white.png";
+import logo2 from "../assets/transparent_black.png";
 import '../styles/Footer.css';
+import { useTheme } from '../context/ThemeContext'; // Import useTheme
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
   const { t } = useTranslation(); // Initialize translation hook
+  const { theme } = useTheme(); // Get current theme
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (sectionId) => {
@@ -23,8 +26,8 @@ export default function Footer() {
         <div className="modern-footer-content">
           {/* Company Info */}
           <div className="footer-column footer-column-main">
-            <img 
-              src={logo} 
+            <img
+              src={theme === 'dark' ? logo2 : logo1}
               alt="SmartSites"
               className="footer-logo"
             />
