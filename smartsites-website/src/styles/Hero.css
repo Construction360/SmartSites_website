@@ -257,37 +257,7 @@
   margin-bottom: 3rem;
 }
 
-.modern-hero-trust {
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-[data-theme="light"] .modern-hero-trust {
-  border-top-color: rgba(0, 0, 0, 0.1);
-}
-
-.trust-label {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-}
-
-.trust-companies {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.trust-company {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.trust-divider {
-  color: var(--text-muted);
-}
 
 .modern-hero-visual {
   position: relative;

@@ -55,6 +55,11 @@
       "yamata": {
         "name": "Yamata İnşaat ve Yatırım A.Ş.",
         "status": "In Gesprächen"
+      },
+      "ustyapi": {
+        "name": "Ustyapi Construction",
+        "status": "Pilotprogramm",
+        "objective": "Digitale Transformation"
       }
     },
     "mapTitle": "Unsere Partner - Globale Reichweite",
@@ -129,25 +134,41 @@
         "number": "01",
         "title": "Intelligente Kameras installieren",
         "description": "Installieren Sie KI-gestützte Kameras und IoT-Sensoren auf Ihrer Baustelle. Schnelle Einrichtung mit minimaler Unterbrechung.",
-        "features": ["5G-Konnektivität", "Wetterfestes Design", "24/7-Betrieb"]
+        "features": [
+          "5G-Konnektivität",
+          "Wetterfestes Design",
+          "24/7-Betrieb"
+        ]
       },
       "process": {
         "number": "02",
         "title": "KI verarbeitet Daten",
         "description": "Computervision analysiert Baustellenaktivitäten in Echtzeit und erkennt Arbeiter, Ausrüstung und Fortschritte.",
-        "features": ["Objekterkennung", "Aktivitätserkennung", "Musteranalyse"]
+        "features": [
+          "Objekterkennung",
+          "Aktivitätserkennung",
+          "Musteranalyse"
+        ]
       },
       "monitor": {
         "number": "03",
         "title": "Dashboard überwachen",
         "description": "Greifen Sie von überall auf ein einheitliches Dashboard zu. Verfolgen Sie Fortschritte, Standorte und Gerätestatus.",
-        "features": ["Live-Feeds", "Fortschrittsverfolgung", "Ressourcenüberwachung"]
+        "features": [
+          "Live-Feeds",
+          "Fortschrittsverfolgung",
+          "Ressourcenüberwachung"
+        ]
       },
       "alerts": {
         "number": "04",
         "title": "Warnungen erhalten",
         "description": "Erhalten Sie sofortige Benachrichtigungen über Verzögerungen, Sicherheitsvorfälle oder Geräteprobleme.",
-        "features": ["Intelligente Warnungen", "Mobile Benachrichtigungen", "E-Mail-Berichte"]
+        "features": [
+          "Intelligente Warnungen",
+          "Mobile Benachrichtigungen",
+          "E-Mail-Berichte"
+        ]
       }
     }
   },
@@ -268,7 +289,11 @@
         "value": "Globale Operationen"
       },
       "trustTitle": "Vertraut von:",
-      "companies": ["Benesta Construction", "ESTA Construction", "Yamata İnşaat"]
+      "companies": [
+        "Benesta Construction",
+        "ESTA Construction",
+        "Yamata İnşaat"
+      ]
     },
     "form": {
       "name": {

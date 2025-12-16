@@ -4,6 +4,7 @@ import { Check, Calendar, Users, MapPin } from 'lucide-react';
 import benestaLogo from '../assets/benesta.svg';
 import estaLogo from '../assets/Esta.png';
 import yamataLogo from '../assets/yamata.png';
+import ustyapi from '../assets/ustyapi.png';
 import locationIcon from '../assets/location_icon.png';
 import '../styles/TrustedBy.css';
 import { useTranslation } from 'react-i18next';
@@ -30,6 +31,13 @@ export default function TrustedBy() {
       logo: yamataLogo,
       statusKey: 'trustedBy.partners.yamata.status',
       objectiveKey: 'trustedBy.partners.yamata.objective'
+    },
+    {
+      nameKey: 'trustedBy.partners.ustyapi.name',
+      logo: ustyapi,
+      statusKey: 'trustedBy.partners.ustyapi.status',
+      objectiveKey: 'trustedBy.partners.ustyapi.objective',
+      logoClass: 'partner-logo-invert'
     }
   ];
 
@@ -87,7 +95,7 @@ export default function TrustedBy() {
                 <img
                   src={partner.logo}
                   alt={t(partner.nameKey)}
-                  className="partner-logo"
+                  className={`partner-logo ${partner.logoClass || ''}`}
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextElementSibling.style.display = 'flex';

@@ -21,9 +21,28 @@
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-bottom: 4rem;
+}
+
+/* Invert logo for dark mode if it's black */
+.partner-logo.partner-logo-invert {
+  filter: invert(1) brightness(1.5);
+}
+
+.partner-card:hover .partner-logo.partner-logo-invert {
+  filter: invert(1) brightness(1.5);
+}
+
+/* On light mode, don't invert (assuming black logo looks good on white) */
+[data-theme="light"] .partner-logo.partner-logo-invert {
+  filter: none;
+  opacity: 1;
+}
+
+[data-theme="light"] .partner-card:hover .partner-logo.partner-logo-invert {
+  filter: none;
 }
 
 .partner-card {

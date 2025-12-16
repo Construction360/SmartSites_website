@@ -112,17 +112,7 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Trust Badges */}
-          <div className="modern-hero-trust">
-            <p className="trust-label">{t('hero.trust.label')}</p>
-            <div className="trust-companies">
-              <span className="trust-company">Benesta</span>
-              <span className="trust-divider">•</span>
-              <span className="trust-company">ESTA</span>
-              <span className="trust-divider">•</span>
-              <span className="trust-company">Yamata İnşaat</span>
-            </div>
-          </div>
+
         </div>
 
         {/* Hero Image/Visual */}

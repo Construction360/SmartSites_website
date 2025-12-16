@@ -55,6 +55,11 @@
       "yamata": {
         "name": "Yamata İnşaat ve Yatırım A.Ş.",
         "status": "Görüşme Aşamasında"
+      },
+      "ustyapi": {
+        "name": "Üstyapı İnşaat",
+        "status": "Pilot Program",
+        "objective": "Dijital Dönüşüm"
       }
     },
     "mapTitle": "Ortaklarımız - Küresel Erişim",
@@ -129,25 +134,41 @@
         "number": "01",
         "title": "Akıllı Kameraları Kurun",
         "description": "Yapay zekalı kameraları ve IoT sensörlerini sahaya yerleştirin. Hızlı ve kolay kurulum.",
-        "features": ["5G bağlantısı", "Hava koşullarına dayanıklı tasarım", "7/24 çalışma"]
+        "features": [
+          "5G bağlantısı",
+          "Hava koşullarına dayanıklı tasarım",
+          "7/24 çalışma"
+        ]
       },
       "process": {
         "number": "02",
         "title": "Yapay Zeka Verileri İşler",
         "description": "Bilgisayarlı görü teknolojisi, işçi, ekipman ve ilerlemeyi gerçek zamanlı olarak analiz eder.",
-        "features": ["Nesne tespiti", "Aktivite tanıma", "Veri deseni analizi"]
+        "features": [
+          "Nesne tespiti",
+          "Aktivite tanıma",
+          "Veri deseni analizi"
+        ]
       },
       "monitor": {
         "number": "03",
         "title": "Gösterge Panelinden Takip Edin",
         "description": "Tek bir panelden tüm sahaları izleyin. İlerlemeyi, konumları ve ekipman durumlarını takip edin.",
-        "features": ["Canlı yayın", "İlerleme takibi", "Kaynak izleme"]
+        "features": [
+          "Canlı yayın",
+          "İlerleme takibi",
+          "Kaynak izleme"
+        ]
       },
       "alerts": {
         "number": "04",
         "title": "Anında Bildirim Alın",
         "description": "Gecikmeler, güvenlik olayları veya ekipman sorunları için anlık bildirim alın.",
-        "features": ["Akıllı uyarılar", "Mobil bildirimler", "E-posta raporları"]
+        "features": [
+          "Akıllı uyarılar",
+          "Mobil bildirimler",
+          "E-posta raporları"
+        ]
       }
     }
   },
@@ -268,7 +289,11 @@
         "value": "Küresel Operasyonlar"
       },
       "trustTitle": "Güvenenler:",
-      "companies": ["Benesta İnşaat", "ESTA İnşaat", "Yamata İnşaat"]
+      "companies": [
+        "Benesta İnşaat",
+        "ESTA İnşaat",
+        "Yamata İnşaat"
+      ]
     },
     "form": {
       "name": {
