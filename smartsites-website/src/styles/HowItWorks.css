@@ -158,7 +158,7 @@
 .howitworks-bg-grid {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -167,7 +167,7 @@
 }
 
 [data-theme="light"] .howitworks-bg-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
 }
@@ -180,7 +180,41 @@
 }
 
 @media (max-width: 768px) {
+  .modern-howitworks {
+    padding: 4rem 1.5rem;
+  }
+
   .modern-steps-timeline {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modern-steps-timeline::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .modern-steps-timeline::-webkit-scrollbar-thumb {
+    background: var(--orange-neon);
+    border-radius: 4px;
+  }
+
+  .modern-steps-timeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .modern-step-card {
+    min-width: 280px;
+    scroll-snap-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .step-connector {
+    display: none;
   }
 }

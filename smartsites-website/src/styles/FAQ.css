@@ -170,7 +170,25 @@
   .faq-section {
     padding: 4rem 1.5rem;
   }
+
+  .faq-accordion {
+    gap: 0.75rem;
+    /* Reduced gap from 1rem */
+  }
+
+  .faq-question {
+    padding: 1rem;
+    /* Compact padding */
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+
+  .faq-answer.open {
+    padding: 0 1rem 1rem 1rem;
+  }
+
   .faq-answer p {
     margin-left: 0;
+    font-size: 0.9rem;
   }
 }

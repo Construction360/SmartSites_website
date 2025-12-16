@@ -15,24 +15,24 @@
   --bg-primary: #0A0E27;
   --bg-secondary: #131829;
   --bg-tertiary: #1a1f3a;
-  
+
   /* Neon Colors */
   --orange-neon: #FF6B35;
   --cyan-neon: #00D9FF;
   --purple-neon: #B759FF;
   --pink-neon: #FF2E97;
-  
+
   /* Text Colors */
   --text-primary: #FFFFFF;
   --text-secondary: #B8BFCC;
   --text-muted: #6B7280;
-  
+
   /* Gradients */
   --gradient-orange: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);
   --gradient-cyan: linear-gradient(135deg, #00D9FF 0%, #4DFFFF 100%);
   --gradient-purple: linear-gradient(135deg, #B759FF 0%, #D499FF 100%);
   --gradient-mixed: linear-gradient(135deg, #FF6B35 0%, #00D9FF 50%, #B759FF 100%);
-  
+
   /* Shadows & Glows */
   --glow-orange: 0 0 20px rgba(255, 107, 53, 0.5);
   --glow-cyan: 0 0 20px rgba(0, 217, 255, 0.5);
@@ -81,24 +81,24 @@ body {
   --bg-primary: #FFFFFF;
   --bg-secondary: #F9FAFB;
   --bg-tertiary: #F3F4F6;
-  
+
   /* Keep neon colors but adjust for light background */
   --orange-neon: #F97316;
   --cyan-neon: #0EA5E9;
   --purple-neon: #9333EA;
   --pink-neon: #EC4899;
-  
+
   /* Text Colors for Light Mode */
   --text-primary: #111827;
   --text-secondary: #4B5563;
   --text-muted: #9CA3AF;
-  
+
   /* Adjusted Gradients for Light Mode */
   --gradient-orange: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
   --gradient-cyan: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);
   --gradient-purple: linear-gradient(135deg, #9333EA 0%, #A855F7 100%);
   --gradient-mixed: linear-gradient(135deg, #F97316 0%, #0EA5E9 50%, #9333EA 100%);
-  
+
   /* Adjusted Glows for Light Mode */
   --glow-orange: 0 0 20px rgba(249, 115, 22, 0.3);
   --glow-cyan: 0 0 20px rgba(14, 165, 233, 0.3);
@@ -255,6 +255,18 @@ body {
   letter-spacing: -0.02em;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    /* Reduced from 3.5rem */
+    line-height: 1.2;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
 .section-description {
   font-size: 1.125rem;
   color: var(--text-secondary);
@@ -280,6 +292,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -291,6 +304,7 @@ body {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -298,28 +312,37 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes gradientShift {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
 }
 
 @keyframes pulse {
-    0%, 100% {
-      opacity: 0.15;
-    }
-    50% {
-      opacity: 0.3;
-    }
+
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
 }

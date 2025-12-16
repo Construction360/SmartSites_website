@@ -434,7 +434,38 @@
     padding: 4rem 1.5rem;
   }
 
-  .partners-grid,
+  .partners-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-right: -1.5rem;
+    /* Bleed to edge */
+    padding-right: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .partner-card {
+    min-width: 260px;
+    scroll-snap-align: center;
+    padding: 2rem 1.5rem;
+    /* Tighter padding for mobile */
+  }
+
+  .partners-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .partners-grid::-webkit-scrollbar-thumb {
+    background: var(--cyan-neon);
+    border-radius: 4px;
+  }
+
+  .partners-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
   .achievements-grid {
     grid-template-columns: 1fr;
   }

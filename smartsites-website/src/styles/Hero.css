@@ -398,7 +398,9 @@
   }
 
   .modern-hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    /* Reduced from 2.5rem */
+    line-height: 1.2;
   }
 
   .modern-hero-stats {

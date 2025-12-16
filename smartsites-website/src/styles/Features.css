@@ -236,7 +236,38 @@
 
 @media (max-width: 768px) {
   .modern-features-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    /* Space for scrollbar/shadow */
+    -webkit-overflow-scrolling: touch;
+    margin-right: -2rem;
+    /* Bleed to edge */
+    padding-right: 2rem;
+    /* Bleed to edge */
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .modern-features-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .modern-features-grid::-webkit-scrollbar-thumb {
+    background: var(--orange-neon);
+    border-radius: 4px;
+  }
+
+  .modern-features-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .modern-feature-card {
+    min-width: 280px;
+    /* Fixed width for cards */
+    max-width: 280px;
+    scroll-snap-align: center;
   }
 
   .modern-stats-bar {
