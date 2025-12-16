@@ -186,32 +186,93 @@
 
   .modern-steps-timeline {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1.5rem;
-    padding-bottom: 2rem;
-    margin-right: -1.5rem;
-    padding-right: 1.5rem;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    gap: 0;
+    padding-left: 1.5rem;
+    /* Space for timeline line */
+    border-left: 2px solid rgba(255, 107, 53, 0.2);
+    margin-left: 1rem;
+    overflow-x: visible;
+    /* Disable scroll */
+    padding-bottom: 0;
+    margin-right: 0;
   }
 
+  /* Disable scrollbar styles */
   .modern-steps-timeline::-webkit-scrollbar {
-    height: 4px;
-  }
-
-  .modern-steps-timeline::-webkit-scrollbar-thumb {
-    background: var(--orange-neon);
-    border-radius: 4px;
-  }
-
-  .modern-steps-timeline::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    display: none;
   }
 
   .modern-step-card {
-    min-width: 280px;
-    scroll-snap-align: center;
-    padding: 2rem 1.5rem;
+    min-width: auto;
+    scroll-snap-align: none;
+    padding: 0 0 3rem 1.5rem;
+    /* Bottom padding for spacing */
+    background: transparent !important;
+    /* Remove card bg */
+    border: none;
+    backdrop-filter: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Custom timeline dot */
+  .modern-step-card::before {
+    content: '';
+    position: absolute;
+    left: -1.6rem;
+    /* Align with border line */
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background: var(--bg-primary);
+    border: 2px solid var(--orange-neon);
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  /* Active dot effect */
+  .modern-step-card::after {
+    content: '';
+    position: absolute;
+    left: -1.35rem;
+    top: 0.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--orange-neon);
+    border-radius: 50%;
+    z-index: 3;
+    opacity: 0.5;
+  }
+
+  .step-number-badge {
+    display: none;
+    /* Hide big number badge, use dots */
+  }
+
+  .step-icon-circle {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 1rem 0;
+    /* Left align icon */
+    background: rgba(255, 107, 53, 0.05);
+    border-width: 1px;
+  }
+
+  .step-icon-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .step-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-content {
+    text-align: left;
   }
 
   .step-connector {

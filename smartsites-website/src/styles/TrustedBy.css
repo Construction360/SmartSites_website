@@ -488,12 +488,16 @@
   }
 
   .location-dot {
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12.5px;
+    margin-top: -7px;
+    /* Shift dots up slightly on mobile */
   }
 
   .location-dot::after {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+    bottom: 105%;
+    /* Adjusted offset */
   }
 }

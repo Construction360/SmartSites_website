@@ -413,5 +413,22 @@
 
   .modern-hero-visual {
     order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .video-wrapper {
+    aspect-ratio: 4 / 5;
+    /* Make it tall (Portrait Mode) */
+  }
+
+  /* Force the landscape video to cover the tall container */
+  .hero-visual-img {
+    width: 300% !important;
+    /* Extremely wide to ensure height coverage */
+    height: 100% !important;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) scale(1.2);
+    /* Center and scale */
   }
 }

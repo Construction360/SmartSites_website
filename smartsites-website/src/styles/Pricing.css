@@ -302,7 +302,61 @@
   }
 
   .pricing-benefits {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 1rem;
+    padding-bottom: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .pricing-benefits::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pricing-benefit-card {
+    min-width: auto;
+    scroll-snap-align: none;
+    padding: 1rem;
+    background: transparent !important;
+    /* Minimal look */
+    border: none;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+    text-align: left;
+    align-items: center;
+  }
+
+  .pricing-benefit-card:hover {
+    transform: none;
+  }
+
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    font-size: 1.25rem;
+    background: rgba(0, 217, 255, 0.05);
+  }
+
+  .benefit-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Wrapper for text to handle grid layout properly */
+  .benefit-title {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .benefit-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    grid-column: 2;
+    /* Ensure description sits below title but aligned right */
   }
 
   .pricing-pilot-banner {
