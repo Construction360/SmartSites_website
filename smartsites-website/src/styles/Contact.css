@@ -2,13 +2,13 @@
 
 .modern-contact {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 3rem 1rem;
   background: var(--bg-secondary);
   overflow: hidden;
 }
 
 .modern-contact-container {
-  max-width: 1400px;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -17,13 +17,13 @@
 .modern-contact-content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  margin-top: 4rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .modern-contact-info {
   position: relative;
-  padding: 3rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
@@ -31,8 +31,10 @@
 }
 
 [data-theme="light"] .modern-contact-info {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: none;
 }
 
 .contact-info-header {
@@ -47,21 +49,22 @@
 }
 
 .contact-info-header h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  color: var(--text-primary);
 }
 
 .contact-info-text {
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.7;
 }
 
 .contact-info-items {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-info-item {
@@ -72,8 +75,8 @@
 
 .info-icon {
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,6 +112,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
+  font-weight: 600;
 }
 
 .info-value {
@@ -131,8 +135,8 @@
 }
 
 [data-theme="light"] .contact-trust-box {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.05);
 }
 
 .trust-box-title {
@@ -140,6 +144,7 @@
   color: var(--text-muted);
   text-transform: uppercase;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .trust-box-companies {
@@ -166,7 +171,7 @@
 }
 
 .modern-contact-form-wrapper {
-  padding: 3rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
@@ -174,8 +179,10 @@
 }
 
 [data-theme="light"] .modern-contact-form-wrapper {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: none;
 }
 
 .modern-contact-form {
@@ -208,20 +215,20 @@
 
 .modern-form-group input,
 .modern-form-group textarea {
-  padding: 1rem;
+  padding: 0.75rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: inherit;
   transition: all 0.3s ease;
 }
 
 [data-theme="light"] .modern-form-group input,
 [data-theme="light"] .modern-form-group textarea {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: #f8fafc;
+  border-color: #e2e8f0;
   color: var(--text-primary);
 }
 
@@ -230,13 +237,14 @@
   outline: none;
   border-color: var(--orange-neon);
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
 }
 
 [data-theme="light"] .modern-form-group input:focus,
 [data-theme="light"] .modern-form-group textarea:focus {
-  background: rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
+  background: #ffffff;
+  border-color: var(--orange-neon);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
 }
 
 .modern-form-group input::placeholder,
