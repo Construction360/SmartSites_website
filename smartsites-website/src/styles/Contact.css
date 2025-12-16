@@ -17,7 +17,7 @@
 .modern-contact-content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -26,7 +26,7 @@
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   backdrop-filter: blur(20px);
 }
 
@@ -174,7 +174,7 @@
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   backdrop-filter: blur(10px);
 }
 
@@ -188,13 +188,13 @@
 .modern-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .modern-form-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .modern-form-group {
@@ -215,12 +215,12 @@
 
 .modern-form-group input,
 .modern-form-group textarea {
-  padding: 0.75rem;
+  padding: 0.6rem 0.75rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-family: inherit;
   transition: all 0.3s ease;
 }
@@ -254,7 +254,7 @@
 
 .modern-form-group textarea {
   resize: vertical;
-  min-height: 150px;
+  min-height: 100px;
 }
 
 .modern-form-success {
