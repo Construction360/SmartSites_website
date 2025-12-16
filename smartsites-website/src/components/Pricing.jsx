@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Pricing() {
   const { t } = useTranslation();
-  
+
   // Define icons for benefits
   const benefitIcons = {
     contracts: <Zap size={24} />,
@@ -102,19 +102,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Custom Quote CTA */}
-        <div className="pricing-custom-quote">
-          <h3 className="custom-quote-title">{t('pricing.enterprise.title')}</h3>
-          <p className="custom-quote-text">
-            {t('pricing.enterprise.description')}
-            <br />
-            {t('pricing.enterprise.description2')}
-          </p>
-          <button className="modern-btn modern-btn-secondary modern-btn-large" onClick={openCalendly}>
-            <span>{t('pricing.enterprise.button')}</span>
-            <div className="btn-glow-secondary"></div>
-          </button>
-        </div>
+
       </div>
 
       {/* Background */}

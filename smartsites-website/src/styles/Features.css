@@ -16,8 +16,9 @@
 
 .modern-features-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  /* Changed from 2 to 4 to prevent "zoomed" look */
+  gap: 1.5rem;
   margin-bottom: 4rem;
 }
 
@@ -30,12 +31,15 @@
 .feature-card-inner {
   position: relative;
   height: 100%;
-  padding: 2.5rem;
+  padding: 1.75rem;
+  /* Reduced from 2.5rem */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 [data-theme="light"] .feature-card-inner {
@@ -46,7 +50,8 @@
 .modern-feature-card:hover .feature-card-inner {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--orange-neon);
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  /* Reduced hover lift from -10px */
 }
 
 [data-theme="light"] .modern-feature-card:hover .feature-card-inner {
@@ -55,9 +60,11 @@
 
 .feature-icon-wrapper {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 2rem;
+  width: 60px;
+  /* Reduced from 80px */
+  height: 60px;
+  /* Reduced from 80px */
+  margin-bottom: 1.5rem;
 }
 
 .feature-icon {
@@ -68,7 +75,7 @@
   align-items: center;
   justify-content: center;
   background: var(--gradient-orange);
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   color: white;
   z-index: 1;
 }
@@ -104,17 +111,21 @@
 }
 
 .feature-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  /* Reduced from 1.5rem */
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .feature-description {
-  font-size: 1rem;
+  font-size: 0.9375rem;
+  /* Reduced from 1rem */
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+  /* Pushes button to bottom */
 }
 
 .feature-learn-more {
@@ -217,9 +228,9 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .modern-features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

@@ -10,23 +10,26 @@ import { useTranslation } from 'react-i18next';
 
 export default function TrustedBy() {
   const { t } = useTranslation();
-  
+
   // Partner data with corresponding keys from JSON structure
   const partners = [
     {
       nameKey: 'trustedBy.partners.benesta.name',
       logo: benestaLogo,
-      statusKey: 'trustedBy.partners.benesta.status'
+      statusKey: 'trustedBy.partners.benesta.status',
+      objectiveKey: 'trustedBy.partners.benesta.objective'
     },
     {
       nameKey: 'trustedBy.partners.esta.name',
       logo: estaLogo,
-      statusKey: 'trustedBy.partners.esta.status'
+      statusKey: 'trustedBy.partners.esta.status',
+      objectiveKey: 'trustedBy.partners.esta.objective'
     },
     {
       nameKey: 'trustedBy.partners.yamata.name',
       logo: yamataLogo,
-      statusKey: 'trustedBy.partners.yamata.status'
+      statusKey: 'trustedBy.partners.yamata.status',
+      objectiveKey: 'trustedBy.partners.yamata.objective'
     }
   ];
 
@@ -81,8 +84,8 @@ export default function TrustedBy() {
           {partners.map((partner, index) => (
             <div key={index} className="partner-card">
               <div className="partner-logo-wrapper">
-                <img 
-                  src={partner.logo} 
+                <img
+                  src={partner.logo}
                   alt={t(partner.nameKey)}
                   className="partner-logo"
                   onError={(e) => {
@@ -98,65 +101,42 @@ export default function TrustedBy() {
                 <span className="status-dot"></span>
                 {t(partner.statusKey)}
               </div>
+              <div className="partner-objective">
+                {t(partner.objectiveKey)}
+              </div>
               <div className="partner-card-glow"></div>
             </div>
           ))}
         </div>
-       
+
         {/* Partnership Map Section */}
         <div className="partnership-map-section">
-            <h3 className="map-title">{t('trustedBy.mapTitle')}</h3>
-            <div className="map-container">
-                {/* Pins using the custom PNG icon */}
-                <div className="location-dot dot-turkey" data-tooltip="Benesta: Istanbul, Turkey">
-                    <img src={locationIcon} alt="Location Pin"/>
-                </div>
-                <div className="location-dot dot-turkey-2" data-tooltip="Yamata: Istanbul, Turkey">
-                     <img src={locationIcon} alt="Location Pin"/>
-                </div>
-                <div className="location-dot dot-russia" data-tooltip="ESTA: Russia">
-                     <img src={locationIcon} alt="Location Pin"/>
-                </div>
-                <div className="location-dot dot-russia-2" data-tooltip="Yamata: Russia">
-                     <img src={locationIcon} alt="Location Pin"/>
-                </div>
-                <div className="location-dot dot-kazakhstan" data-tooltip="ESTA: Kazakhstan">
-                     <img src={locationIcon} alt="Location Pin"/>
-                </div>
-                <div className="location-dot dot-iraq" data-tooltip="ESTA & Yamata: Iraq">
-                     <img src={locationIcon} alt="Location Pin"/>
-                </div>
+          <h3 className="map-title">{t('trustedBy.mapTitle')}</h3>
+          <div className="map-container">
+            {/* Pins using the custom PNG icon */}
+            <div className="location-dot dot-turkey" data-tooltip="Benesta: Istanbul, Turkey">
+              <img src={locationIcon} alt="Location Pin" />
             </div>
+            <div className="location-dot dot-turkey-2" data-tooltip="Yamata: Istanbul, Turkey">
+              <img src={locationIcon} alt="Location Pin" />
+            </div>
+            <div className="location-dot dot-russia" data-tooltip="ESTA: Russia">
+              <img src={locationIcon} alt="Location Pin" />
+            </div>
+            <div className="location-dot dot-russia-2" data-tooltip="Yamata: Russia">
+              <img src={locationIcon} alt="Location Pin" />
+            </div>
+            <div className="location-dot dot-kazakhstan" data-tooltip="ESTA: Kazakhstan">
+              <img src={locationIcon} alt="Location Pin" />
+            </div>
+            <div className="location-dot dot-iraq" data-tooltip="ESTA & Yamata: Iraq">
+              <img src={locationIcon} alt="Location Pin" />
+            </div>
+          </div>
         </div>
 
-        {/* Achievements */}
-        <div className="achievements-grid">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="achievement-card">
-              <div className="achievement-icon">
-                {achievement.icon}
-                <div className="achievement-icon-glow"></div>
-              </div>
-              <h3 className="achievement-title">{t(achievement.titleKey)}</h3>
-              <p className="achievement-description">{t(achievement.descriptionKey)}</p>
-            </div>
-          ))}
-        </div>
 
-        {/* Call to Action */}
-        <div className="trustedby-cta">
-          <p className="trustedby-cta-text">
-            {t('trustedBy.cta.text')}
-          </p>
-          <button 
-            className="modern-btn modern-btn-primary modern-btn-large"
-            onClick={openCalendly}
-          >
-            <Calendar size={20} />
-            <span>{t('trustedBy.cta.button')}</span>
-            <div className="btn-glow"></div>
-          </button>
-        </div>
+
       </div>
 
       {/* Background Elements */}

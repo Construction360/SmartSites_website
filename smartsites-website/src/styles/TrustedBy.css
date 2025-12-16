@@ -104,18 +104,24 @@
 }
 
 .partner-status {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 217, 255, 0.1);
-  border: 1px solid rgba(0, 217, 255, 0.3);
-  border-radius: 2rem;
-  color: var(--cyan-neon);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--orange-neon);
+  background: rgba(255, 107, 53, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.partner-objective {
+  margin-top: 0.5rem;
   font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-align: center;
+  font-weight: 500;
 }
 
 [data-theme="light"] .partner-status {

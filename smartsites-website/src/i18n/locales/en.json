@@ -46,15 +46,18 @@
     "partners": {
       "benesta": {
         "name": "Benesta Construction",
-        "status": "MVP Deployed"
+        "status": "MVP Deployed",
+        "objective": "Targeting 100% Site Digitalization"
       },
       "esta": {
         "name": "ESTA Construction",
-        "status": "Pilot Program"
+        "status": "Pilot Program",
+        "objective": "Goal: Zero Safety Incidents"
       },
       "yamata": {
         "name": "Yamata İnşaat ve Yatırım A.Ş.",
-        "status": "In Discussion"
+        "status": "In Discussion",
+        "objective": "Projected: 40% Faster Reporting"
       }
     },
     "mapTitle": "Our Partners-Global Reach",
@@ -129,25 +132,41 @@
         "number": "01",
         "title": "Deploy Smart Cameras",
         "description": "Install AI-enabled cameras and IoT sensors across your site. Quick setup with minimal disruption.",
-        "features": ["5G connectivity", "Weatherproof design", "24/7 operation"]
+        "features": [
+          "5G connectivity",
+          "Weatherproof design",
+          "24/7 operation"
+        ]
       },
       "process": {
         "number": "02",
         "title": "AI Processes Data",
         "description": "Computer vision analyzes site activity in real-time, detecting workers, equipment, and progress.",
-        "features": ["Object detection", "Activity recognition", "Pattern analysis"]
+        "features": [
+          "Object detection",
+          "Activity recognition",
+          "Pattern analysis"
+        ]
       },
       "monitor": {
         "number": "03",
         "title": "Monitor Dashboard",
         "description": "Access unified dashboard from anywhere. Track progress, locations, and equipment status.",
-        "features": ["Live feeds", "Progress tracking", "Resource monitoring"]
+        "features": [
+          "Live feeds",
+          "Progress tracking",
+          "Resource monitoring"
+        ]
       },
       "alerts": {
         "number": "04",
         "title": "Receive Alerts",
         "description": "Get instant notifications for delays, safety incidents, or equipment issues.",
-        "features": ["Smart alerts", "Mobile notifications", "Email reports"]
+        "features": [
+          "Smart alerts",
+          "Mobile notifications",
+          "Email reports"
+        ]
       }
     }
   },
@@ -268,7 +287,11 @@
         "value": "Global Operations"
       },
       "trustTitle": "Trusted by:",
-      "companies": ["Benesta Construction", "ESTA Construction", "Yamata İnşaat"]
+      "companies": [
+        "Benesta Construction",
+        "ESTA Construction",
+        "Yamata İnşaat"
+      ]
     },
     "form": {
       "name": {
