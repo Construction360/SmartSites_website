@@ -71,4 +71,4 @@ The project follows a standard React application structure:
 
 ## Owner:
 
-Sheikh Muhammed Tadeeb
+Sheikh Muhammed Tadeeb (SmartSites)
