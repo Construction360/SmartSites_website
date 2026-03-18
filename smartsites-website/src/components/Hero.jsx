@@ -1,20 +1,11 @@
-// src/components/Hero.jsx - WITH i18n
-import React, { useEffect, useState } from 'react';
-import { ArrowRight, Zap, Eye, Shield, Calendar } from 'lucide-react';
-import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import React from 'react';
+import { ArrowRight, Calendar, Eye, Zap, ShieldCheck } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import siteMonitoringImage from '../assets/abc.png';
 import '../styles/Hero.css';
 
 export default function Hero() {
-  const { t } = useTranslation(); // Initialize translation hook
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  const { t } = useTranslation();
 
   const openCalendly = () => {
     if (window.Calendly) {
@@ -31,119 +22,73 @@ export default function Hero() {
 
   return (
     <section className="modern-hero" id="home">
-      {/* Animated Background */}
-      <div className="modern-hero-bg">
-        <div className="hero-gradient-1"></div>
-        <div className="hero-gradient-2"></div>
-        <div className="hero-grid"></div>
-        <div
-          className="hero-cursor-glow"
-          style={{
-            left: `${mousePosition.x}px`,
-            top: `${mousePosition.y}px`
-          }}
-        ></div>
+      <div className="modern-hero-bg" aria-hidden="true">
+        <img
+          src={siteMonitoringImage}
+          alt=""
+          className="hero-background-image"
+        />
+        <div className="hero-media-overlay"></div>
+        <div className="hero-media-vignette"></div>
+        <div className="hero-media-noise"></div>
       </div>
 
       <div className="modern-hero-container">
         <div className="modern-hero-content">
-          {/* Badge */}
-          <div className="modern-hero-badge">
-            <Zap size={16} />
-            <span>{t('hero.badge')}</span>
-            <div className="badge-glow"></div>
-          </div>
-
-          {/* Main Heading */}
           <h1 className="modern-hero-title">
             <span className="title-line">{t('hero.title.line1')}</span>
             <span className="title-line title-gradient">{t('hero.title.line2')}</span>
             <span className="title-line">{t('hero.title.line3')}</span>
           </h1>
 
-
-
-          {/* Stats */}
-          <div className="modern-hero-stats">
-            <div className="hero-stat-card">
-              <div className="stat-icon">
-                <Eye />
-              </div>
-              <div className="stat-content">
-                <div className="stat-value">{t('hero.stats.monitoring.value')}</div>
-                <div className="stat-label">{t('hero.stats.monitoring.label')}</div>
-              </div>
-              <div className="stat-glow"></div>
-            </div>
-
-            <div className="hero-stat-card">
-              <div className="stat-icon stat-icon-cyan">
-                <Zap />
-              </div>
-              <div className="stat-content">
-                <div className="stat-value">{t('hero.stats.analytics.value')}</div>
-                <div className="stat-label">{t('hero.stats.analytics.label')}</div>
-              </div>
-              <div className="stat-glow stat-glow-cyan"></div>
-            </div>
-
-            <div className="hero-stat-card">
-              <div className="stat-icon stat-icon-purple">
-                <Shield />
-              </div>
-              <div className="stat-content">
-                <div className="stat-value">{t('hero.stats.coverage.value')}</div>
-                <div className="stat-label">{t('hero.stats.coverage.label')}</div>
-              </div>
-              <div className="stat-glow stat-glow-purple"></div>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
           <div className="modern-hero-buttons">
             <button className="modern-btn modern-btn-primary modern-btn-large" onClick={openCalendly}>
               <Calendar size={20} />
               <span>{t('hero.buttons.scheduleCall')}</span>
-              <div className="btn-glow"></div>
             </button>
             <button className="modern-btn modern-btn-secondary modern-btn-large" onClick={scrollToFeatures}>
               <span>{t('hero.buttons.exploreFeatures')}</span>
-              <div className="btn-glow-secondary"></div>
+              <ArrowRight size={18} />
             </button>
           </div>
 
-
-        </div>
-
-        {/* Hero Image/Visual */}
-        <div className="modern-hero-visual">
-          <div className="hero-visual-container">
-            <div className="hero-visual-card">
-              <div className="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/tnsBZqBI_9M?autoplay=1&mute=1&loop=1&playlist=tnsBZqBI_9M&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1&vq=hd1080"
-                  className="hero-visual-img"
-                  title="SmartSites Intro"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ border: 'none' }}
-                ></iframe>
-                {/* Overlay to prevent interaction and hide some YouTube UI elements on hover */}
-                <div className="video-overlay-blocker"></div>
+          <div className="hero-stats-row">
+            <div className="hero-stat-pill">
+              <span className="hero-stat-icon"><Eye size={16} /></span>
+              <div className="hero-stat-copy">
+                <span className="hero-stat-value">{t('hero.stats.monitoring.value')}</span>
+                <span className="hero-stat-label">{t('hero.stats.monitoring.label')}</span>
               </div>
-              <div className="visual-overlay"></div>
             </div>
-            <div className="visual-float visual-float-1"></div>
-            <div className="visual-float visual-float-2"></div>
-            <div className="visual-float visual-float-3"></div>
+            <div className="hero-stat-pill">
+              <span className="hero-stat-icon hero-stat-icon--blue"><Zap size={16} /></span>
+              <div className="hero-stat-copy">
+                <span className="hero-stat-value">{t('hero.stats.analytics.value')}</span>
+                <span className="hero-stat-label">{t('hero.stats.analytics.label')}</span>
+              </div>
+            </div>
+            <div className="hero-stat-pill">
+              <span className="hero-stat-icon hero-stat-icon--muted"><ShieldCheck size={16} /></span>
+              <div className="hero-stat-copy">
+                <span className="hero-stat-value">{t('hero.stats.coverage.value')}</span>
+                <span className="hero-stat-label">{t('hero.stats.coverage.label')}</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="scroll-indicator">
-        <div className="scroll-line"></div>
-        <span>{t('hero.scrollText')}</span>
+        <div className="modern-hero-visual">
+          <div className="hero-video-shell">
+            <iframe
+              src="https://www.youtube.com/embed/tnsBZqBI_9M?autoplay=1&mute=1&playsinline=1&loop=1&playlist=tnsBZqBI_9M&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&disablekb=1"
+              title="SmartSites product video"
+              className="hero-video-embed"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <div className="hero-video-blocker" aria-hidden="true"></div>
+          </div>
+        </div>
       </div>
     </section>
   );

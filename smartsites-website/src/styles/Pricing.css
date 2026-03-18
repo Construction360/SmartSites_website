@@ -22,16 +22,16 @@
 .pricing-main-card {
   position: relative;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--surface-elevated) 84%, transparent);
+  border: 1px solid var(--border-subtle);
   border-radius: 2rem;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   margin-bottom: 3rem;
 }
 
 [data-theme="light"] .pricing-main-card {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--border-subtle);
 }
 
 .pricing-badge {
@@ -43,13 +43,14 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1.5rem;
-  background: var(--gradient-orange);
+  background: rgba(50, 103, 224, 0.1);
+  border: 1px solid rgba(50, 103, 224, 0.18);
   border-radius: 2rem;
-  color: white;
+  color: var(--blue-soft);
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+  box-shadow: none;
 }
 
 .pricing-header-content {
@@ -82,11 +83,8 @@
 
 .pricing-value {
   font-size: 3.5rem;
-  font-weight: 900;
-  background: var(--gradient-orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700;
+  color: var(--blue-soft);
   line-height: 1;
 }
 
@@ -131,7 +129,7 @@
 }
 
 .feature-check {
-  color: var(--cyan-neon);
+  color: var(--accent-orange);
   flex-shrink: 0;
 }
 
@@ -140,15 +138,15 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: rgba(0, 217, 255, 0.05);
-  border: 1px solid rgba(0, 217, 255, 0.2);
+  background: rgba(28, 93, 216, 0.05);
+  border: 1px solid rgba(28, 93, 216, 0.18);
   border-radius: 1rem;
   margin-top: 2rem;
 }
 
 [data-theme="light"] .pricing-pilot-banner {
-  background: rgba(14, 165, 233, 0.05);
-  border-color: rgba(14, 165, 233, 0.2);
+  background: rgba(27, 79, 209, 0.06);
+  border-color: rgba(27, 79, 209, 0.25);
 }
 
 .pilot-banner-icon {
@@ -159,7 +157,7 @@
 .pilot-banner-content h4 {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--cyan-neon);
+  color: var(--blue-soft);
   margin-bottom: 0.5rem;
 }
 
@@ -172,9 +170,9 @@
 .pricing-card-glow {
   position: absolute;
   inset: -3px;
-  background: var(--gradient-orange);
-  opacity: 0.1;
-  filter: blur(30px);
+  background: radial-gradient(circle, rgba(50, 103, 224, 0.35), transparent 60%);
+  opacity: 0.08;
+  filter: blur(26px);
   z-index: -1;
   border-radius: 2rem;
 }
@@ -188,21 +186,21 @@
 
 .pricing-benefit-card {
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--surface-elevated) 82%, transparent);
+  border: 1px solid var(--border-subtle);
   border-radius: 1rem;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 [data-theme="light"] .pricing-benefit-card {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--border-subtle);
 }
 
 .pricing-benefit-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-5px);
+  background: color-mix(in srgb, var(--surface-elevated) 90%, transparent);
+  transform: translateY(-3px);
 }
 
 [data-theme="light"] .pricing-benefit-card:hover {
@@ -216,15 +214,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 217, 255, 0.1);
-  border: 2px solid rgba(0, 217, 255, 0.3);
+  background: rgba(28, 93, 216, 0.08);
+  border: 1px solid rgba(28, 93, 216, 0.18);
   border-radius: 50%;
-  color: var(--cyan-neon);
+  color: var(--blue-soft);
 }
 
 [data-theme="light"] .benefit-icon {
-  background: rgba(14, 165, 233, 0.1);
-  border-color: rgba(14, 165, 233, 0.3);
+  background: rgba(27, 79, 209, 0.08);
+  border-color: rgba(27, 79, 209, 0.25);
 }
 
 .benefit-title {
@@ -243,15 +241,15 @@
 .pricing-custom-quote {
   text-align: center;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--surface-elevated) 82%, transparent);
+  border: 1px solid var(--border-subtle);
   border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 [data-theme="light"] .pricing-custom-quote {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--border-subtle);
 }
 
 .custom-quote-title {
@@ -274,13 +272,13 @@
   right: -20%;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(50, 103, 224, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
 [data-theme="light"] .pricing-bg-gradient {
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(27, 79, 209, 0.07) 0%, transparent 70%);
 }
 
 /* Responsive Styles */
@@ -370,7 +368,7 @@
     height: 48px;
     margin: 0;
     font-size: 1.25rem;
-    background: rgba(0, 217, 255, 0.05);
+    background: rgba(28, 93, 216, 0.06);
   }
 
   .benefit-icon svg {

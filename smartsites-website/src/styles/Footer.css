@@ -4,7 +4,7 @@
   position: relative;
   padding: 4rem 2rem 2rem 2rem;
   background: var(--bg-primary);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 
@@ -40,7 +40,7 @@
 .footer-logo {
   height: 100px;
   width: 105px;
-  filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.3));
+  filter: none;
 }
 
 .footer-tagline {
@@ -66,7 +66,7 @@
 }
 
 .footer-contact-link:hover {
-  color: var(--orange-neon);
+  color: var(--blue-soft);
 }
 
 .footer-column-title {
@@ -88,7 +88,7 @@
 }
 
 .footer-link:hover {
-  color: var(--orange-neon);
+  color: var(--blue-soft);
 }
 
 .footer-text {
@@ -120,8 +120,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--surface-elevated) 76%, transparent);
+  border: 1px solid var(--border-subtle);
   border-radius: 2rem;
   color: var(--text-secondary);
   font-size: 0.875rem;
@@ -131,14 +131,14 @@
 }
 
 [data-theme="light"] .scroll-to-top {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--border-subtle);
 }
 
 .scroll-to-top:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--surface-elevated) 86%, transparent);
   color: var(--text-primary);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .footer-glow {
@@ -148,7 +148,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 200px;
-  background: radial-gradient(ellipse, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(50, 103, 224, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
