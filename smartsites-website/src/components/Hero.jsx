@@ -35,6 +35,7 @@ export default function Hero() {
 
       <div className="modern-hero-container">
         <div className="modern-hero-content">
+          <div className="modern-hero-chip">AI-Powered construction monitoring</div>
           <h1 className="modern-hero-title">
             <span className="title-line">{t('hero.title.line1')}</span>
             <span className="title-line title-gradient">{t('hero.title.line2')}</span>
@@ -54,21 +55,21 @@ export default function Hero() {
 
           <div className="hero-stats-row">
             <div className="hero-stat-pill">
-              <span className="hero-stat-icon"><Eye size={16} /></span>
+              <span className="hero-stat-icon"><Eye size={18} /></span>
               <div className="hero-stat-copy">
                 <span className="hero-stat-value">{t('hero.stats.monitoring.value')}</span>
                 <span className="hero-stat-label">{t('hero.stats.monitoring.label')}</span>
               </div>
             </div>
             <div className="hero-stat-pill">
-              <span className="hero-stat-icon hero-stat-icon--blue"><Zap size={16} /></span>
+              <span className="hero-stat-icon hero-stat-icon--blue"><Zap size={18} /></span>
               <div className="hero-stat-copy">
                 <span className="hero-stat-value">{t('hero.stats.analytics.value')}</span>
                 <span className="hero-stat-label">{t('hero.stats.analytics.label')}</span>
               </div>
             </div>
             <div className="hero-stat-pill">
-              <span className="hero-stat-icon hero-stat-icon--muted"><ShieldCheck size={16} /></span>
+              <span className="hero-stat-icon hero-stat-icon--muted"><ShieldCheck size={18} /></span>
               <div className="hero-stat-copy">
                 <span className="hero-stat-value">{t('hero.stats.coverage.value')}</span>
                 <span className="hero-stat-label">{t('hero.stats.coverage.label')}</span>

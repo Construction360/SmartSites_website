@@ -94,12 +94,12 @@
 }
 
 .language-option.active {
-  background: rgba(28, 93, 216, 0.08);
+  background: rgba(251, 184, 83, 0.08);
   color: var(--blue-soft);
 }
 
 [data-theme="light"] .language-option.active {
-  background: rgba(27, 79, 209, 0.08);
+  background: rgba(251, 184, 83, 0.08);
 }
 
 .language-name {

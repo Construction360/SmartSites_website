@@ -129,10 +129,10 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--blue-soft);
-  background: rgba(28, 93, 216, 0.08);
+  background: rgba(251, 184, 83, 0.08);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
-  border: 1px solid rgba(28, 93, 216, 0.3);
+  border: 1px solid rgba(251, 184, 83, 0.3);
 }
 
 .partner-objective {
@@ -144,8 +144,8 @@
 }
 
 [data-theme="light"] .partner-status {
-  background: rgba(27, 79, 209, 0.06);
-  border-color: rgba(27, 79, 209, 0.25);
+  background: rgba(251, 184, 83, 0.06);
+  border-color: rgba(251, 184, 83, 0.25);
 }
 
 .status-dot {
@@ -159,7 +159,7 @@
 .partner-card-glow {
   position: absolute;
   inset: -2px;
-  background: radial-gradient(circle, rgba(50, 103, 224, 0.4), transparent 60%);
+  background: radial-gradient(circle, rgba(251, 184, 83, 0.4), transparent 60%);
   opacity: 0;
   filter: blur(20px);
   transition: opacity 0.4s ease;
@@ -210,21 +210,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(28, 93, 216, 0.08);
-  border: 2px solid rgba(28, 93, 216, 0.35);
+  background: rgba(251, 184, 83, 0.08);
+  border: 2px solid rgba(251, 184, 83, 0.35);
   border-radius: 50%;
   color: var(--blue-soft);
 }
 
 [data-theme="light"] .achievement-icon {
-  background: rgba(27, 79, 209, 0.08);
-  border-color: rgba(27, 79, 209, 0.25);
+  background: rgba(251, 184, 83, 0.08);
+  border-color: rgba(251, 184, 83, 0.25);
 }
 
 .achievement-icon-glow {
   position: absolute;
   inset: -8px;
-  background: radial-gradient(circle, rgba(50, 103, 224, 0.35), transparent 60%);
+  background: radial-gradient(circle, rgba(251, 184, 83, 0.35), transparent 60%);
   opacity: 0.2;
   filter: blur(15px);
   border-radius: 50%;
@@ -272,13 +272,13 @@
   transform: translate(-50%, -50%);
   width: 1000px;
   height: 1000px;
-  background: radial-gradient(circle, rgba(50, 103, 224, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 184, 83, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
 [data-theme="light"] .trustedby-bg-gradient {
-  background: radial-gradient(circle, rgba(27, 79, 209, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 184, 83, 0.07) 0%, transparent 70%);
 }
 
 .partnership-map-section {
@@ -297,7 +297,7 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  background-image: url('https://imgur.com/ejgOYI9.png');
+  background-image: url('../assets/black-map.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -305,7 +305,7 @@
 }
 
 [data-theme="light"] .map-container {
-  background-image: url('https://i.imgur.com/EPGcE27.png');
+  background-image: url('../assets/black-map.png');
 }
 
 .location-dot {
@@ -320,7 +320,7 @@
 .location-dot img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 4px rgba(50, 103, 224, 0.24));
+  filter: drop-shadow(0 0 4px rgba(251, 184, 83, 0.24));
 }
 
 @keyframes mapPulse {
@@ -391,33 +391,33 @@
 }
 
 [data-theme="light"] .dot-turkey {
-  top: 29.7%;
-  left: 49.4%;
+  top: 31.5%;
+  left: 53%;
 }
 
 [data-theme="light"] .dot-turkey-2 {
-  top: 29.9%;
-  left: 50%;
-}
-
-[data-theme="light"] .dot-russia {
-  top: 22%;
+  top: 31.5%;
   left: 54%;
 }
 
+[data-theme="light"] .dot-russia {
+  top: 24.5%;
+  left: 57.5%;
+}
+
 [data-theme="light"] .dot-russia-2 {
-  top: 20%;
-  left: 67.5%;
+  top: 23%;
+  left: 70.5%;
 }
 
 [data-theme="light"] .dot-kazakhstan {
-  top: 23.8%;
-  left: 58.4%;
+  top: 26.7%;
+  left: 62%;
 }
 
 [data-theme="light"] .dot-iraq {
-  top: 34%;
-  left: 53%;
+  top: 36.4%;
+  left: 57%;
 }
 
 /* Responsive Styles */

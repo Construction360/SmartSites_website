@@ -15,11 +15,11 @@
   --bg-secondary: #0b1522;
   --bg-tertiary: #122033;
 
-  --blue-strong: #3b66c7;
-  --blue-soft: #6f90d6;
+  --blue-strong: #FBB853;
+  --blue-soft: #FBB853;
   --blue-subtle: #c2d0ee;
 
-  --accent-orange: #f58b3b;
+  --accent-orange: #FBB853;
 
   --text-primary: #f9fbff;
   --text-secondary: #bcc7da;
@@ -29,7 +29,7 @@
   --surface-elevated-subtle: rgba(16, 28, 46, 0.84);
   --border-subtle: rgba(129, 144, 175, 0.26);
 
-  --gradient-primary: linear-gradient(135deg, #446dc8 0%, #5f84d1 100%);
+  --gradient-primary: linear-gradient(135deg, #FBB853 0%, #F5A623 100%);
   --shadow-soft: 0 18px 40px rgba(3, 8, 20, 0.28);
 }
 
@@ -75,11 +75,11 @@ section {
   --bg-secondary: #fbfcfe;
   --bg-tertiary: #e9edf6;
 
-  --blue-strong: #375dbe;
-  --blue-soft: #5f7fca;
+  --blue-strong: #FBB853;
+  --blue-soft: #FBB853;
   --blue-subtle: #9eb1de;
 
-  --accent-orange: #f58b3b;
+  --accent-orange: #FBB853;
 
   --text-primary: #0f172a;
   --text-secondary: #4b5563;
@@ -89,7 +89,7 @@ section {
   --surface-elevated-subtle: rgba(246, 248, 252, 0.92);
   --border-subtle: rgba(148, 163, 184, 0.32);
 
-  --gradient-primary: linear-gradient(135deg, #375dbe 0%, #5f7fca 100%);
+  --gradient-primary: linear-gradient(135deg, #FBB853 0%, #F5A623 100%);
 
   --shadow-soft: 0 16px 34px rgba(15, 23, 42, 0.1);
 }
@@ -178,7 +178,7 @@ section {
 .btn-glow-secondary {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(50, 103, 224, 0.18), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(251, 184, 83, 0.18), transparent 55%);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: -1;
@@ -212,18 +212,18 @@ section {
 
 [data-theme="light"] .section-badge {
   background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(55, 93, 190, 0.16);
+  border-color: rgba(251, 184, 83, 0.16);
 }
 
 .section-badge-cyan {
-  background: rgba(50, 103, 224, 0.08);
-  border-color: rgba(50, 103, 224, 0.35);
+  background: rgba(251, 184, 83, 0.08);
+  border-color: rgba(251, 184, 83, 0.35);
   color: var(--blue-soft);
 }
 
 .section-badge-purple {
-  background: rgba(50, 103, 224, 0.08);
-  border-color: rgba(50, 103, 224, 0.35);
+  background: rgba(251, 184, 83, 0.08);
+  border-color: rgba(251, 184, 83, 0.35);
   color: var(--blue-soft);
 }
 
@@ -264,7 +264,8 @@ section {
 }
 
 .title-gradient {
-  color: color-mix(in srgb, var(--blue-strong) 78%, var(--text-primary));
+  /* Use exact accent yellow for headings (avoid muted color-mix) */
+  color: var(--accent-orange);
 }
 
 /* ========================================

@@ -91,15 +91,15 @@
 .icon-bg {
   position: absolute;
   inset: 0;
-  background: rgba(28, 93, 216, 0.08);
-  border: 1px solid rgba(28, 93, 216, 0.35);
+  background: rgba(251, 184, 83, 0.08);
+  border: 1px solid rgba(251, 184, 83, 0.35);
   border-radius: 0.75rem;
   z-index: 0;
 }
 
 .info-icon-cyan .icon-bg {
-  background: rgba(28, 93, 216, 0.08);
-  border-color: rgba(28, 93, 216, 0.35);
+  background: rgba(251, 184, 83, 0.08);
+  border-color: rgba(251, 184, 83, 0.35);
 }
 
 .info-content {
@@ -165,7 +165,7 @@
   right: -50px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(50, 103, 224, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 184, 83, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -237,15 +237,16 @@
   outline: none;
   border-color: var(--blue-soft);
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 4px rgba(28, 93, 216, 0.15);
+  box-shadow: 0 0 0 4px rgba(251, 184, 83, 0.15);
 }
 
 [data-theme="light"] .modern-form-group input:focus,
 [data-theme="light"] .modern-form-group textarea:focus {
   background: #ffffff;
   border-color: var(--blue-soft);
-  box-shadow: 0 0 0 4px rgba(27, 79, 209, 0.12);
+  box-shadow: 0 0 0 4px rgba(251, 184, 83, 0.12);
 }
+
 
 .modern-form-group input::placeholder,
 .modern-form-group textarea::placeholder {
@@ -259,8 +260,8 @@
 
 .modern-form-success {
   padding: 1rem;
-  background: rgba(28, 93, 216, 0.08);
-  border: 1px solid rgba(28, 93, 216, 0.35);
+  background: rgba(251, 184, 83, 0.08);
+  border: 1px solid rgba(251, 184, 83, 0.35);
   border-radius: 0.75rem;
   color: var(--blue-soft);
   text-align: center;
@@ -279,7 +280,7 @@
   right: -20%;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(50, 103, 224, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 184, 83, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
