@@ -1,283 +1,171 @@
-/* src/styles/HowItWorks.css */
+/* src/styles/HowItWorks.css - PREMIUM DARK SAAS REWRITE */
 
-.modern-howitworks {
+.saas-howitworks {
   position: relative;
   padding: 8rem 2rem;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   overflow: hidden;
 }
 
-.modern-howitworks-container {
-  max-width: 1400px;
+.saas-howitworks-container {
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
-.modern-steps-timeline {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.saas-section-header.centered {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+/* Horizontal Timeline */
+.saas-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
   gap: 2rem;
-  margin-bottom: 4rem;
-  position: relative;
 }
 
-.modern-step-card {
-  position: relative;
-  padding: 2.5rem;
-  background: color-mix(in srgb, var(--surface-elevated) 84%, transparent);
-  border: 1px solid var(--border-subtle);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(8px);
-  transition: all 0.4s ease;
-}
-
-[data-theme="light"] .modern-step-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: var(--border-subtle);
-}
-
-.modern-step-card:hover {
-  background: color-mix(in srgb, var(--surface-elevated) 92%, transparent);
-  transform: translateY(-4px);
-}
-
-[data-theme="light"] .modern-step-card:hover {
-  background: rgba(0, 0, 0, 0.04);
-}
-
-.step-number-badge {
+/* The connecting line */
+.saas-timeline::after {
+  content: '';
   position: absolute;
-  top: -15px;
-  left: 2rem;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(251, 184, 83, 0.12);
-  border: 1px solid rgba(251, 184, 83, 0.18);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--blue-soft);
-  box-shadow: none;
-}
-
-.badge-pulse {
-  position: absolute;
-  inset: -5px;
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.45), transparent 60%);
-  opacity: 0.22;
-  filter: blur(12px);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.step-icon-circle {
-  width: 100px;
-  height: 100px;
-  margin: 2rem auto 2rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Lighter yellow circle behind icons */
-  background: rgba(251, 184, 83, 0.08);
-  border: 1px solid rgba(251, 184, 83, 0.22);
-  border-radius: 50%;
-  color: var(--blue-soft);
-  position: relative;
-}
-
-.icon-circle-glow {
-  position: absolute;
-  inset: -10px;
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.35), transparent 60%);
-  opacity: 0.16;
-  filter: blur(18px);
-  border-radius: 50%;
+  top: 24px;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-glass-hover), transparent);
   z-index: 0;
 }
 
-.step-content {
+.saas-timeline-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  flex: 1;
 }
 
-.step-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-.step-description {
-  font-size: 0.9375rem;
+.timeline-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 0 8px var(--bg-secondary);
 }
 
-.step-features {
+.saas-timeline-node:hover .timeline-dot {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 20px var(--accent-gold-dim), 0 0 0 8px var(--bg-secondary);
+  transform: scale(1.1);
+}
+
+.timeline-content {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-features {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 1rem;
+  text-align: left;
 }
 
-.step-features li {
+.timeline-features li {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
-.step-features li svg {
-  color: var(--accent-orange);
-  flex-shrink: 0;
+.timeline-features li svg {
+  color: var(--text-primary);
+  opacity: 0.5;
 }
 
-.step-connector {
-  display: none;
-}
-
-.step-card-glow {
+/* Background utilities */
+.howitworks-bg-glow {
   position: absolute;
-  inset: -2px;
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.35), transparent 60%);
-  opacity: 0;
-  filter: blur(20px);
-  transition: opacity 0.4s ease;
-  z-index: -1;
-  border-radius: 1.5rem;
-}
-
-.modern-step-card:hover .step-card-glow {
-  opacity: 0.12;
-}
-
-.howitworks-bg-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(251, 184, 83, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(251, 184, 83, 0.02) 1px, transparent 1px);
-  background-size: 72px 72px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
-[data-theme="light"] .howitworks-bg-grid {
-  background-image:
-    linear-gradient(rgba(251, 184, 83, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(251, 184, 83, 0.06) 1px, transparent 1px);
-}
+@media (max-width: 860px) {
+  .saas-timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-left: 2rem;
+  }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .modern-steps-timeline {
-    grid-template-columns: repeat(2, 1fr);
+  .saas-timeline::after {
+    top: 0;
+    bottom: 0;
+    left: 43px;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, transparent, var(--border-glass-hover), transparent);
+  }
+
+  .saas-timeline-node {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .timeline-dot {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+    margin-top: 0.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .modern-howitworks {
-    padding: 4rem 1.5rem;
-  }
-
-  .modern-steps-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding-left: 1.5rem;
-    /* Space for timeline line */
-    border-left: 2px solid rgba(251, 184, 83, 0.25);
-    margin-left: 1rem;
-    overflow-x: visible;
-    /* Disable scroll */
-    padding-bottom: 0;
-    margin-right: 0;
-  }
-
-  /* Disable scrollbar styles */
-  .modern-steps-timeline::-webkit-scrollbar {
-    display: none;
-  }
-
-  .modern-step-card {
-    min-width: auto;
-    scroll-snap-align: none;
-    padding: 0 0 3rem 1.5rem;
-    /* Bottom padding for spacing */
-    background: transparent !important;
-    /* Remove card bg */
-    border: none;
-    backdrop-filter: none;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Custom timeline dot */
-  .modern-step-card::before {
-    content: '';
-    position: absolute;
-    left: -1.6rem;
-    /* Align with border line */
-    top: 0;
-    width: 1rem;
-    height: 1rem;
-    background: var(--bg-primary);
-    border: 2px solid var(--blue-soft);
-    border-radius: 50%;
-    z-index: 2;
-  }
-
-  /* Active dot effect */
-  .modern-step-card::after {
-    content: '';
-    position: absolute;
-    left: -1.35rem;
-    top: 0.25rem;
-    width: 0.5rem;
-    height: 0.5rem;
-    background: var(--blue-soft);
-    border-radius: 50%;
-    z-index: 3;
-    opacity: 0.5;
-  }
-
-  .step-number-badge {
-    display: none;
-    /* Hide big number badge, use dots */
-  }
-
-  .step-icon-circle {
-    width: 50px;
-    height: 50px;
-    margin: 0 0 1rem 0;
-    /* Left align icon */
-    background: rgba(251, 184, 83, 0.06);
-    border-width: 1px;
-  }
-
-  .step-icon-circle svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .step-title {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .step-content {
-    text-align: left;
-  }
-
-  .step-connector {
-    display: none;
+  .saas-howitworks {
+    padding: 5rem 1.5rem;
   }
 }

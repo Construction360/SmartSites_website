@@ -1,49 +1,43 @@
-// src/components/Features.jsx - MODERN REDESIGN
 import React from 'react';
-import { Camera, Users, Package, Brain, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Camera, Users, Package, Brain, ArrowRight } from 'lucide-react';
 import '../styles/Features.css';
 import { useTranslation } from 'react-i18next';
 
 export default function Features() {
   const { t } = useTranslation();
 
-  // Feature data moved to an array, using i18n translation keys
   const features = [
     {
-      icon: <Camera size={32} />,
+      icon: <Camera size={24} />,
       titleKey: 'features.cards.monitoring.title',
       descriptionKey: 'features.cards.monitoring.description',
       learnMoreKey: 'features.cards.monitoring.learnMore',
-      color: "orange",
-      delay: "0s"
+      className: "bento-large"
     },
     {
-      icon: <Users size={32} />,
+      icon: <Users size={24} />,
       titleKey: 'features.cards.tracking.title',
       descriptionKey: 'features.cards.tracking.description',
       learnMoreKey: 'features.cards.tracking.learnMore',
-      color: "cyan",
-      delay: "0.1s"
+      className: "bento-square"
     },
     {
-      icon: <Package size={32} />,
+      icon: <Package size={24} />,
       titleKey: 'features.cards.material.title',
       descriptionKey: 'features.cards.material.description',
       learnMoreKey: 'features.cards.material.learnMore',
-      color: "purple",
-      delay: "0.2s"
+      className: "bento-square"
     },
     {
       icon: <Brain size={32} />,
       titleKey: 'features.cards.analytics.title',
       descriptionKey: 'features.cards.analytics.description',
       learnMoreKey: 'features.cards.analytics.learnMore',
-      color: "orange",
-      delay: "0.3s"
+      className: "bento-wide"
     }
   ];
 
-  // Stats array for easier maintenance
   const stats = [
     {
       valueKey: 'features.stats.reduction.value',
@@ -60,69 +54,72 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="modern-features">
-      <div className="modern-features-container">
+    <section id="features" className="saas-features">
+      <div className="saas-features-container">
         {/* Header */}
-        <div className="modern-section-header">
-          <span className="section-badge">
-            <span className="badge-dot"></span>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="saas-section-header"
+        >
+          <span className="saas-badge">
+            <span className="dot"></span>
             {t('features.badge')}
           </span>
-          <h2 className="section-title">
-            {t('features.title')}
-            <span className="title-gradient"> {t('features.titleHighlight')}</span>
+          <h2 className="saas-title">
+            {t('features.title')}{' '}
+            <span className="text-gradient-gold">{t('features.titleHighlight')}</span>
           </h2>
-          <p className="section-description">
+          <p className="saas-subtitle">
             {t('features.description')}
           </p>
-        </div>
+        </motion.div>
 
-        {/* Features Grid */}
-        <div className="modern-features-grid">
+        {/* Bento Grid */}
+        <div className="bento-grid">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className={`modern-feature-card feature-${feature.color}`}
-              style={{ animationDelay: feature.delay }}
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={`bento-card ${feature.className}`}
             >
-              <div className="feature-card-inner">
-                <div className="feature-icon-wrapper">
-                  <div className="feature-icon">
-                    {feature.icon}
-                  </div>
-                  <div className="icon-glow"></div>
-                </div>
-
-                <h3 className="feature-title">{t(feature.titleKey)}</h3>
-                <p className="feature-description">{t(feature.descriptionKey)}</p>
-
-                <button className="feature-learn-more">
-                  <span>{t(feature.learnMoreKey)}</span>
-                  <ArrowUpRight size={16} />
-                </button>
-
-                <div className="feature-card-glow"></div>
+              <div className="bento-icon-wrapper">
+                {feature.icon}
               </div>
-            </div>
+              <div className="bento-content">
+                <h3 className="bento-title">{t(feature.titleKey)}</h3>
+                <p className="bento-desc">{t(feature.descriptionKey)}</p>
+                
+                <a href="#contact" className="bento-link">
+                  {t(feature.learnMoreKey)} <ArrowRight size={14} />
+                </a>
+              </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Stats Bar */}
-        <div className="modern-stats-bar">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
+          className="saas-stats-bar"
+        >
           {stats.map((stat, index) => (
-            <React.Fragment key={index}>
-              <div className="stat-item">
-                <div className="stat-number">{t(stat.valueKey)}</div>
-                <div className="stat-label">{t(stat.labelKey)}</div>
-                <div className="stat-bar"></div>
-              </div>
-              {index < stats.length - 1 && <div className="stat-divider"></div>}
-            </React.Fragment>
+            <div key={index} className="saas-stat-item">
+              <div className="saas-stat-num">{t(stat.valueKey)}</div>
+              <div className="saas-stat-label">{t(stat.labelKey)}</div>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      {/* Background Elements */}
       <div className="features-bg-gradient"></div>
     </section>
   );

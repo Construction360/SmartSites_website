@@ -1,102 +1,92 @@
-// src/components/FAQ.jsx
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-import '../styles/FAQ.css';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, HelpCircle, ShieldAlert, Cpu, Lock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import '../styles/FAQ.css';
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState(null);
   const { t } = useTranslation();
-  const [openIndex, setOpenIndex] = useState(0);
-  
-  // Create an array of FAQ question keys that match our JSON structure
-  const faqKeys = [
-    'q1',
-    'q2',
-    'q3',
-    'q4',
-    'q5',
-    'q6',
-    'q7',
-    'q8',
-    'q9'
-  ];
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? -1 : index);
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqs = [
+    {
+      icon: <Cpu size={20} />,
+      question: t('faq.questions.q1.question'),
+      answer: t('faq.questions.q1.answer'),
+    },
+    {
+      icon: <HelpCircle size={20} />,
+      question: t('faq.questions.q8.question'),
+      answer: t('faq.questions.q8.answer'),
+    },
+    {
+      icon: <Lock size={20} />,
+      question: t('faq.questions.q3.question'),
+      answer: t('faq.questions.q3.answer'),
+    },
+    {
+      icon: <ShieldAlert size={20} />,
+      question: t('faq.questions.q9.question'),
+      answer: t('faq.questions.q9.answer'),
+    }
+  ];
+
   return (
-    <section id="faq" className="faq-section">
-      <div className="faq-container">
-        {/* Header */}
-        <div className="faq-header">
-          <span className="section-badge section-badge-purple">
-            <span className="badge-dot"></span>
-            {t('faq.badge')}
+    <section id="faq" className="saas-faq">
+      <div className="saas-faq-container">
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="saas-section-header centered"
+        >
+          <span className="saas-badge">
+            <span className="dot"></span>
+            {t('faq.badge', 'FAQ')}
           </span>
-          <h2 className="section-title">
-            {t('faq.title')}
-            <span className="title-gradient"> {t('faq.titleHighlight')}</span>
-          </h2>
-          <p className="section-description">
-            {t('faq.description')}
-            <br />
-            {t('faq.description2')}
-          </p>
-        </div>
+          <h2 className="saas-title">{t('faq.title')}</h2>
+          <p className="saas-subtitle">{t('faq.description')}</p>
+        </motion.div>
 
-        {/* FAQ Accordion */}
-        <div className="faq-accordion">
-          {faqKeys.map((faqKey, index) => (
-            <div 
-              key={index} 
-              className={`faq-item ${openIndex === index ? 'active' : ''}`}
-            >
-              <button 
-                className="faq-question"
-                onClick={() => toggleFAQ(index)}
+        <div className="saas-accordion">
+          {faqs.map((faq, index) => {
+            const isActive = openIndex === index;
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className={`saas-faq-item ${isActive ? 'active' : ''}`}
               >
-                <HelpCircle size={24} className="faq-icon" />
-                <span className="faq-question-text">{t(`faq.questions.${faqKey}.question`)}</span>
-                <ChevronDown 
-                  size={24} 
-                  className={`faq-chevron ${openIndex === index ? 'rotated' : ''}`}
-                />
-              </button>
-              
-              <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
-                <p>{t(`faq.questions.${faqKey}.answer`)}</p>
-              </div>
-
-              <div className="faq-item-glow"></div>
-            </div>
-          ))}
+                <button 
+                  className="saas-faq-question" 
+                  onClick={() => toggleAccordion(index)}
+                  aria-expanded={isActive}
+                >
+                  <div className="saas-question-content">
+                    <span className="saas-faq-icon">{faq.icon}</span>
+                    <span>{faq.question}</span>
+                  </div>
+                  <ChevronDown className="saas-chevron" size={20} />
+                </button>
+                <div className="saas-faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
-        {/* Still Have Questions CTA */}
-        <div className="faq-cta">
-          <h3 className="faq-cta-title">{t('faq.cta.title')}</h3>
-          <p className="faq-cta-text">
-            {t('faq.cta.description')}
-          </p>
-          <button 
-            className="modern-btn modern-btn-primary modern-btn-large"
-            onClick={() => {
-              if (window.Calendly) {
-                window.Calendly.initPopupWidget({
-                  url: 'https://calendly.com/smartsitestr/30min'
-                });
-              }
-            }}
-          >
-            <span>{t('faq.cta.button')}</span>
-            <div className="btn-glow"></div>
-          </button>
-        </div>
       </div>
-
-      {/* Background */}
-      <div className="faq-bg-gradient"></div>
+      <div className="faq-bg-glow"></div>
     </section>
   );
 }

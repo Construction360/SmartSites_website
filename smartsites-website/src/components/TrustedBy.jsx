@@ -41,33 +41,7 @@ export default function TrustedBy() {
     }
   ];
 
-  // Achievement data with corresponding keys from JSON structure
-  const achievements = [
-    {
-      icon: <Check size={24} />,
-      titleKey: 'trustedBy.achievements.mvp.title',
-      descriptionKey: 'trustedBy.achievements.mvp.description'
-    },
-    {
-      icon: <Calendar size={24} />,
-      titleKey: 'trustedBy.achievements.pilot.title',
-      descriptionKey: 'trustedBy.achievements.pilot.description'
-    },
-    {
-      icon: <Users size={24} />,
-      titleKey: 'trustedBy.achievements.validated.title',
-      descriptionKey: 'trustedBy.achievements.validated.description'
-    }
-  ];
 
-  const openCalendly = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/smartsitestr/30min'
-      });
-    }
-    return false;
-  };
 
   return (
     <section className="trustedby-section">

@@ -1,17 +1,18 @@
-/* src/styles/TrustedBy.css */
+/* src/styles/TrustedBy.css - PREMIUM DARK/LIGHT SAAS REWRITE */
 
 .trustedby-section {
   position: relative;
   padding: 8rem 2rem;
   background: var(--bg-primary);
   overflow: hidden;
+  border-top: 1px solid var(--border-glass);
 }
 
 .trustedby-container {
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .trustedby-header {
@@ -26,49 +27,30 @@
   margin-bottom: 4rem;
 }
 
-/* Invert logo for dark mode if it's black */
 .partner-logo.partner-logo-invert {
   filter: invert(1) brightness(1.5);
 }
 
-.partner-card:hover .partner-logo.partner-logo-invert {
-  filter: invert(1) brightness(1.5);
-}
-
-/* On light mode, don't invert (assuming black logo looks good on white) */
 [data-theme="light"] .partner-logo.partner-logo-invert {
   filter: none;
   opacity: 1;
 }
 
-[data-theme="light"] .partner-card:hover .partner-logo.partner-logo-invert {
-  filter: none;
-}
-
 .partner-card {
   position: relative;
   padding: 3rem 2rem;
-  background: color-mix(in srgb, var(--surface-elevated) 82%, transparent);
-  border: 1px solid var(--border-subtle);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-glass);
   border-radius: 1.5rem;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(16px);
   text-align: center;
-  transition: all 0.4s ease;
-}
-
-[data-theme="light"] .partner-card {
-  background: rgba(255, 255, 255, 0.88);
-  border-color: var(--border-subtle);
+  transition: all 0.3s ease;
 }
 
 .partner-card:hover {
-  background: color-mix(in srgb, var(--surface-elevated) 90%, transparent);
-  border-color: color-mix(in srgb, var(--blue-soft) 34%, var(--border-subtle));
+  background: var(--border-glass);
+  border-color: var(--border-glass-hover);
   transform: translateY(-4px);
-}
-
-[data-theme="light"] .partner-card:hover {
-  background: rgba(0, 0, 0, 0.04);
 }
 
 .partner-logo-wrapper {
@@ -119,20 +101,21 @@
 }
 
 .partner-card:hover .partner-logo-text {
-  color: var(--blue-soft);
+  color: var(--text-primary);
 }
 
 .partner-status {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--blue-soft);
-  background: rgba(251, 184, 83, 0.08);
+  color: var(--text-primary);
+  background: var(--surface-glass);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
-  border: 1px solid rgba(251, 184, 83, 0.3);
+  border: 1px solid var(--border-glass);
 }
 
 .partner-objective {
@@ -143,15 +126,10 @@
   font-weight: 500;
 }
 
-[data-theme="light"] .partner-status {
-  background: rgba(251, 184, 83, 0.06);
-  border-color: rgba(251, 184, 83, 0.25);
-}
-
 .status-dot {
   width: 6px;
   height: 6px;
-  background: var(--accent-orange);
+  background: var(--accent-gold);
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -159,7 +137,7 @@
 .partner-card-glow {
   position: absolute;
   inset: -2px;
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.4), transparent 60%);
+  background: radial-gradient(circle, var(--accent-gold-dim) 0%, transparent 60%);
   opacity: 0;
   filter: blur(20px);
   transition: opacity 0.4s ease;
@@ -168,119 +146,11 @@
 }
 
 .partner-card:hover .partner-card-glow {
-  opacity: 0.08;
+  opacity: 1;
 }
 
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
 
-.achievement-card {
-  position: relative;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-[data-theme="light"] .achievement-card {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.achievement-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-5px);
-}
-
-[data-theme="light"] .achievement-card:hover {
-  background: rgba(0, 0, 0, 0.04);
-}
-
-.achievement-icon {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 1.5rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(251, 184, 83, 0.08);
-  border: 2px solid rgba(251, 184, 83, 0.35);
-  border-radius: 50%;
-  color: var(--blue-soft);
-}
-
-[data-theme="light"] .achievement-icon {
-  background: rgba(251, 184, 83, 0.08);
-  border-color: rgba(251, 184, 83, 0.25);
-}
-
-.achievement-icon-glow {
-  position: absolute;
-  inset: -8px;
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.35), transparent 60%);
-  opacity: 0.2;
-  filter: blur(15px);
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.achievement-title {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.achievement-description {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.trustedby-cta {
-  text-align: center;
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
-}
-
-[data-theme="light"] .trustedby-cta {
-  background: rgba(0, 0, 0, 0.02);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.trustedby-cta-text {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.trustedby-bg-gradient {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 1000px;
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.05) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-[data-theme="light"] .trustedby-bg-gradient {
-  background: radial-gradient(circle, rgba(251, 184, 83, 0.07) 0%, transparent 70%);
-}
-
+/* Partnership Map Section */
 .partnership-map-section {
   padding: 3rem 0;
   text-align: center;
@@ -305,7 +175,9 @@
 }
 
 [data-theme="light"] .map-container {
+  /* You may want to invert the map for light mode, or keep it black depending on preference */
   background-image: url('../assets/black-map.png');
+  filter: invert(1) opacity(0.5); /* Hack to make a light map if necessary */
 }
 
 .location-dot {
@@ -320,21 +192,13 @@
 .location-dot img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 4px rgba(251, 184, 83, 0.24));
+  filter: drop-shadow(0 0 4px var(--accent-gold-dim));
 }
 
 @keyframes mapPulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
 }
 
 .location-dot::after {
@@ -353,6 +217,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   font-size: 0.875rem;
   z-index: 10;
+  box-shadow: var(--shadow-subtle);
 }
 
 .location-dot:hover::after {
@@ -360,78 +225,40 @@
   visibility: visible;
 }
 
-[data-theme="dark"] .dot-turkey {
-  top: 31.5%;
-  left: 53%;
+/* Base coordinates */
+.dot-turkey { top: 31.5%; left: 53%; }
+.dot-turkey-2 { top: 31.5%; left: 54%; }
+.dot-russia { top: 24.5%; left: 57.5%; }
+.dot-russia-2 { top: 23%; left: 70.5%; }
+.dot-kazakhstan { top: 26.7%; left: 62%; }
+.dot-iraq { top: 36.4%; left: 57%; }
+
+
+/* Ambient Background */
+.trustedby-bg-gradient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, var(--accent-gold-dim) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
 }
 
-[data-theme="dark"] .dot-turkey-2 {
-  top: 31.5%;
-  left: 54%;
-}
-
-[data-theme="dark"] .dot-russia {
-  top: 24.5%;
-  left: 57.5%;
-}
-
-[data-theme="dark"] .dot-russia-2 {
-  top: 23%;
-  left: 70.5%;
-}
-
-[data-theme="dark"] .dot-kazakhstan {
-  top: 26.7%;
-  left: 62%;
-}
-
-[data-theme="dark"] .dot-iraq {
-  top: 36.4%;
-  left: 57%;
-}
-
-[data-theme="light"] .dot-turkey {
-  top: 31.5%;
-  left: 53%;
-}
-
-[data-theme="light"] .dot-turkey-2 {
-  top: 31.5%;
-  left: 54%;
-}
-
-[data-theme="light"] .dot-russia {
-  top: 24.5%;
-  left: 57.5%;
-}
-
-[data-theme="light"] .dot-russia-2 {
-  top: 23%;
-  left: 70.5%;
-}
-
-[data-theme="light"] .dot-kazakhstan {
-  top: 26.7%;
-  left: 62%;
-}
-
-[data-theme="light"] .dot-iraq {
-  top: 36.4%;
-  left: 57%;
-}
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-
-  .partners-grid,
-  .achievements-grid {
+  .partners-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .trustedby-section {
-    padding: 4rem 1.5rem;
+    padding: 6rem 1.5rem;
   }
 
   .partners-grid {
@@ -441,7 +268,6 @@
     gap: 1rem;
     padding-bottom: 1.5rem;
     margin-right: -1.5rem;
-    /* Bleed to edge */
     padding-right: 1.5rem;
     -webkit-overflow-scrolling: touch;
   }
@@ -450,7 +276,6 @@
     min-width: 260px;
     scroll-snap-align: center;
     padding: 2rem 1.5rem;
-    /* Tighter padding for mobile */
   }
 
   .partners-grid::-webkit-scrollbar {
@@ -458,16 +283,12 @@
   }
 
   .partners-grid::-webkit-scrollbar-thumb {
-    background: var(--blue-soft);
+    background: var(--border-glass-hover);
     border-radius: 4px;
   }
 
   .partners-grid::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .achievements-grid {
-    grid-template-columns: 1fr;
+    background: var(--surface-glass);
   }
 
   .partner-logo-wrapper {
@@ -479,10 +300,6 @@
     max-height: 60px;
   }
 
-  .trustedby-cta-text {
-    font-size: 1rem;
-  }
-
   .map-container {
     padding: 1rem;
   }
@@ -491,13 +308,11 @@
     width: 12px;
     height: 12.5px;
     margin-top: -7px;
-    /* Shift dots up slightly on mobile */
   }
 
   .location-dot::after {
     font-size: 0.65rem;
     padding: 0.3rem 0.5rem;
     bottom: 105%;
-    /* Adjusted offset */
   }
 }

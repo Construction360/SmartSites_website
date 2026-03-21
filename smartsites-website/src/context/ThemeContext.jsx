@@ -13,9 +13,13 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage or default to dark
     const savedTheme = localStorage.getItem('smartsites-theme');
-    return savedTheme || 'dark';
+    if (savedTheme) return savedTheme;
+    
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
+    }
+    return 'dark';
   });
 
   useEffect(() => {

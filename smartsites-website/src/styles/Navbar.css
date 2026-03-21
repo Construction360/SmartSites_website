@@ -1,237 +1,213 @@
-/* src/styles/Navbar.css */
+/* src/styles/Navbar.css - PREMIUM DARK SAAS WITH LIGHT MODE */
 
-/* --- GENERAL NAVBAR STYLING --- */
-
-.modern-navbar {
+.saas-navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(7, 16, 25, 0.56);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 11, 0.5); /* Deep obsidian glass */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-glass);
   transition: all 0.3s ease;
 }
 
-.modern-navbar.scrolled {
-  background: rgba(7, 16, 25, 0.88);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+[data-theme="light"] .saas-navbar {
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
-[data-theme="light"] .modern-navbar {
-  background: rgba(255, 255, 255, 0.72);
-  border-bottom-color: rgba(15, 23, 42, 0.06);
+.saas-navbar.scrolled {
+  background: rgba(10, 10, 11, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="light"] .modern-navbar.scrolled {
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+[data-theme="light"] .saas-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.modern-navbar-container {
+.saas-navbar-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.25rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.modern-navbar-logo {
+.saas-navbar-logo {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.modern-logo {
-
+.saas-logo {
   width: 128px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+  transition: opacity 0.2s ease;
+}
+
+[data-theme="light"] .saas-logo {
   filter: none;
-  transition: opacity 0.24s ease;
 }
 
-.modern-logo:hover {
-  opacity: 0.9;
+.saas-logo:hover {
+  opacity: 0.8;
 }
 
-
-/* --- DESKTOP NAVIGATION (Visible by Default) --- */
-
-.modern-navbar-menu {
+/* --- DESKTOP NAVIGATION --- */
+.saas-navbar-menu {
   display: flex;
-  gap: 2.2rem;
+  gap: 2rem;
   align-items: center;
 }
 
-.modern-navbar-actions {
+.saas-navbar-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.modern-nav-link {
+.saas-nav-link {
   position: relative;
   background: none;
   border: none;
-  color: color-mix(in srgb, var(--text-secondary) 88%, var(--text-primary));
-  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
   padding: 0.5rem 0;
 }
 
-.modern-nav-link:hover {
+.saas-nav-link:hover {
   color: var(--text-primary);
 }
 
-.nav-link-glow {
+.saas-nav-link::after {
+  content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
-  right: 0;
-  height: 1px;
-  background: currentColor;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-gold);
   transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.3s ease;
 }
 
-.modern-nav-link:hover .nav-link-glow {
+.saas-nav-link:hover::after {
   transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Theme Toggle Button */
+.saas-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saas-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border-color: var(--border-glass-hover);
+}
+
+[data-theme="light"] .saas-theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 
-/* --- MOBILE NAVIGATION (Hidden on Desktop) --- */
-
-.modern-navbar-toggle {
+/* --- MOBILE NAVIGATION --- */
+.saas-navbar-toggle {
   display: none;
-  /* Hidden by default */
   background: none;
   border: none;
   color: var(--text-primary);
   cursor: pointer;
   z-index: 1001;
-  /* Ensure it's above other elements */
 }
 
-/* ADD THIS RULE for light mode hamburger icon */
-[data-theme="light"] .modern-navbar-toggle {
-  color: var(--text-primary);
-}
-
-.modern-navbar-mobile {
+.saas-navbar-mobile {
   display: none;
-  /* Hidden by default */
 }
 
-
-/* --- RESPONSIVE STYLES --- */
+@media (max-width: 900px) {
+  .saas-navbar-menu {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
-
-  /* On mobile, hide the desktop menu/actions and show the hamburger toggle */
-  .modern-navbar-menu,
-  .modern-navbar-actions {
+  .saas-navbar-actions {
     display: none;
   }
 
-  .modern-navbar-toggle {
+  .saas-navbar-toggle {
     display: block;
   }
 
-  /* This styles the mobile menu *when* it is rendered by React */
-  .modern-navbar-mobile {
+  .saas-navbar-mobile {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem 2rem;
-    background: rgba(7, 16, 25, 0.96);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 1.25rem;
+    padding: 2rem;
+    background: rgba(10, 10, 11, 0.98);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-glass);
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   }
 
-  /* ADD THIS RULE for light mode mobile panel */
-  [data-theme="light"] .modern-navbar-mobile {
-    background: rgba(255, 255, 255, 0.96);
-    border-top-color: rgba(15, 23, 42, 0.08);
+  [data-theme="light"] .saas-navbar-mobile {
+    background: rgba(255, 255, 255, 0.98);
+    border-top-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   }
 
-  .modern-mobile-link {
+  .saas-mobile-link {
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     text-align: left;
     cursor: pointer;
     padding: 0.5rem 0;
   }
 
-  /* ADD THIS RULE for light mode mobile links */
-  [data-theme="light"] .modern-mobile-link {
-    color: var(--text-secondary);
+  .saas-mobile-link:hover {
+    color: var(--text-primary);
   }
 
-  .theme-toggle-mobile {
+  .saas-mobile-actions-row {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    gap: 1rem;
   }
-}
 
-
-/* --- SHARED THEME TOGGLE STYLES (Used on desktop and mobile) --- */
-
-.theme-toggle-btn {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: color-mix(in srgb, var(--surface-elevated) 76%, transparent);
-  border: 1px solid var(--border-subtle);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-[data-theme="light"] .theme-toggle-btn {
-  background: rgba(255, 255, 255, 0.86);
-  border-color: var(--border-subtle);
-}
-
-.theme-toggle-btn:hover {
-  background: color-mix(in srgb, var(--surface-elevated) 88%, transparent);
-  transform: none;
-}
-
-[data-theme="light"] .theme-toggle-btn:hover {
-  background: #ffffff;
-}
-
-.theme-icon {
-  color: var(--text-secondary);
-  transition: color 0.3s ease;
-}
-
-/* Mobile-specific styles for the theme toggle button */
-.theme-toggle-mobile {
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  justify-content: center;
-  gap: 0.75rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  /* for color change of hamburger button */
-}
-
-.theme-toggle-mobile:hover {
-  transform: none;
-  /* Disable rotation for the mobile button */
+  .saas-theme-toggle-mobile {
+    width: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    gap: 0.5rem;
+  }
 }

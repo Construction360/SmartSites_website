@@ -1,47 +1,43 @@
-// src/components/Navbar.jsx - WITH LANGUAGE SELECTOR
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Calendar, Sun, Moon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
-import LanguageSelector from './LanguageSelector'; // Import LanguageSelector
-import logo1 from "../assets/logo_white.svg";
-import logo2 from "../assets/logo_black.svg";
+import LanguageSelector from './LanguageSelector';
+import logoWhite from "../assets/logo_white.svg";
+import logoBlack from "../assets/logo_black.svg";
 import '../styles/Navbar.css';
-
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
   const { theme, toggleTheme } = useTheme();
-  const { t } = useTranslation(); // Initialize translation hook
 
   useEffect(() => {
     let ticking = false;
-
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const isScrolled = window.scrollY > 50;
-          setScrolled(prev => (prev !== isScrolled ? isScrolled : prev));
+          setScrolled(window.scrollY > 50);
           ticking = false;
         });
         ticking = true;
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Add favicon to the page
   useEffect(() => {
     const existingFavicon = document.querySelector("link[rel*='icon']");
+    const activeLogo = theme === 'light' ? logoBlack : logoWhite;
+    
     if (existingFavicon) {
-      existingFavicon.href = theme === 'dark' ? logo1 : logo2;
+      existingFavicon.href = activeLogo;
     } else {
       const favicon = document.createElement('link');
       favicon.rel = 'icon';
-      favicon.href = theme === 'dark' ? logo1 : logo2;
+      favicon.href = activeLogo;
       favicon.type = 'image/svg+xml';
       document.head.appendChild(favicon);
     }
@@ -62,120 +58,80 @@ export default function Navbar() {
     return false;
   };
 
+  const logoSrc = theme === 'light' ? logoBlack : logoWhite;
+
   return (
-    <nav className={`modern-navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="modern-navbar-container">
-        <div className="modern-navbar-logo">
-          <img
-            src={theme === 'dark' ? logo1 : logo2}
-            alt="SmartSites Logo"
-            className="modern-logo"
-          />
-          <div className="logo-glow"></div>
+    <nav className={`saas-navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="saas-navbar-container">
+        
+        <div className="saas-navbar-logo">
+          <img src={logoSrc} alt="SmartSites Logo" className="saas-logo" />
         </div>
 
         {/* Desktop Menu */}
-        <div className="modern-navbar-menu">
-          <button onClick={() => scrollToSection('home')} className="modern-nav-link">
-            <span>{t('navbar.home')}</span>
-            <div className="nav-link-glow"></div>
+        <div className="saas-navbar-menu">
+          <button onClick={() => scrollToSection('home')} className="saas-nav-link">
+            {t('navbar.home')}
           </button>
-          <button onClick={() => scrollToSection('features')} className="modern-nav-link">
-            <span>{t('navbar.features')}</span>
-            <div className="nav-link-glow"></div>
+          <button onClick={() => scrollToSection('features')} className="saas-nav-link">
+            {t('navbar.features')}
           </button>
-          <button onClick={() => scrollToSection('how-it-works')} className="modern-nav-link">
-            <span>{t('navbar.howItWorks')}</span>
-            <div className="nav-link-glow"></div>
+          <button onClick={() => scrollToSection('how-it-works')} className="saas-nav-link">
+            {t('navbar.howItWorks')}
           </button>
-          <button onClick={() => scrollToSection('contact')} className="modern-nav-link">
-            <span>{t('navbar.contact')}</span>
-            <div className="nav-link-glow"></div>
+          <button onClick={() => scrollToSection('contact')} className="saas-nav-link">
+            {t('navbar.contact')}
           </button>
         </div>
 
-        <div className="modern-navbar-actions">
-          {/* Language Selector */}
+        <div className="saas-navbar-actions">
           <LanguageSelector />
-
-          {/* Theme Toggle */}
-          <button
-            className="theme-toggle-btn"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? (
-              <Sun size={20} className="theme-icon" />
-            ) : (
-              <Moon size={20} className="theme-icon" />
-            )}
-            <div className="theme-toggle-glow"></div>
+          <button onClick={toggleTheme} className="saas-theme-toggle" aria-label="Toggle theme">
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-
-          {/* Schedule Call Button */}
-          <button
-            onClick={openCalendly}
-            className="modern-btn modern-btn-primary"
-          >
-            <Calendar size={18} />
+          <button onClick={openCalendly} className="saas-btn saas-btn-primary">
+            <Calendar size={16} />
             <span>{t('navbar.scheduleCall')}</span>
-            <div className="btn-glow"></div>
           </button>
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="modern-navbar-toggle"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
+        <button className="saas-navbar-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="modern-navbar-mobile">
-          <button onClick={() => scrollToSection('home')} className="modern-mobile-link">
+        <div className="saas-navbar-mobile">
+          <button onClick={() => scrollToSection('home')} className="saas-mobile-link">
             {t('navbar.home')}
           </button>
-          <button onClick={() => scrollToSection('features')} className="modern-mobile-link">
+          <button onClick={() => scrollToSection('features')} className="saas-mobile-link">
             {t('navbar.features')}
           </button>
-          <button onClick={() => scrollToSection('how-it-works')} className="modern-mobile-link">
+          <button onClick={() => scrollToSection('how-it-works')} className="saas-mobile-link">
             {t('navbar.howItWorks')}
           </button>
-          <button onClick={() => scrollToSection('contact')} className="modern-mobile-link">
+          <button onClick={() => scrollToSection('contact')} className="saas-mobile-link">
             {t('navbar.contact')}
           </button>
+          
+          <div className="saas-mobile-actions-row">
+            <LanguageSelector />
+            <button onClick={toggleTheme} className="saas-theme-toggle saas-theme-toggle-mobile" aria-label="Toggle theme">
+              {theme === 'dark' ? (
+                <><Sun size={18} /> <span>Light Mode</span></>
+              ) : (
+                <><Moon size={18} /> <span>Dark Mode</span></>
+              )}
+            </button>
+          </div>
 
-          {/* Language Selector Mobile */}
-          <LanguageSelector />
-
-          {/* Theme Toggle Mobile */}
-          <button
-            className="theme-toggle-btn theme-toggle-mobile"
-            onClick={toggleTheme}
-          >
-            {theme === 'dark' ? (
-              <>
-                <Sun size={20} />
-                <span>Light Mode</span>
-              </>
-            ) : (
-              <>
-                <Moon size={20} />
-                <span>Dark Mode</span>
-              </>
-            )}
-          </button>
-
-          {/* Schedule Call Mobile */}
-          <button
-            onClick={openCalendly}
-            className="modern-btn modern-btn-primary"
-          >
-            <Calendar size={18} />
-            {t('navbar.scheduleCall')}
+          <button onClick={openCalendly} className="saas-btn saas-btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+            <Calendar size={16} />
+            <span>{t('navbar.scheduleCall')}</span>
           </button>
         </div>
       )}
