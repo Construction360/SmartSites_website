@@ -33,7 +33,7 @@ export default function Hero() {
           className="saas-badge"
         >
           <span className="dot gold"></span>
-          AI-Powered Construction Intelligence
+          {t('hero.badge')}
         </motion.div>
         
         <motion.h1 
