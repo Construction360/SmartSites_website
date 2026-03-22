@@ -7,13 +7,13 @@
     "scheduleCall": "Запланировать звонок"
   },
   "hero": {
-    "badge": "ИИ-мониторинг строительства",
+    "badge": "AI-Powered Construction Intelligence",
     "title": {
       "line1": "Возьмите под контроль",
       "line2": "каждую строительную",
       "line3": "площадку"
     },
-    "subtitle": "Мониторинг в реальном времени, прогностическая аналитика и полная видимость объекта.",
+    "subtitle": "Elevate your worksite with real-time analytics, continuous tracking, and unparalleled AI-driven insights engineered for modern construction teams.",
     "subtitleHighlight": "Превратите хаос в порядок.",
     "stats": {
       "monitoring": {

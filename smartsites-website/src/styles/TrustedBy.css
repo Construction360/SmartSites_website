@@ -175,9 +175,8 @@
 }
 
 [data-theme="light"] .map-container {
-  /* You may want to invert the map for light mode, or keep it black depending on preference */
   background-image: url('../assets/black-map.png');
-  filter: invert(1) opacity(0.5); /* Hack to make a light map if necessary */
+  filter: none; 
 }
 
 .location-dot {

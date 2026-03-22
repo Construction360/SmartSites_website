@@ -65,13 +65,13 @@ body {
   --text-secondary: #5C4D3C;
   --text-muted: #9C8972;
   
-  --accent-gold: #E58A1F;
-  --accent-gold-dim: rgba(229, 138, 31, 0.15);
+  --accent-gold: #FBB03B;
+  --accent-gold-dim: rgba(251, 176, 59, 0.15);
   
-  --surface-glass: rgba(229, 138, 31, 0.04);
-  --border-glass: rgba(229, 138, 31, 0.15);
-  --border-glass-hover: rgba(229, 138, 31, 0.35);
-  --shadow-subtle: 0 4px 24px rgba(229, 138, 31, 0.08);
+  --surface-glass: rgba(251, 176, 59, 0.04);
+  --border-glass: rgba(251, 176, 59, 0.15);
+  --border-glass-hover: rgba(251, 176, 59, 0.35);
+  --shadow-subtle: 0 4px 24px rgba(251, 176, 59, 0.08);
   
   --gradient-start: var(--text-primary);
   --gradient-end: var(--accent-gold);

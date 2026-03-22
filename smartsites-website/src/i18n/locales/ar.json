@@ -7,13 +7,13 @@
     "scheduleCall": "حدد موعد مكالمة"
   },
   "hero": {
-    "badge": "مراقبة مواقع البناء بالذكاء الاصطناعي",
+    "badge": "AI-Powered Construction Intelligence",
     "title": {
       "line1": "ضع كل",
       "line2": "موقع بناء",
       "line3": "تحت السيطرة"
     },
-    "subtitle": "مراقبة لحظية بالذكاء الاصطناعي، وتحليلات تنبؤية، ورؤية شاملة للموقع.",
+    "subtitle": "Elevate your worksite with real-time analytics, continuous tracking, and unparalleled AI-driven insights engineered for modern construction teams.",
     "subtitleHighlight": "حوّل الفوضى إلى تحكم كامل.",
     "stats": {
       "monitoring": {

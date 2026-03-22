@@ -33,7 +33,7 @@ export default function Hero() {
           className="saas-badge"
         >
           <span className="dot gold"></span>
-          AI-Powered Construction Intelligence
+          {t('hero.badge')}
         </motion.div>
         
         <motion.h1 
@@ -53,7 +53,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="saas-subtitle"
         >
-          Elevate your worksite with real-time analytics, continuous tracking, and unparalleled AI-driven insights engineered for modern construction teams.
+          {t('hero.subtitle')}
         </motion.p>
 
         <motion.div 

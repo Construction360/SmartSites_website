@@ -1,11 +1,14 @@
 import React from 'react';
 import { Mail, MapPin, ArrowUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import logo from "../assets/transparent_white.png";
+import { useTheme } from '../context/ThemeContext';
+import logoLight from "../assets/transparent_white.png";
+import logoDark from "../assets/transparent_black.png";
 import '../styles/Footer.css';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const { theme } = useTheme();
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (sectionId) => {
@@ -22,7 +25,7 @@ export default function Footer() {
         <div className="saas-footer-content">
           
           <div className="saas-footer-column saas-footer-main">
-            <img src={logo} alt="SmartSites Logo" className="saas-footer-logo" />
+            <img src={theme === 'dark' ? logoDark : logoLight} alt="SmartSites Logo" className="saas-footer-logo" />
             <p className="saas-footer-tagline">
               {t('footer.tagline')}
             </p>

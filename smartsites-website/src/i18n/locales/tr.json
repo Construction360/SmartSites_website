@@ -7,13 +7,13 @@
     "scheduleCall": "Görüşme Planla"
   },
   "hero": {
-    "badge": "Yapay Zeka Destekli Şantiye Takibi",
+    "badge": "AI-Powered Construction Intelligence",
     "title": {
       "line1": "Her",
       "line2": "Şantiyeyi",
       "line3": "Kontrol Altına Alın"
     },
-    "subtitle": "Gerçek zamanlı yapay zeka izleme, öngörücü analizler ve tam saha görünürlüğü.",
+    "subtitle": "Elevate your worksite with real-time analytics, continuous tracking, and unparalleled AI-driven insights engineered for modern construction teams.",
     "subtitleHighlight": "Karmaşayı kontrole dönüştürün.",
     "stats": {
       "monitoring": {
