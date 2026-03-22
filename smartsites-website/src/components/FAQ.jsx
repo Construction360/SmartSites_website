@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle, ShieldAlert, Cpu, Lock } from 'lucide-react';
+import { ChevronDown, HelpCircle, ShieldAlert, Cpu, Lock, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../styles/FAQ.css';
 
@@ -17,6 +17,11 @@ export default function FAQ() {
       icon: <Cpu size={20} />,
       question: t('faq.questions.q1.question'),
       answer: t('faq.questions.q1.answer'),
+    },
+    {
+      icon: <Users size={20} />,
+      question: t('faq.questions.q4.question'),
+      answer: t('faq.questions.q4.answer'),
     },
     {
       icon: <HelpCircle size={20} />,

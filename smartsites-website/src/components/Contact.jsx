@@ -10,6 +10,21 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Get form data directly from the event target
+    const name = e.target.elements.name.value;
+    const email = e.target.elements.email.value;
+    const company = e.target.elements.company.value;
+    const message = e.target.elements.message.value;
+
+    const subject = encodeURIComponent(`Contact Form Submission: ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`
+    );
+    
+    // Open default mail client
+    window.location.href = `mailto:smartsitestr@gmail.com?subject=${subject}&body=${body}`;
+
     setFormStatus('success');
     setTimeout(() => setFormStatus(''), 3000);
   };
