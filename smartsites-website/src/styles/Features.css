@@ -1,4 +1,4 @@
-/* src/styles/Features.css - PREMIUM DARK SAAS REWRITE */
+/* src/styles/Features.css — Clean 2x2 Cards */
 
 .saas-features {
   position: relative;
@@ -8,7 +8,7 @@
 }
 
 .saas-features-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -22,47 +22,36 @@
   margin-right: auto;
 }
 
-/* Bento Grid */
+/* 2x2 Grid */
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 280px;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-bottom: 5rem;
 }
 
-/* Card classes */
 .bento-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-/* Item 0: Large square (spans 2x2) */
-.bento-large {
-  grid-column: span 2;
-  grid-row: span 2;
-  justify-content: flex-end;
+.bento-number {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  opacity: 0.04;
+  line-height: 1;
+  pointer-events: none;
 }
 
-/* Item 1 & 2: Standard squares (1x1) */
-.bento-square {
-  grid-column: span 1;
-  grid-row: span 1;
-  justify-content: space-between;
-}
-
-/* Item 3: Wide rectangle (3x1) */
-.bento-wide {
-  grid-column: span 3;
-  grid-row: span 1;
-  flex-direction: row;
-  align-items: center;
-  gap: 3rem;
-}
-
-.bento-icon-wrapper {
-  width: 48px;
-  height: 48px;
+.bento-icon-wrap {
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -70,62 +59,43 @@
   background: var(--surface-glass);
   border: 1px solid var(--border-glass);
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  flex-shrink: 0;
+  margin-bottom: 0.75rem;
 }
 
-.bento-large .bento-icon-wrapper {
-  margin-top: auto;
-}
-
-.bento-wide .bento-icon-wrapper {
-  margin-bottom: 0;
-  width: 64px;
-  height: 64px;
-}
-
-/* Card Content */
 .bento-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
+  margin-bottom: 0.1rem;
 }
 
-.bento-large .bento-title {
-  font-size: 2rem;
+.bento-subtitle {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
 }
 
 .bento-desc {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
-.bento-large .bento-desc {
-  font-size: 1.1rem;
-  max-width: 80%;
-}
-
-.bento-wide .bento-content {
-  flex: 1;
-}
-
-.bento-wide .bento-desc {
-  max-width: 600px;
-}
-
-/* Learn more link */
 .bento-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--text-primary);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  margin-top: 1.5rem;
-  opacity: 0.7;
+  margin-top: auto;
+  padding-top: 1rem;
+  opacity: 0.6;
   transition: opacity 0.2s ease, gap 0.2s ease;
   text-decoration: none;
 }
@@ -149,9 +119,7 @@
   border-right: 1px solid var(--border-glass);
 }
 
-.saas-stat-item:last-child {
-  border-right: none;
-}
+.saas-stat-item:last-child { border-right: none; }
 
 .saas-stat-num {
   font-size: 3.5rem;
@@ -170,7 +138,7 @@
   font-weight: 500;
 }
 
-/* Background gradient */
+/* Background */
 .features-bg-gradient {
   position: absolute;
   top: 50%;
@@ -184,47 +152,13 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-  }
-  
-  .bento-large {
-    grid-column: span 2;
-    grid-row: span 1;
-    min-height: 340px;
-  }
-  
-  .bento-wide {
-    grid-column: span 2;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-}
-
 @media (max-width: 768px) {
   .saas-features {
     padding: 6rem 1.5rem;
   }
-  
+
   .bento-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .bento-large, .bento-square, .bento-wide {
-    grid-column: span 1;
-    grid-row: span 1;
-    min-height: auto;
-  }
-  
-  .bento-large {
-    padding-top: 4rem;
-  }
-  
-  .bento-large .bento-desc {
-    max-width: 100%;
   }
 
   .saas-stats-bar {
@@ -239,7 +173,7 @@
     border-bottom: 1px solid var(--border-glass);
     padding-bottom: 3rem;
   }
-  
+
   .saas-stat-item:last-child {
     border-bottom: none;
     padding-bottom: 0;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Camera, Users, Package, Brain, ArrowRight } from 'lucide-react';
+import { Users, Truck, Camera, Package, ArrowRight } from 'lucide-react';
 import '../styles/Features.css';
 import { useTranslation } from 'react-i18next';
 
@@ -9,55 +9,49 @@ export default function Features() {
 
   const features = [
     {
-      icon: <Camera size={24} />,
+      icon: <Users size={22} />,
       titleKey: 'features.cards.monitoring.title',
+      subtitleKey: 'features.cards.monitoring.subtitle',
       descriptionKey: 'features.cards.monitoring.description',
       learnMoreKey: 'features.cards.monitoring.learnMore',
-      className: "bento-large"
+      number: "01"
     },
     {
-      icon: <Users size={24} />,
+      icon: <Truck size={22} />,
       titleKey: 'features.cards.tracking.title',
+      subtitleKey: 'features.cards.tracking.subtitle',
       descriptionKey: 'features.cards.tracking.description',
       learnMoreKey: 'features.cards.tracking.learnMore',
-      className: "bento-square"
+      number: "02"
     },
     {
-      icon: <Package size={24} />,
+      icon: <Camera size={22} />,
       titleKey: 'features.cards.material.title',
+      subtitleKey: 'features.cards.material.subtitle',
       descriptionKey: 'features.cards.material.description',
       learnMoreKey: 'features.cards.material.learnMore',
-      className: "bento-square"
+      number: "03"
     },
     {
-      icon: <Brain size={32} />,
+      icon: <Package size={22} />,
       titleKey: 'features.cards.analytics.title',
+      subtitleKey: 'features.cards.analytics.subtitle',
       descriptionKey: 'features.cards.analytics.description',
       learnMoreKey: 'features.cards.analytics.learnMore',
-      className: "bento-wide"
+      number: "04"
     }
   ];
 
   const stats = [
-    {
-      valueKey: 'features.stats.reduction.value',
-      labelKey: 'features.stats.reduction.label',
-    },
-    {
-      valueKey: 'features.stats.tracking.value',
-      labelKey: 'features.stats.tracking.label',
-    },
-    {
-      valueKey: 'features.stats.monitoring.value',
-      labelKey: 'features.stats.monitoring.label',
-    }
+    { valueKey: 'features.stats.reduction.value', labelKey: 'features.stats.reduction.label' },
+    { valueKey: 'features.stats.tracking.value', labelKey: 'features.stats.tracking.label' },
+    { valueKey: 'features.stats.monitoring.value', labelKey: 'features.stats.monitoring.label' }
   ];
 
   return (
     <section id="features" className="saas-features">
       <div className="saas-features-container">
-        {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -77,34 +71,29 @@ export default function Features() {
           </p>
         </motion.div>
 
-        {/* Bento Grid */}
         <div className="bento-grid">
           {features.map((feature, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bento-card ${feature.className}`}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bento-card"
             >
-              <div className="bento-icon-wrapper">
-                {feature.icon}
-              </div>
-              <div className="bento-content">
-                <h3 className="bento-title">{t(feature.titleKey)}</h3>
-                <p className="bento-desc">{t(feature.descriptionKey)}</p>
-                
-                <a href="#contact" className="bento-link">
-                  {t(feature.learnMoreKey)} <ArrowRight size={14} />
-                </a>
-              </div>
+              <span className="bento-number">{feature.number}</span>
+              <div className="bento-icon-wrap">{feature.icon}</div>
+              <h3 className="bento-title">{t(feature.titleKey)}</h3>
+              <span className="bento-subtitle">{t(feature.subtitleKey)}</span>
+              <p className="bento-desc">{t(feature.descriptionKey)}</p>
+              <a href="#contact" className="bento-link">
+                {t(feature.learnMoreKey)} <ArrowRight size={14} />
+              </a>
             </motion.div>
           ))}
         </div>
 
-        {/* Stats Bar */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -119,7 +108,6 @@ export default function Features() {
           ))}
         </motion.div>
       </div>
-
       <div className="features-bg-gradient"></div>
     </section>
   );

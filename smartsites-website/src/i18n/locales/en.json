@@ -92,24 +92,53 @@
     "description": "Comprehensive AI-powered platform combining computer vision, IoT sensors, and predictive analytics for complete construction site visibility.",
     "cards": {
       "monitoring": {
-        "title": "Smart Camera Monitoring",
-        "description": "AI-enabled cameras capture 24/7 site activity. Automatic detection of equipment, workers, and progress milestones with computer vision.",
-        "learnMore": "Learn more"
+        "title": "Worker Tracking",
+        "subtitle": "Real-Time Personnel Monitoring",
+        "description": "Track each worker — exact location, identity, task, subcontractor. BLE devices on workers transmit to wall-mounted receivers. Zones are color coded for instant visual control.",
+        "learnMore": "Learn more",
+        "features": {
+          "f1": "Live Location — GPS + BLE position on field map with zone working",
+          "f2": "Auto Attendance — Automatic check-in/out, work hours, idle time",
+          "f3": "Performance — Individual + average productivity metrics",
+          "f4": "Hakedis — Progress payments auto-calculated from data",
+          "f5": "Zone Alerts — Voice warnings near restricted areas"
+        }
       },
       "tracking": {
-        "title": "Worker & Asset Tracking",
-        "description": "Real-time location tracking via BLE/GPS sensors. Monitor safety compliance and locate equipment instantly across all zones.",
-        "learnMore": "Learn more"
+        "title": "Fleet Tracking",
+        "subtitle": "Vehicle & Machinery Intelligence",
+        "description": "Monitor excavators, cranes, trucks, and all vehicles. Real-time telemetry shows fuel usage, idle time, utilization peaks, and predictive maintenance alerts.",
+        "learnMore": "Learn more",
+        "features": {
+          "f1": "Fuel Analytics — Real time consumption, cost per vehicle",
+          "f2": "Predictive Maintenance — Fault alerts before breakdowns",
+          "f3": "Utilization — Idle vs active, peak hours, efficiency",
+          "f4": "Route Tracking — Movement patterns, zone compliance"
+        }
       },
       "material": {
-        "title": "Material & Equipment Monitoring",
-        "description": "Know exactly where materials and equipment are located. Eliminate search time and improve resource coordination.",
-        "learnMore": "Learn more"
+        "title": "Smart Camera Solution",
+        "subtitle": "AI Vision & Detection",
+        "description": "Wall-mounted cameras with AI vision detect PPE compliance, zone violations, and generate instant voice alerts. YOLOv8 model runs real-time detection.",
+        "learnMore": "Learn more",
+        "features": {
+          "f1": "PPE Detection — Helmet, vest detection + voice alert",
+          "f2": "Zone Restriction — Voice warning near danger zones",
+          "f3": "Zone Time — Time per zone for site oversight",
+          "f4": "24/7 Monitoring — Indoor + outdoor, timelapse, replay"
+        }
       },
       "analytics": {
-        "title": "AI Predictive Analytics",
-        "description": "Machine learning predicts delays and safety risks before they occur. Make data-driven decisions to keep projects on track.",
-        "learnMore": "Learn more"
+        "title": "Inventory Management",
+        "subtitle": "Material & Equipment Intelligence",
+        "description": "Camera-based tracking of all construction materials — cement bags, steel bars, helmets, boots, tools. Know what's used, what's left, and predict what's needed.",
+        "learnMore": "Learn more",
+        "features": {
+          "f1": "Material Tracking — Camera monitors usage vs. stock",
+          "f2": "Equipment Locator — Find any tool/machine on field",
+          "f3": "Predictive Orders — AI forecasts needs before shortage",
+          "f4": "Low Stock Alerts — Notifications before materials run out"
+        }
       }
     },
     "stats": {
@@ -338,10 +367,10 @@
       },
       "features": {
         "title": "Features",
-        "monitoring": "Smart Camera Monitoring",
-        "tracking": "Worker & Asset Tracking",
-        "material": "Material Monitoring",
-        "analytics": "AI Predictive Analytics"
+        "monitoring": "Worker Tracking",
+        "tracking": "Fleet Tracking",
+        "material": "Smart Camera Solution",
+        "analytics": "Inventory Management"
       },
       "company": {
         "title": "Company",

@@ -89,24 +89,53 @@
     "description": "Bilgisayarlı görü, IoT sensörleri ve öngörücü analizleri birleştiren yapay zeka destekli platform ile tam şantiye görünürlüğü sağlayın.",
     "cards": {
       "monitoring": {
-        "title": "Akıllı Kamera İzleme",
-        "description": "Yapay zeka destekli kameralar 7/24 şantiye faaliyetlerini kaydeder. Ekipman, işçi ve ilerleme tespitini otomatik olarak yapar.",
-        "learnMore": "Daha fazla bilgi"
+        "title": "İşçi Takibi",
+        "subtitle": "Gerçek Zamanlı Personel İzleme",
+        "description": "Her işçiyi takip edin — konum, kimlik, görev, taşeron. BLE cihazları duvar tipi alıcılara iletir. Bölgeler anlık görsel kontrol için renk kodludur.",
+        "learnMore": "Daha fazla bilgi",
+        "features": {
+          "f1": "Canlı Konum — GPS + BLE ile saha haritasında bölgesel çalışma",
+          "f2": "Otomatik Yoklama — Giriş/çıkış, çalışma saati, boş zaman",
+          "f3": "Performans — Bireysel + ortalama verimlilik metrikleri",
+          "f4": "Hakediş — BLE verilerinden otomatik hesaplanan ilerleme ödemeleri",
+          "f5": "Bölge Uyarıları — Kısıtlı alanlarda sesli uyarılar"
+        }
       },
       "tracking": {
-        "title": "İşçi ve Varlık Takibi",
-        "description": "BLE/GPS sensörleriyle gerçek zamanlı konum takibi. Güvenlik uyumunu izleyin ve ekipmanları anında bulun.",
-        "learnMore": "Daha fazla bilgi"
+        "title": "Filo Takibi",
+        "subtitle": "Araç ve Makine Zekası",
+        "description": "Ekskavatör, vinç, kamyon ve tüm araçları izleyin. Gerçek zamanlı telemetri: yakıt tüketimi, boşta kalma, kullanım yoğunluğu ve bakım uyarıları.",
+        "learnMore": "Daha fazla bilgi",
+        "features": {
+          "f1": "Yakıt Analizi — Gerçek zamanlı tüketim, araç başı maliyet",
+          "f2": "Öngörücü Bakım — Arıza öncesi uyarılar",
+          "f3": "Kullanım Oranı — Boşta/aktif, yoğun saatler, verimlilik",
+          "f4": "Rota Takibi — Hareket desenleri, bölge uyumu"
+        }
       },
       "material": {
-        "title": "Malzeme ve Ekipman Takibi",
-        "description": "Malzeme ve ekipmanların tam olarak nerede olduğunu bilin. Arama süresini azaltın, kaynak koordinasyonunu geliştirin.",
-        "learnMore": "Daha fazla bilgi"
+        "title": "Akıllı Kamera Çözümü",
+        "subtitle": "Yapay Zeka Görüş ve Tespit",
+        "description": "Duvar tipi kameralar yapay zeka ile KKE uyumunu, bölge ihlallerini tespit eder ve anlık sesli uyarılar üretir. YOLOv8 modeli gerçek zamanlı çalışır.",
+        "learnMore": "Daha fazla bilgi",
+        "features": {
+          "f1": "KKE Tespiti — Baret, yelek algılama + sesli uyarı",
+          "f2": "Bölge Kısıtlama — Tehlikeli alanlarda sesli uyarı",
+          "f3": "Bölge Süresi — Her bölgede geçirilen süre takibi",
+          "f4": "7/24 İzleme — İç/dış mekan, timelapse, tekrar izleme"
+        }
       },
       "analytics": {
-        "title": "Yapay Zeka Tabanlı Öngörücü Analiz",
-        "description": "Makine öğrenimi, gecikmeleri ve güvenlik risklerini önceden tahmin eder. Veriye dayalı kararlarla projelerinizi doğru yönde tutun.",
-        "learnMore": "Daha fazla bilgi"
+        "title": "Envanter Yönetimi",
+        "subtitle": "Malzeme ve Ekipman Zekası",
+        "description": "Tüm inşaat malzemelerinin kamera tabanlı takibi — çimento, demir, baret, bot, alet. Neyin kullanıldığını, neyin kaldığını bilin ve ihtiyaçları öngörün.",
+        "learnMore": "Daha fazla bilgi",
+        "features": {
+          "f1": "Malzeme Takibi — Kamera ile kullanım/stok karşılaştırma",
+          "f2": "Ekipman Bulucu — Sahada herhangi bir alet/makineyi bulun",
+          "f3": "Öngörücü Siparişler — Eksiklik öncesi yapay zeka tahmini",
+          "f4": "Düşük Stok Uyarısı — Malzeme bitmeden bildirim"
+        }
       }
     },
     "stats": {
@@ -335,10 +364,10 @@
       },
       "features": {
         "title": "Özellikler",
-        "monitoring": "Akıllı Kamera İzleme",
-        "tracking": "İşçi ve Varlık Takibi",
-        "material": "Malzeme Takibi",
-        "analytics": "Yapay Zeka Analitiği"
+        "monitoring": "İşçi Takibi",
+        "tracking": "Filo Takibi",
+        "material": "Akıllı Kamera Çözümü",
+        "analytics": "Envanter Yönetimi"
       },
       "company": {
         "title": "Şirket",
