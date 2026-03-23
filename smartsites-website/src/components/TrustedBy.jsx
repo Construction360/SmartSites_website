@@ -4,7 +4,7 @@ import { Check, Calendar, Users, MapPin } from 'lucide-react';
 import benestaLogo from '../assets/benesta.svg';
 import estaLogo from '../assets/Esta.png';
 import yamataLogo from '../assets/yamata.png';
-import ustyapi from '../assets/ustyapi.png';
+import ustyapi from '../assets/ust-yapi.png';
 import locationIcon from '../assets/location_icon.png';
 import '../styles/TrustedBy.css';
 import { useTranslation } from 'react-i18next';

@@ -2,8 +2,8 @@ import React from 'react';
 import { Mail, MapPin, ArrowUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
-import logoLight from "../assets/transparent_white.png";
-import logoDark from "../assets/transparent_black.png";
+import logoLight from "../assets/transparent.png";
+import logoDark from "../assets/tansparent_black.png";
 import '../styles/Footer.css';
 
 export default function Footer() {
